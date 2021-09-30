@@ -4,7 +4,6 @@ import 'antd/dist/antd.css';
 const ButtonAnt = () => {
   return (
     <>
-      <Button type="primary">Primary Button</Button>
       <Button>Default Button</Button>
       <Button type="dashed">Dashed Button</Button>
       <br />

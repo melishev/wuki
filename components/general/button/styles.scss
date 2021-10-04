@@ -13,13 +13,13 @@ button {
     box-sizing: border-box;
     border: unset;
     cursor: pointer;
-}
-button.small {
-    border-radius: 12px;
-}
-button:hover {
-    background: #0077ed;
-}
-button:disabled {
-    opacity: .32;
+    &.small {
+      border-radius: 12px;
+    }
+    &:hover {
+      background: #0077ed;
+    }
+    &:disabled {
+      opacity: .32;
+    }
 }

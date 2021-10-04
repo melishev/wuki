@@ -1,13 +1,12 @@
-import './styles.css'
+import './styles.scss';
+import './ve.scss';
 
-const Button = () => {
-  return (
-    <>
-      <button>Sign In</button>
-      <button className="small">Sign In</button>
-      <button disabled>Sign In</button>
-    </>
-  )
-}
+const Button = () => (
+  <>
+    <button type="button">Sign In</button>
+    <button type="button" className="small">Sign In</button>
+    <button type="button" disabled>Sign In</button>
+  </>
+);
 
-export default Button
+export default Button;

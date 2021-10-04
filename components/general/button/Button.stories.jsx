@@ -7,4 +7,4 @@ export default {
   component: Button,
 };
 
-export const Template = () => <Button />;
+export const Default = () => <Button />;

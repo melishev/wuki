@@ -19,7 +19,7 @@ install:
 deploy:
   provider: pages
   skip_cleanup: true
-  github-token: $GITHUB_TOKEN
+  github-token: $Travis CI
   local_dir: build
   on:
     branch: master

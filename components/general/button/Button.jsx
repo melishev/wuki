@@ -1,5 +1,4 @@
 import './styles.scss';
-import './ve.scss';
 
 const Button = () => (
   <>

@@ -1,0 +1,10 @@
+// Font auto-generator
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: local($fname), url($furl) format("woff2");
+    // font-display: swap // Uncomment to initially display system fonts
+  }
+}

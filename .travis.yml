@@ -16,10 +16,6 @@ script:
 install:
   - yarn
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github-token: $Travis CI
-  local_dir: build
-  on:
-    branch: master
+branches:
+  only:
+    - master

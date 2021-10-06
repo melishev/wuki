@@ -11,4 +11,3 @@
  Thank you all in advance for your help and PR.
 
 #### [📕 Storybook Preview ](https://wookie-ui.vercel.app)
-d

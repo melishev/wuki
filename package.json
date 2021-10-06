@@ -1,13 +1,14 @@
 {
   "name": "wookie-ui",
-  "version": "0.0.0-beta.0",
+  "version": "0.0.0-development",
   "description": "🧸 Wookie UI is a UI Kit developed for React.js based on Ant UI 🐜. Wookie is a home project.",
   "homepage": "https://github.com/melishev/wookie-ui#readme",
   "scripts": {
     "dev": "start-storybook -p 6006",
     "build": "rollup -c",
     "build-storybook": "build-storybook",
-    "lint": "eslint --ext .jsx components/**"
+    "lint": "eslint --ext .jsx components/**",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "antd": "^4.16.13",
@@ -36,6 +37,7 @@
     "rollup-plugin-scss": "3",
     "sass": "^1.42.1",
     "sass-loader": "10.1.1",
+    "semantic-release": "^18.0.0",
     "style-loader": "2.0.0"
   },
   "peerDependencies": {},
@@ -53,7 +55,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/melishev/wookie-ui.git"
+    "url": "https://github.com/melishev/wookie-ui.git"
   },
   "bugs": {
     "url": "https://github.com/melishev/wookie-ui/issues"

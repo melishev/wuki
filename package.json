@@ -1,27 +1,54 @@
 {
   "name": "wookie-ui",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0-development",
+  "description": "🧸 Wookie UI is a UI Kit developed for React.js based on 🍏 Apple.com UI. Wookie is a home project.",
+  "homepage": "https://github.com/melishev/wookie-ui#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "dev": "start-storybook -p 6006",
+    "build": "rollup -c",
+    "build-storybook": "build-storybook",
+    "lint": "eslint --ext .jsx components/**"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.15.5",
+    "@semantic-release/git": "^10.0.0",
     "@storybook/addon-actions": "^6.3.8",
     "@storybook/addon-essentials": "^6.3.8",
     "@storybook/addon-links": "^6.3.8",
     "@storybook/react": "^6.3.8",
-    "babel-loader": "^8.2.2"
+    "babel-loader": "^8.2.2",
+    "conventional-changelog-atom": "^2.0.8",
+    "semantic-release": "^18.0.0"
   },
-  "dependencies": {
-    "antd": "^4.16.13",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  }
+  "peerDependencies": {},
+  "author": {
+    "name": "Matvey Melishev",
+    "email": "matvey@melishev.ru",
+    "url": "https://melishev.ru"
+  },
+  "maintainers": [
+    {
+      "name": "Matvey Melishev",
+      "email": "matvey@melishev.ru",
+      "url": "https://melishev.ru"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/melishev/wookie-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/melishev/wookie-ui/issues"
+  },
+  "keywords": [
+    "react",
+    "apple",
+    "ui",
+    "antd"
+  ],
+  "license": "ISC"
 }

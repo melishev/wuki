@@ -4,11 +4,8 @@ module.exports = {
     [
       "@semantic-release/commit-analyzer",
       {
-        preset: "angular",
-        releaseRules: [{ type: "fix", release: "patch" }],
         parserOpts: {
-          headerPattern: /^(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff]) (\w*)(?:\(([\w\$\.\-\* ]*)\))?\: (.*)$/,
-          headerCorrespondence: ["emoji", "type", "scope", "subject"],
+          headerPattern: /^(?:(?:\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff]) (\w*))(?:\(([\w\$\.\-\* ]*)\))?\: (.*)$/,
         },
       },
     ],

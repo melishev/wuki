@@ -1,5 +1,6 @@
 /* eslint-disable object-shorthand */
-import './styles.scss';
+import React from 'react';
+import './index.scss';
 // import propTypes from 'prop-types';
 
 const Typography = () => (

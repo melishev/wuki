@@ -1,10 +1,37 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 
-import Button from './index';
+import Buttons from './index';
 
 export default {
   title: 'Button',
-  component: Button,
+  component: Buttons,
+  argTypes: {
+    label: {
+      control: { type: 'text' },
+    },
+    type: {
+      control: { type: 'select' },
+      options: [' ', 'secondary', 'neutral'],
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['compact', 'medium', 'elevated', 'super'],
+    },
+    pill: {
+      control: { type: 'boolean' },
+    },
+    disabled: {
+      control: { type: 'boolean' },
+    },
+  },
+  args: {
+    label: 'Continue',
+    type: ' ',
+    size: 'medium',
+    pill: false,
+    disabled: false,
+  },
 };
 
-export const Default = () => <Button />;
+export const Button = (args) => <Buttons {...args} />;

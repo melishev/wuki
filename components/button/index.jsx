@@ -1,11 +1,30 @@
-import './styles.scss';
+/* eslint-disable object-curly-newline */
+/* eslint-disable react/prop-types */
+/* eslint-disable object-shorthand */
+import React from 'react';
+import propTypes from 'prop-types';
+import styles from './index.module.scss';
 
-const Button = () => (
-  <>
-    <button type="button">Sign In</button>
-    <button type="button" className="small">Sign In</button>
-    <button type="button" disabled>Sign In</button>
-  </>
+const Button = ({ label, type, size, pill, disabled }) => (
+  <button type="button" className={` ${styles.button} ${type} ${size} ${pill ? 'pill' : ''}`} disabled={disabled}>
+    {label}
+  </button>
 );
+
+Button.propTypes = {
+  label: propTypes.string,
+  type: propTypes.string,
+  size: propTypes.string,
+  pill: propTypes.bool,
+  disabled: propTypes.bool,
+};
+
+Button.defaultProps = {
+  label: 'Button',
+  type: 'primary',
+  size: 'medium',
+  pill: false,
+  disabled: false,
+};
 
 export default Button;

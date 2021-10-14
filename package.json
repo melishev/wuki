@@ -5,7 +5,7 @@
   "homepage": "https://github.com/melishev/wookie-ui#readme",
   "scripts": {
     "dev": "start-storybook -p 6006",
-    "build": "rm -rf dist && rollup -c",
+    "build": "rollup -c",
     "build-storybook": "build-storybook",
     "lint": "eslint --ext .jsx components/**"
   },

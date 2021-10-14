@@ -7,7 +7,6 @@ import babel from 'rollup-plugin-babel';
 import cleaner from 'rollup-plugin-cleaner';
 import postcss from 'rollup-plugin-postcss';
 import analyze from 'rollup-plugin-analyzer';
-import { terser } from 'rollup-plugin-terser';
 import commonjs from '@rollup/plugin-commonjs';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
@@ -46,28 +45,24 @@ const plugins = [
     extensions,
   }),
   peerDepsExternal(),
-  terser(),
   analyze({
     summaryOnly: true,
   }),
 ];
 
-export default
-[
-  {
-    input: ['components/**/index.jsx'],
-    output: {
-      format: 'cjs',
-      exports: 'named',
-      sourcemap: true,
-      dir: 'dist',
-    },
-    plugins: [
-      ...plugins,
-      multiInput({ relative: ['components/'] }),
-    ],
+export default {
+  input: ['components/**/index.jsx'],
+  output: {
+    format: 'cjs',
+    exports: 'named',
+    sourcemap: true,
+    dir: 'dist',
   },
-];
+  plugins: [
+    ...plugins,
+    multiInput({ relative: 'components/' }),
+  ],
+};
 
 // export default (async () => {
 //   const componentsPath = path.join(__dirname, 'components');

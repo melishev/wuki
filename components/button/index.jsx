@@ -3,10 +3,10 @@
 /* eslint-disable object-shorthand */
 import React from 'react';
 import propTypes from 'prop-types';
-import styles from './index.module.scss';
+import './index.scss';
 
 const Button = ({ label, type, size, pill, disabled }) => (
-  <button type="button" className={` ${styles.button} ${type} ${size} ${pill ? 'pill' : ''}`} disabled={disabled}>
+  <button type="button" className={`${type} ${size} ${pill ? 'pill' : ''}`} disabled={disabled}>
     {label}
   </button>
 );

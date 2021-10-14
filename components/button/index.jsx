@@ -1,6 +1,3 @@
-/* eslint-disable object-curly-newline */
-/* eslint-disable react/prop-types */
-/* eslint-disable object-shorthand */
 import React from 'react';
 import propTypes from 'prop-types';
 import './index.scss';

@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "start-storybook -p 6006",
     "build": "rollup -c",
-    "build-storybook": "build-storybook",
-    "lint": "eslint --ext .jsx components/**"
+    "build:sb": "build-storybook",
+    "lint": "eslint --ext .jsx components/**",
+    "stylelint": "stylelint */**/*.scss"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -31,11 +32,14 @@
     "css-loader": "5.2.6",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "postcss": "^8.3.9",
+    "prettier": "^2.4.1",
     "rollup": "^2.58.0",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-babel": "^4.4.0",
@@ -48,7 +52,14 @@
     "sass": "^1.43.2",
     "sass-loader": "10.1.1",
     "semantic-release": "^18.0.0",
-    "style-loader": "2.0.0"
+    "style-loader": "2.0.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.2.0",
+    "stylelint-scss": "^3.21.0"
   },
   "peerDependencies": {
     "react": ">=16.9.0",

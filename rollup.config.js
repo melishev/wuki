@@ -52,12 +52,17 @@ const plugins = [
 
 export default {
   input: ['components/**/index.jsx'],
-  output: {
-    format: 'cjs',
-    exports: 'named',
-    sourcemap: true,
-    dir: 'dist',
-  },
+  output: [
+    {
+      format: 'cjs',
+      exports: 'named',
+      dir: 'dist',
+    },
+    // {
+    //   format: 'esm',
+    //   dir: 'dist/esm',
+    // },
+  ],
   plugins: [
     ...plugins,
     multiInput({ relative: 'components/' }),

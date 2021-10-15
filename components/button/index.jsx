@@ -3,7 +3,11 @@ import propTypes from 'prop-types';
 import './index.scss';
 
 const Button = ({ label, type, size, pill, disabled }) => (
-  <button type="button" className={`${type} ${size} ${pill ? 'pill' : ''}`} disabled={disabled}>
+  <button
+    type="button"
+    className={`${type} ${size} ${pill ? 'pill' : ''}`}
+    disabled={disabled}
+  >
     {label}
   </button>
 );

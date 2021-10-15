@@ -1,253 +1,284 @@
 // https://www.apple.com/v/iphone-13-pro/b/built/styles/main.built.css
 
 @mixin ribbon {
-	font-size: 14px;
-	line-height: 1.4285914286;
-	font-weight: 400;
-	letter-spacing: -0.016em;
-	font-family: 'SF Pro Text', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4285914286;
+    font-weight: 400;
+    letter-spacing: -0.016em;
+    font-family: 'SF Pro Text', SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+        sans-serif;
 }
 
 @mixin headline-standalone {
-	font-size: 96px;
-	line-height: 1.0416666667;
-	font-weight: 600;
-	letter-spacing: -0.015em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 96px;
+    line-height: 1.0416666667;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin super-keyfeatures-shared {
-	font-size: 80px;
-	line-height: 1.05;
-	font-weight: 600;
-	letter-spacing: -0.015em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 80px;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin intro-shared {
-	font-size: 120px;
-	line-height: 1;
-	font-weight: 600;
-	letter-spacing: -0.002em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 120px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -0.002em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin intro-shared-alt {
-	font-size: 120px;
-	line-height: .9166666667;
-	font-weight: 600;
-	letter-spacing: -0.002em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 120px;
+    line-height: 0.9166666667;
+    font-weight: 600;
+    letter-spacing: -0.002em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin intro-alt1-shared {
-	font-size: 64px;
-	line-height: 1.0625;
-	font-weight: 600;
-	letter-spacing: -0.009em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 64px;
+    line-height: 1.0625;
+    font-weight: 600;
+    letter-spacing: -0.009em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin intro-alt2-shared {
-	font-size: 96px;
-	line-height: 1.0416666667;
-	font-weight: 600;
-	letter-spacing: -0.015em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 96px;
+    line-height: 1.0416666667;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin subhead-shared {
-	font-size: 40px;
-	line-height: 1.1;
-	font-weight: 600;
-	letter-spacing: 0em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin subhead-endcap-shared {
-	font-size: 32px;
-	line-height: 1.25;
-	font-weight: 600;
-	letter-spacing: .004em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: 0.004em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin callout-shared {
-	font-size: 24px;
-	line-height: 1.1666666667;
-	font-weight: 600;
-	letter-spacing: .009em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.1666666667;
+    font-weight: 600;
+    letter-spacing: 0.009em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin claim {
-	font-size: 24px;
-	line-height: 1.1666666667;
-	font-weight: 600;
-	letter-spacing: .009em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.1666666667;
+    font-weight: 600;
+    letter-spacing: 0.009em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin claim-super {
-	font-size: 64px;
-	line-height: 1.0625;
-	font-weight: 600;
-	letter-spacing: -0.009em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 64px;
+    line-height: 1.0625;
+    font-weight: 600;
+    letter-spacing: -0.009em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin headline-innovation-story {
-	font-size: 40px;
-	line-height: 1;
-	font-weight: 600;
-	letter-spacing: 0em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin eyebrow-hero {
-	font-size: 24px;
-	line-height: 1.1666666667;
-	font-weight: 600;
-	letter-spacing: .009em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.1666666667;
+    font-weight: 600;
+    letter-spacing: 0.009em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin headline-hero {
-	font-size: 64px;
-	line-height: 1.0625;
-	font-weight: 600;
-	letter-spacing: -0.009em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif
+    font-size: 64px;
+    line-height: 1.0625;
+    font-weight: 600;
+    letter-spacing: -0.009em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin intro-hero {
-	font-size: 80px;
-	line-height: 1.05;
-	font-weight: 600;
-	letter-spacing: -0.015em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 80px;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin cta-hero {
-	font-size: 24px;
-	line-height: 1.1666666667;
-	font-weight: 600;
-	letter-spacing: .009em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.1666666667;
+    font-weight: 600;
+    letter-spacing: 0.009em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin spec-design {
-	font-size: 40px;
-	line-height: 1.1;
-	font-weight: 600;
-	letter-spacing: 0em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin features-camera {
-	font-size: 24px;
-	line-height: 1.1666666667;
-	font-weight: 600;
-	letter-spacing: .009em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.1666666667;
+    font-weight: 600;
+    letter-spacing: 0.009em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin title-camera-hardware {
-	font-size: 32px;
-	line-height: 1.125;
-	font-weight: 600;
-	letter-spacing: .004em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif
+    font-size: 32px;
+    line-height: 1.125;
+    font-weight: 600;
+    letter-spacing: 0.004em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin eyebrow-battery {
-	font-size: 40px;
-	line-height: 1.1;
-	font-weight: 600;
-	letter-spacing: 0em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin claim-5g {
-	font-size: 28px;
-	line-height: 1.1428571429;
-	font-weight: 600;
-	letter-spacing: .007em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    line-height: 1.1428571429;
+    font-weight: 600;
+    letter-spacing: 0.007em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin subhead-ar {
-	font-size: 40px;
-	line-height: 1.1;
-	font-weight: 600;
-	letter-spacing: 0em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin subhead-carriers {
-	font-size: 48px;
-	line-height: 1.0834933333;
-	font-weight: 600;
-	letter-spacing: -0.003em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    line-height: 1.0834933333;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin copy-carriers {
-	font-size: 21px;
-	line-height: 1.381002381;
-	font-weight: 400;
-	letter-spacing: .011em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 21px;
+    line-height: 1.381002381;
+    font-weight: 400;
+    letter-spacing: 0.011em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin subhead-buystrip {
-	font-size: 32px;
-	line-height: 1.25;
-	font-weight: 600;
-	letter-spacing: .004em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: 0.004em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin copy-buystrip {
-	font-size: 19px;
-	line-height: 1.2105263158;
-	font-weight: 400;
-	letter-spacing: .012em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 19px;
+    line-height: 1.2105263158;
+    font-weight: 400;
+    letter-spacing: 0.012em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin body-tight {
-	font-size: 17px;
-	line-height: 1.2353641176;
-	font-weight: 400;
-	letter-spacing: -0.022em;
-	font-family: 'SF Pro Text', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.2353641176;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    font-family: 'SF Pro Text', SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+        sans-serif;
 }
 
 @mixin caption {
-	font-size: 12px;
-	line-height: 1.3333733333;
-	font-weight: 400;
-	letter-spacing: -0.01em;
-	font-family: 'SF Pro Text', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.3333733333;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    font-family: 'SF Pro Text', SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+        sans-serif;
 }
 
 @mixin eyebrow {
-	font-size: 24px;
-	line-height: 1.1666666667;
-	font-weight: 600;
-	letter-spacing: .009em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.1666666667;
+    font-weight: 600;
+    letter-spacing: 0.009em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 @mixin label {
-	font-size: 24px;
-	line-height: 1.1666666667;
-	font-weight: 600;
-	letter-spacing: .009em;
-	font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.1666666667;
+    font-weight: 600;
+    letter-spacing: 0.009em;
+    font-family: 'SF Pro Display', SF Pro Icons, Helvetica Neue, Helvetica,
+        Arial, sans-serif;
 }
 
 p {
-  @include super-keyfeatures-shared;
+    @include super-keyfeatures-shared;
 }

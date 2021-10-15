@@ -1,95 +1,102 @@
 button {
-  // Size
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 1.17648;
-  letter-spacing: -.022em;
-
-  min-width: 28px;
-  border-radius: 18px;
-  padding: 8px 16px;
-  // Type
-  color: #fff;
-  background: #0071E3;
-
-  border: unset;
-  border-radius: 12px;
-  cursor: pointer;
-
-  // Types
-  &.secondary {
-    color: #000;
-    background: #e8e8ed;
-  }
-  &.neutral {
-    color: #fff;
-    background: #1d1d1f;
-  }
-
-  // Sizes
-  &.compact {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.33337;
-    letter-spacing: -.01em;
-
-    min-width: 23px;
-    border-radius: 12px;
-    padding: 4px 11px;
-  }
-  &.elevated {
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 1.17648;
-    letter-spacing: -.022em;
-
-    min-width: 26px;
-    border-radius: 22px;
-    padding: 12px 22px;
-  }
-  &.super {
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 1.17648;
-    letter-spacing: -.022em;
-
     min-width: 28px;
-    border-radius: 28px;
-    padding: 18px 31px;
-  }
+    padding: 8px 16px;
+    // Type
+    color: #fff;
+    font-weight: 400;
+    // Size
+    font-size: 17px;
+    font-family: 'SF Pro Text';
+    line-height: 1.17648;
+    letter-spacing: -0.022em;
+    background: #0071e3;
+    border: unset;
+    border-radius: 18px;
+    border-radius: 12px;
+    cursor: pointer;
 
-  // States
-  &:hover {
-    background: #0077ED;
+    // Types
     &.secondary {
-      background: #EBEBF0;
+        color: #000;
+        background: #e8e8ed;
     }
-    &.neutral {
-      background: #272729;
-    }
-  }
-  &:active {
-    background: #006EDB;
-    &.secondary {
-      background: #E6E6EB;
-    }
-    &.neutral {
-      background: #18181A;
-    }
-  }
-  &:disabled {
-    opacity: .32;
-    cursor: default;
-    &.secondary {
-      opacity: .56;
-    }
-    &.neutral {
-      opacity: .32;
-    }
-  }
 
-  // Pill
-  &.pill {
-    border-radius: 1em;
-  }
+    &.neutral {
+        color: #fff;
+        background: #1d1d1f;
+    }
+
+    // Sizes
+    &.compact {
+        min-width: 23px;
+        padding: 4px 11px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.33337;
+        letter-spacing: -0.01em;
+        border-radius: 12px;
+    }
+
+    &.elevated {
+        min-width: 26px;
+        padding: 12px 22px;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 1.17648;
+        letter-spacing: -0.022em;
+        border-radius: 22px;
+    }
+
+    &.super {
+        min-width: 28px;
+        padding: 18px 31px;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 1.17648;
+        letter-spacing: -0.022em;
+        border-radius: 28px;
+    }
+
+    // States
+    &:hover {
+        background: #0077ed;
+
+        &.secondary {
+            background: #ebebf0;
+        }
+
+        &.neutral {
+            background: #272729;
+        }
+    }
+
+    &:active {
+        background: #006edb;
+
+        &.secondary {
+            background: #e6e6eb;
+        }
+
+        &.neutral {
+            background: #18181a;
+        }
+    }
+
+    &:disabled {
+        cursor: default;
+        opacity: 0.32;
+
+        &.secondary {
+            opacity: 0.56;
+        }
+
+        &.neutral {
+            opacity: 0.32;
+        }
+    }
+
+    // Pill
+    &.pill {
+        border-radius: 1em;
+    }
 }

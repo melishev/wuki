@@ -1,15 +1,65 @@
 @import 'mixins.scss';
 
 // SF Pro Display
-@include font('SF Pro Display', normal, 300, '~/assets/fonts/SF Pro Display/SF-Pro-Display-Light.woff2');
-@include font('SF Pro Display', normal, 400, '~/assets/fonts/SF Pro Display/SF-Pro-Display-Regular.woff2');
-@include font('SF Pro Display', normal, 500, '~/assets/fonts/SF Pro Display/SF-Pro-Display-Medium.woff2');
-@include font('SF Pro Display', normal, 600, '~/assets/fonts/SF Pro Display/SF-Pro-Display-SemiBold.woff2');
-@include font('SF Pro Display', normal, 700, '~/assets/fonts/SF Pro Display/SF-Pro-Display-Bold.woff2');
+@include font(
+    'SF Pro Display',
+    normal,
+    300,
+    '~/assets/fonts/SF Pro Display/SF-Pro-Display-Light.woff2'
+);
+@include font(
+    'SF Pro Display',
+    normal,
+    400,
+    '~/assets/fonts/SF Pro Display/SF-Pro-Display-Regular.woff2'
+);
+@include font(
+    'SF Pro Display',
+    normal,
+    500,
+    '~/assets/fonts/SF Pro Display/SF-Pro-Display-Medium.woff2'
+);
+@include font(
+    'SF Pro Display',
+    normal,
+    600,
+    '~/assets/fonts/SF Pro Display/SF-Pro-Display-SemiBold.woff2'
+);
+@include font(
+    'SF Pro Display',
+    normal,
+    700,
+    '~/assets/fonts/SF Pro Display/SF-Pro-Display-Bold.woff2'
+);
 
 // SF Pro Text
-@include font('SF Pro Text', normal, 300, '~/assets/fonts/SF Pro Text/SF-Pro-Text-Light.woff2');
-@include font('SF Pro Text', normal, 400, '~/assets/fonts/SF Pro Text/SF-Pro-Text-Regular.woff2');
-@include font('SF Pro Text', normal, 500, '~/assets/fonts/SF Pro Text/SF-Pro-Text-Medium.woff2');
-@include font('SF Pro Text', normal, 600, '~/assets/fonts/SF Pro Text/SF-Pro-Text-SemiBold.woff2');
-@include font('SF Pro Text', normal, 700, '~/assets/fonts/SF Pro Text/SF-Pro-Text-Bold.woff2');
+@include font(
+    'SF Pro Text',
+    normal,
+    300,
+    '~/assets/fonts/SF Pro Text/SF-Pro-Text-Light.woff2'
+);
+@include font(
+    'SF Pro Text',
+    normal,
+    400,
+    '~/assets/fonts/SF Pro Text/SF-Pro-Text-Regular.woff2'
+);
+@include font(
+    'SF Pro Text',
+    normal,
+    500,
+    '~/assets/fonts/SF Pro Text/SF-Pro-Text-Medium.woff2'
+);
+@include font(
+    'SF Pro Text',
+    normal,
+    600,
+    '~/assets/fonts/SF Pro Text/SF-Pro-Text-SemiBold.woff2'
+);
+@include font(
+    'SF Pro Text',
+    normal,
+    700,
+    '~/assets/fonts/SF Pro Text/SF-Pro-Text-Bold.woff2'
+);

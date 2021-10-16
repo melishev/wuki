@@ -11,7 +11,7 @@ const WookieUI = () => {
   return (
     <div className="container">
       {allColumn.map((item) => (
-        <div>{item}</div>
+        <div>{`${item}col`}</div>
       ))}
     </div>
   );

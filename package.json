@@ -4,6 +4,9 @@
   "main": "dist/index.js",
   "description": "🧸 Wookie UI is a UI Kit developed for React.js based on 🍏 Apple.com UI. Wookie is a home project.",
   "homepage": "https://github.com/melishev/wookie-ui#readme",
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "dev": "start-storybook -p 6006",
     "build": "rollup -c",

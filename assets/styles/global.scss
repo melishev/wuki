@@ -3,3 +3,8 @@
 body {
     font-family: 'SF Pro Text', sans-serif;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+}

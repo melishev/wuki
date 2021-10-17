@@ -1,24 +1,14 @@
-import React from 'react';
-import './index.scss';
+/* eslint-disable arrow-body-style */
+
+// NOT FOR PRODUCTION BUILD, ONLY FOR DEMO
 // import propTypes from 'prop-types';
 
-const WookieUI = () => {
-  const allColumn = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-    22, 23, 24,
-  ];
+import Row from './row';
+import Col from './col';
 
-  return (
-    <div className="container">
-      {allColumn.map((item) => (
-        <div>{`${item}col`}</div>
-      ))}
-    </div>
-  );
+const Grid = {
+  Row,
+  Col,
 };
 
-// WookieUI.propTypes = {
-//   children: propTypes.node.isRequired,
-// };
-
-export default WookieUI;
+export default Grid;

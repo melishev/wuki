@@ -1,9 +1,9 @@
 /* eslint-disable object-shorthand */
 import React from 'react';
-import './index.scss';
+import styles from './index.module.scss';
 // import propTypes from 'prop-types';
 
-const Typography = () => <p>SF Pro Text</p>;
+const Typography = () => <p className={styles.test}>SF Pro Text</p>;
 
 // Typography.propTypes = {
 

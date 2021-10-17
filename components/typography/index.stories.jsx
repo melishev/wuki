@@ -4,7 +4,7 @@ import React from 'react';
 import TypographyC from './index';
 
 export default {
-  title: 'Typography',
+  title: 'General/Typography',
   component: TypographyC,
 };
 

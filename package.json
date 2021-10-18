@@ -1,6 +1,6 @@
 {
   "name": "wookie-ui",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "dist/index.js",
   "description": "🧸 Wookie UI is a UI Kit developed for React.js based on 🍏 Apple.com UI. Wookie is a home project.",
   "homepage": "https://github.com/melishev/wookie-ui#readme",

@@ -1,5 +1,7 @@
 // https://www.apple.com/v/iphone-13-pro/b/built/styles/main.built.css
 
+@import '../../assets/styles/global';
+
 @mixin ribbon {
     font-weight: 400;
     font-size: 14px;

@@ -1,3 +1,5 @@
+import '../assets/styles/global.scss';
+
 export { default as Grid } from './grid';
 
 export { default as Button } from './button';

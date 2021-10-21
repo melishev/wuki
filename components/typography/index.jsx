@@ -1,16 +1,7 @@
 /* eslint-disable object-shorthand */
 import React from 'react';
-import styles from './index.module.scss';
-// import propTypes from 'prop-types';
+import './index.scss';
 
-const Typography = () => <p className={styles.test}>Woo Text</p>;
-
-// Typography.propTypes = {
-
-// };
-
-// Typography.defaultProps = {
-
-// };
+const Typography = () => <p>Woo Text</p>;
 
 export default Typography;

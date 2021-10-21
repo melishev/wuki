@@ -1,6 +1,3 @@
-// import fs from 'fs-extra';
-// import path from 'path';
-
 import copy from 'rollup-plugin-copy';
 import autoprefixer from 'autoprefixer';
 import babel from 'rollup-plugin-babel';
@@ -17,10 +14,7 @@ const extensions = ['.js', '.jsx'];
 
 const plugins = [
   copy({
-    targets: [
-      { src: 'components/index.js', dest: 'dist' },
-      { src: 'assets/fonts/**/*.woff2', dest: 'dist/assets/fonts' },
-    ],
+    targets: [{ src: 'components/index.js', dest: 'dist' }],
     verbose: true,
     copyOnce: true,
   }),
@@ -30,15 +24,11 @@ const plugins = [
     presets: ['@babel/preset-env', '@babel/preset-react'],
   }),
   cleaner({
-    targets: [
-      './dist/',
-    ],
+    targets: ['./dist/'],
   }),
   postcss({
     minimize: true,
-    plugins: [
-      autoprefixer,
-    ],
+    plugins: [autoprefixer],
   }),
   commonjs(),
   nodeResolve({
@@ -50,64 +40,16 @@ const plugins = [
   }),
 ];
 
-export default {
-  input: ['components/**/index.jsx'],
-  output: [
-    {
-      format: 'cjs',
-      exports: 'named',
-      dir: 'dist',
-    },
-    // {
-    //   format: 'esm',
-    //   dir: 'dist/esm',
-    // },
-  ],
-  plugins: [
-    ...plugins,
-    multiInput({ relative: 'components/' }),
-  ],
-};
-
-// export default (async () => {
-//   const componentsPath = path.join(__dirname, 'components');
-
-//   await fs.remove(path.join(__dirname, 'dist'));
-//   const files = await fs.readdir(componentsPath);
-
-//   const components = await Promise.all(
-//     files.map(async (name) => {
-//       const comPath = path.join(componentsPath, name);
-//       const pathJSX = path.join(comPath, 'index.jsx');
-
-//       const stat = await fs.stat(comPath);
-//       if (!stat.isDirectory()) return null;
-
-//       const hasFile = await fs.pathExists(pathJSX);
-//       if (!hasFile) return null;
-
-//       return { name, jsx: pathJSX };
-//     }),
-//   );
-
-//   return [
-//     ...components
-//       .filter((r) => r)
-//       .map(({ name, jsx }) => ({
-//         input: { [name]: jsx },
-//         output: [
-//           {
-//             format: 'cjs',
-//             exports: 'named',
-//             entryFileNames: '[name]/index.js',
-//             assetFileNames: '[name]',
-//             dir: 'dist',
-//             sourcemap: true,
-//           },
-//         ],
-//         plugins: [
-//           ...plugins,
-//         ],
-//       })),
-//   ];
-// });
+export default [
+  {
+    input: ['components/**/index.jsx'],
+    output: [
+      {
+        format: 'cjs',
+        exports: 'named',
+        dir: 'dist',
+      },
+    ],
+    plugins: [...plugins, multiInput({ relative: 'components/' })],
+  },
+];

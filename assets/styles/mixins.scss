@@ -13,9 +13,17 @@
 @mixin col-generate {
     @for $i from 1 through $colCount {
         .col-#{$i} {
-            flex: 0 0 calc(($i / $colCount) * 100%);
-            max-width: calc(($i / $colCount) * 100%);
-            padding-left: $colGap;
+            grid-column: auto/span $i;
+            // place-self: center; // <align-self> / <justify-self> // ДОЛЖНО БЫТЬ НАСТРАИВАЕМЫМ
+        }
+    }
+}
+
+// Создает offset cтили, в зависимости от кол-ва колонок
+@mixin coll-offset {
+    @for $i from 1 through ($colCount - 1) {
+        .offset-#{$i} {
+            grid-column-start: $i;
         }
     }
 }

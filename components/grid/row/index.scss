@@ -1,0 +1,8 @@
+@import '../../../assets/styles/vars';
+
+.row {
+    display: grid;
+    grid-template-columns: repeat($colCount, 1fr);
+    gap: $colGap;
+    padding: 0 $rowGap;
+}

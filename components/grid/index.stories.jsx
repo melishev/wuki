@@ -2,7 +2,6 @@
 import React from 'react';
 
 import Grids from './index';
-import Button from '../button';
 
 export default {
   title: 'Layout/Grid',
@@ -12,13 +11,13 @@ export default {
 export const Grid = () => (
   <Grids.Row>
     <Grids.Col col={2}>
-      <Button />
+      <p>Col 2</p>
     </Grids.Col>
-    <Grids.Col col={3}>
-      <Button />
+    <Grids.Col col={3} offset={10}>
+      <p>Col 3, Offset 10</p>
     </Grids.Col>
-    <Grids.Col>
-      <Button />
+    <Grids.Col col={2}>
+      <p>Col 2</p>
     </Grids.Col>
   </Grids.Row>
 );

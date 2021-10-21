@@ -1,14 +1,3 @@
-// Font auto-generator
-@mixin font($fname, $fstyle, $fweight, $furl) {
-    @font-face {
-        font-weight: $fweight;
-        font-family: $fname;
-        font-style: $fstyle;
-        src: local($fname), url($furl) format('woff2');
-        // font-display: swap // Uncomment to initially display system fonts
-    }
-}
-
 // Создает стандартную колоночную систему
 @mixin col-generate {
     @for $i from 1 through $colCount {

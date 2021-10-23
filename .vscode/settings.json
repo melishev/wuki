@@ -17,7 +17,7 @@
   "GitCommitPlugin.Templates": [
     {
       "templateName": "Angular",
-      "templateContent": "<icon><type>(<scope>):<space><subject><enter><body><enter><footer>",
+      "templateContent": "<type>:<space><icon><space><subject><enter><body><enter><footer>",
       "default": true
     },
   ],

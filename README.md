@@ -1,4 +1,4 @@
-# Wookie UI Kit 🍏🧸
+# Wuki UI Kit 🍏🧸
 
 ### 🧸 Wookie UI is a UI Kit developed for React.js based on Ant UI 🐜. Wookie is a home project made for your own projects, so be careful when using it.
 

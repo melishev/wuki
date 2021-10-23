@@ -14,7 +14,7 @@ jobs:
       - uses: amannn/action-semantic-pull-request@v3.4.2
         with:
           types: |
-            '🐛 fix'
+            "🐛 fix"
             '📦 feat'
           validateSingleCommit: true
         env:

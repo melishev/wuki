@@ -1,15 +1,30 @@
-# Wookie UI Kit 🍏🧸
+<h1>🧸 Wuki UI Kit</h1>
 
-### 🧸 Wookie UI is a UI Kit developed for React.js based on Ant UI 🐜. Wookie is a home project made for your own projects, so be careful when using it.
+[<img src="https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg">](https://wookie-ui.vercel.app)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![Made With Love](https://img.shields.io/badge/Made%20With-Love-orange.svg)](https://github.com/chetanraj/awesome-github-badges)
 
-#
+[🇷🇺 Русский](https://github.com/melishev/wookie-ui/tree/master/readme/ru.md) | [🇬🇧 English](https://github.com/melishev/wuki)
 
-#### This project is based on the amalgamation of the elaborate [🐜 Ant UI](https://ant.design) functionality, the [🍏 Apple Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/) visual cue, and a pinch of my adorable 'Wookie' puppy 🐶.
+#### 🧸 Wuki is a UI Kit developed for React.js that brings together the best practices of the most popular UI libraries such as Ant Design, Bootstrap, Element and many others.
 
-<b>Current status:</b> 👨🏻‍💻 Under development
+### 🚀 Installation
+```bash
+yarn add wuki
+# or
+npm install wuki
+```
+### 👋🏼 Basic principles
+- Intuitive use, borrowed from already proven libraries and proven in practical use
+- Flexible configuration of source data, for maximum adaptability for various projects
+- Easy to develop and maintain. Automation of checks, tests, and other crap that can only be automated
+- A modern approach to development at every stage. No old shit needed for browsers like IE.
 
- Thank you all in advance for your help and PR.
 
-#### [📕 Storybook Preview ](https://wookie-ui.vercel.app)
+### 🎯 Target
+Create a UI system for comfortable use in modern projects that does not store old and useless code inside itself, using modern css properties.
 
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+> Important: Browsers like IE are likely to have poor support, but don't care.
+
+**Status:** In developing 👨🏻‍💻
+
+🙏🏼 **Thanks in advance to everyone who contributed**

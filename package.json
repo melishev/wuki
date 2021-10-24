@@ -2,7 +2,7 @@
   "name": "wuki",
   "version": "1.4.0",
   "main": "dist/index.js",
-  "description": "🧸 Wookie UI is a UI Kit developed for React.js based on 🍏 Apple.com UI. Wookie is a home project.",
+  "description": "🧸 Wuki is a UI Kit developed for React.js that brings together the best practices of the most popular UI libraries such as Ant Design, Bootstrap, Element and many others.",
   "homepage": "https://wuki.vercel.app",
   "files": [
     "/dist"

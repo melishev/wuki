@@ -4,7 +4,7 @@ import React from 'react';
 import Buttons from './index';
 
 export default {
-  title: 'Button',
+  title: 'General/Button',
   component: Buttons,
   argTypes: {
     label: {

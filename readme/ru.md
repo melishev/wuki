@@ -1,7 +1,7 @@
 <h1>🧸 Wuki UI Kit</h1>
 
-[<img src="https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg">](https://wookie-ui.vercel.app)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![Made With Love](https://img.shields.io/badge/Made%20With-Love-orange.svg)](https://github.com/chetanraj/awesome-github-badges)
+[<img src="https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg">](https://wuki.vercel.app)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![Made With Love](https://img.shields.io/badge/Made%20With-Love-orange.svg)](https://github.com/melishev/wuki)
 
 [🇷🇺 Русский](https://github.com/melishev/wookie-ui/tree/master/readme/ru.md) | [🇬🇧 English](https://github.com/melishev/wuki)
 

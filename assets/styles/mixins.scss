@@ -1,6 +1,6 @@
 // Создает стандартную колоночную систему
 @mixin col-generate {
-    @for $i from 1 through $colCount {
+    @for $i from 1 through map-get($grid, col) {
         .col-#{$i} {
             grid-column: auto/span $i;
             // place-self: center; // <align-self> / <justify-self> // ДОЛЖНО БЫТЬ НАСТРАИВАЕМЫМ
@@ -9,10 +9,21 @@
 }
 
 // Создает offset cтили, в зависимости от кол-ва колонок
-@mixin coll-offset {
-    @for $i from 1 through ($colCount - 1) {
+@mixin col-offset {
+    @for $i from 1 through (map-get($grid, col) - 1) {
         .offset-#{$i} {
             grid-column-start: $i;
         }
     }
 }
+
+// @mixin breakPoints($breakpoint) {
+//     @if map-has-key($breakpoints, $breakpoint) {
+//         @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+//             @content;
+//         }
+//     } @else {
+//         @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+//           + "Please make sure it is defined in `$breakpoints` map.";
+//     }
+// }

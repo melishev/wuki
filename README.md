@@ -3,7 +3,7 @@
 [<img src="https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg">](https://wuki.vercel.app)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![Made With Love](https://img.shields.io/badge/Made%20With-Love-orange.svg)](https://github.com/melishev/wuki)
 
-[🇷🇺 Русский](https://github.com/melishev/wookie-ui/tree/master/readme/ru.md) | [🇬🇧 English](https://github.com/melishev/wuki)
+[🇷🇺 Русский](https://github.com/melishev/wuki/tree/master/.github/readme/ru.md) | [🇬🇧 English](https://github.com/melishev/wuki)
 
 #### 🧸 Wuki is a UI Kit developed for React.js that brings together the best practices of the most popular UI libraries such as Ant Design, Bootstrap, Element and many others.
 
@@ -16,8 +16,9 @@ npm install wuki
 ### 👋🏼 Basic principles
 - Intuitive use, borrowed from already proven libraries and proven in practical use
 - Flexible configuration of source data, for maximum adaptability for various projects
+- No clutter in styles and transmitted data, both during development and in the assembled application
 - Easy to develop and maintain. Automation of checks, tests, and other crap that can only be automated
-- A modern approach to development at every stage. No old shit needed for browsers like IE.
+- A modern approach to development at every stage. No old shit needed for browsers like IE
 
 
 ### 🎯 Target

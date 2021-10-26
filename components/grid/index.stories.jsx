@@ -28,7 +28,7 @@ export const Default = () => (
   <>
     <Information
       title="Default Grid"
-      description="В стандартной конфигурации grid имеет следующие настройки: colCount: 24, gapSize: 21, rowGap: 42"
+      description="In standard configuration, grid has the following settings: colCount: 24, gapSize: 21, rowGap: 42"
     />
     <Row>
       {[...Array(24)].map((item, index) => (
@@ -42,7 +42,7 @@ export const Default = () => (
 
 export const Offset = () => (
   <>
-    <Information title="Сетка с использованием offset" />
+    <Information title="Grid using offset" />
     <Row>
       <Col col={4}>
         <p style={{ textAlign: 'center' }}>col: 4</p>
@@ -60,25 +60,25 @@ export const Offset = () => (
 export const Tag = () => (
   <>
     <Information
-      title="Сетка с использованием Tag"
-      description="Порой, для лучших показателей необходимо использовать семантические HTML тэги. Специально для этого был добавлен props - tag. Он позволяет разработчику переопределить тэг по дефолту - div, на тот который будет подходить лучше. Props Tag доступен для Row и Col."
+      title="Grid using Tag"
+      description="Sometimes, for better performance, you need to use semantic HTML tags. A props - tag has been added specifically for this. It allows the developer to override the default tag - div, which would be better suited. Props Tag is available for Row and Col."
     />
     <Row>
       <Col col={6} tag="aside">
         <p style={{ textAlign: 'center' }}>col: 4, tag: aside</p>
       </Col>
       <Col col={18} tag="main">
-        <p style={{ textAlign: 'center' }}>Col 20, tag: main</p>
+        <p style={{ textAlign: 'center' }}>col 20, tag: main</p>
       </Col>
     </Row>
   </>
 );
 
-export const Play = () => (
+export const Sandbox = () => (
   <>
     <Information
-      title="Play"
-      description="Здесь вы можете настроить Grid сетку и ее содержимое как угодно, что бы лучше понять как на самом деле она работает."
+      title="Sandbox"
+      description="Here you can customize the Grid and its contents however you like to get a better understanding of how it actually works."
     />
   </>
 );

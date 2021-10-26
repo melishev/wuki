@@ -17,13 +17,9 @@
     }
 }
 
-// @mixin breakPoints($breakpoint) {
-//     @if map-has-key($breakpoints, $breakpoint) {
-//         @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
-//             @content;
-//         }
-//     } @else {
-//         @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-//           + "Please make sure it is defined in `$breakpoints` map.";
-//     }
-// }
+// Переработать этот миксин под получение входящих данных, и на их основе строить медиа запрос под один экран, но с передаваемыми внутрь данными
+@mixin col-break-points() {
+    @media (min-width: map-get($grid, breakPoints, xs)) {
+        border: 1px solid red; // TEST
+    }
+}

@@ -57,6 +57,28 @@ export const Offset = () => (
   </>
 );
 
+export const Responsive = () => (
+  <>
+    <Information title="Grid using responsive" />
+    <Row>
+      <Col col={{ xs: 8, xl: 12 }}>
+        <p style={{ textAlign: 'center' }}>col: 8</p>
+      </Col>
+      <Col col={{ xs: 8, xl: 12 }}>
+        <p style={{ textAlign: 'center' }}>col: 8</p>
+      </Col>
+      <Col col={{ xs: 8, xl: 12 }}>
+        <p style={{ textAlign: 'center' }}>col: 8</p>
+      </Col>
+    </Row>
+    <p>
+      Тут должен будет располагаться пример кода, благодаря которому был
+      реализован данный пример, а лучше использовать встроенные функции
+      StoryBook.
+    </p>
+  </>
+);
+
 export const Tag = () => (
   <>
     <Information

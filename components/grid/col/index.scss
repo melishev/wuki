@@ -5,3 +5,5 @@
 @include col-generate();
 // Инициализируем колоночную систему отступов
 @include col-offset();
+
+@include col-break-points();

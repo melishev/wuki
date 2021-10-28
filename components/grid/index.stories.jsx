@@ -33,7 +33,7 @@ export const Default = () => (
     <Row>
       {[...Array(24)].map((item, index) => (
         <Col col={item} key={index}>
-          <p style={{ textAlign: 'center' }}>{index + 1}</p>
+          <p>{index + 1}</p>
         </Col>
       ))}
     </Row>
@@ -45,13 +45,13 @@ export const Offset = () => (
     <Information title="Grid using offset" />
     <Row>
       <Col col={4}>
-        <p style={{ textAlign: 'center' }}>col: 4</p>
+        <p>col: 4</p>
       </Col>
       <Col col={4} offset={11}>
-        <p style={{ textAlign: 'center' }}>col: 4, offset: 10</p>
+        <p>col: 4, offset: 10</p>
       </Col>
       <Col col={4} offset={21}>
-        <p style={{ textAlign: 'center' }}>col: 4, offset: 21</p>
+        <p>col: 4, offset: 21</p>
       </Col>
     </Row>
   </>
@@ -59,23 +59,24 @@ export const Offset = () => (
 
 export const Responsive = () => (
   <>
-    <Information title="Grid using responsive" />
+    <Information
+      title="Grid using responsive"
+      description="Use responsive classes to adjust your layout across viewports."
+    />
     <Row>
-      <Col col={{ xs: 8, xl: 12 }}>
-        <p style={{ textAlign: 'center' }}>col: 8</p>
+      <Col col={{ xs: 12, xl: 8 }}>
+        <p>col: 12, col-xl: 8</p>
       </Col>
-      <Col col={{ xs: 8, xl: 12 }}>
-        <p style={{ textAlign: 'center' }}>col: 8</p>
+      <Col col={{ xs: 12, xl: 8 }}>
+        <p>col: 12, col-xl: 8</p>
       </Col>
-      <Col col={{ xs: 8, xl: 12 }}>
-        <p style={{ textAlign: 'center' }}>col: 8</p>
+      <Col col={{ xs: 12, xl: 8 }}>
+        <p>col: 12, col-xl: 8</p>
       </Col>
     </Row>
-    <p>
-      Тут должен будет располагаться пример кода, благодаря которому был
-      реализован данный пример, а лучше использовать встроенные функции
-      StoryBook.
-    </p>
+    {/* Тут должен будет располагаться пример кода, благодаря которому был
+    реализован данный пример, а лучше использовать встроенные функции
+    StoryBook. */}
   </>
 );
 
@@ -87,10 +88,10 @@ export const Tag = () => (
     />
     <Row>
       <Col col={6} tag="aside">
-        <p style={{ textAlign: 'center' }}>col: 4, tag: aside</p>
+        <p>col: 4, tag: aside</p>
       </Col>
       <Col col={18} tag="main">
-        <p style={{ textAlign: 'center' }}>col 20, tag: main</p>
+        <p>col 20, tag: main</p>
       </Col>
     </Row>
   </>

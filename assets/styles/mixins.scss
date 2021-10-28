@@ -1,9 +1,16 @@
 // Создает стандартную колоночную систему
-@mixin col-generate {
-    @for $i from 1 through map-get($grid, col) {
-        .col-#{$i} {
-            grid-column: auto/span $i;
-            // place-self: center; // <align-self> / <justify-self> // ДОЛЖНО БЫТЬ НАСТРАИВАЕМЫМ
+@mixin col-generate($breakPoint: '') {
+    @if $breakPoint == ''{
+        @for $i from 1 through map-get($grid, col) {
+            .col-#{$i} {
+                grid-column: auto/span $i;
+            }
+        }
+    } @else {
+        @for $i from 1 through map-get($grid, col) {
+            .col-#{$breakPoint}-#{$i} {
+                grid-column: auto/span $i;
+            }
         }
     }
 }
@@ -17,9 +24,9 @@
     }
 }
 
-// Переработать этот миксин под получение входящих данных, и на их основе строить медиа запрос под один экран, но с передаваемыми внутрь данными
-@mixin col-break-points() {
-    @media (min-width: map-get($grid, breakPoints, xs)) {
-        border: 1px solid red; // TEST
+// Создает медиа запрос, для передаваемого экрана и выше
+@mixin col-break-points($breakPoint) {
+    @media (min-width: $breakPoint + px) {
+        @content;
     }
 }

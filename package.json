@@ -85,10 +85,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/melishev/wookie-ui.git"
+    "url": "https://github.com/melishev/wuki.git"
   },
   "bugs": {
-    "url": "https://github.com/melishev/wookie-ui/issues"
+    "url": "https://github.com/melishev/wuki/issues"
   },
   "keywords": [
     "react",

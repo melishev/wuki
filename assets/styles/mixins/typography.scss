@@ -1,0 +1,8 @@
+// Создаем начертание шрифта
+@mixin type-generate($size, $weight, $height: unset) {
+    font-family: map-get($type, fontFamily);
+    font-size: calc($size / map-get($type, base)) + rem;
+    font-weight: $weight;
+    line-height: $height;
+//     letter-spacing: 0.009em;
+}

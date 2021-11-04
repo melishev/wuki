@@ -1,7 +1,18 @@
 /* eslint-disable object-shorthand */
 import React from 'react';
+import propTypes from 'prop-types';
 import './index.scss';
 
-const Typography = () => <p>Woo Text</p>;
+const Text = ({ children, tag: Tag }) => <Tag>{children}</Tag>;
 
-export default Typography;
+Text.propTypes = {
+  children: propTypes.node,
+  tag: propTypes.string,
+};
+
+Text.defaultProps = {
+  children: '',
+  tag: 'p',
+};
+
+export default Text;

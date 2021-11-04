@@ -48,7 +48,7 @@ export const Offset = () => (
         <p>col: 4</p>
       </Col>
       <Col col={4} offset={11}>
-        <p>col: 4, offset: 10</p>
+        <p>col: 4, offset: 11</p>
       </Col>
       <Col col={4} offset={21}>
         <p>col: 4, offset: 21</p>

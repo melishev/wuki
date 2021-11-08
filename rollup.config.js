@@ -1,6 +1,6 @@
 import copy from 'rollup-plugin-copy';
 import autoprefixer from 'autoprefixer';
-import babel from 'rollup-plugin-babel';
+import { babel } from '@rollup/plugin-babel';
 import cleaner from 'rollup-plugin-cleaner';
 import postcss from 'rollup-plugin-postcss';
 import analyze from 'rollup-plugin-analyzer';
@@ -18,6 +18,7 @@ const plugins = [
     verbose: true,
     copyOnce: true,
   }),
+  commonjs(),
   babel({
     exclude: 'node_modules/**',
     extensions,
@@ -30,7 +31,6 @@ const plugins = [
     minimize: true,
     plugins: [autoprefixer],
   }),
-  commonjs(),
   nodeResolve({
     extensions,
   }),

@@ -7,8 +7,8 @@
 import React from 'react';
 import './stories.scss';
 
-import Row from './row';
-import Col from './col';
+import Row from '../row';
+import Col from '../col';
 
 export default {
   title: 'Layout/Grid',

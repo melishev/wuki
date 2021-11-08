@@ -68,7 +68,8 @@
     "stylelint-prettier": "^1.2.0",
     "stylelint-scss": "^3.21.0"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+  },
   "author": {
     "name": "Matvey Melishev",
     "email": "matvey@melishev.ru",

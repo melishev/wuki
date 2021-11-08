@@ -69,9 +69,6 @@
     "stylelint-scss": "^3.21.0"
   },
   "peerDependencies": {
-    "react": ">=16.9.0",
-    "react-dom": ">=16.9.0",
-    "prop-types": "15.7.2"
   },
   "author": {
     "name": "Matvey Melishev",
@@ -98,5 +95,5 @@
     "ui",
     "antd"
   ],
-  "license": "ISC"
+  "license": "MIT"
 }

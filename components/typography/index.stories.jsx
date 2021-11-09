@@ -25,22 +25,22 @@ export const Typography = () => (
     <Information title="Title" description="Description" />
     <Row>
       <Col col={24}>
-        <Text tag="H1">The quick brown fox jumps over the lazy dog</Text>
+        <Text tag="h1">The quick brown fox jumps over the lazy dog</Text>
       </Col>
       <Col col={24}>
-        <Text tag="H2">The quick brown fox jumps over the lazy dog</Text>
+        <Text tag="h2">The quick brown fox jumps over the lazy dog</Text>
       </Col>
       <Col col={24}>
-        <Text tag="H3">The quick brown fox jumps over the lazy dog</Text>
+        <Text tag="h3">The quick brown fox jumps over the lazy dog</Text>
       </Col>
       <Col col={24}>
-        <Text tag="H4">The quick brown fox jumps over the lazy dog</Text>
+        <Text tag="h4">The quick brown fox jumps over the lazy dog</Text>
       </Col>
       <Col col={24}>
-        <Text tag="H5">The quick brown fox jumps over the lazy dog</Text>
+        <Text tag="h5">The quick brown fox jumps over the lazy dog</Text>
       </Col>
       <Col col={24}>
-        <Text tag="H6">The quick brown fox jumps over the lazy dog</Text>
+        <Text tag="h6">The quick brown fox jumps over the lazy dog</Text>
       </Col>
     </Row>
   </>

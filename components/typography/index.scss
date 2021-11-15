@@ -1,16 +1,16 @@
-@import '../../assets/styles/vars';
-@import '../../assets/styles/mixins';
+// @import '../../assets/styles/vars';
+// @import '../../assets/styles/mixins';
 
-// Автоматическая генерация стилей для заголовков
-@each $level, $value in map-get($type, titles) {
-    h#{$level}, .h#{$level} {
-        @include type-generate(map-get($value, size), map-get($value, weight), map-get($value, height));
-    }
-};
+// // Автоматическая генерация стилей для заголовков
+// @each $level, $value in map-get($type, titles) {
+//     h#{$level}, .h#{$level} {
+//         @include type-generate(map-get($value, size), map-get($value, weight), map-get($value, height));
+//     }
+// };
 
-// Автоматическая генерация кастомных стилей
-@each $name, $value in map-get($type, variants) {
-    .#{$name} {
-        @include type-generate(map-get($value, size), map-get($value, weight), map-get($value, height));
-    }
-};
+// // Автоматическая генерация кастомных стилей
+// @each $name, $value in map-get($type, variants) {
+//     .#{$name} {
+//         @include type-generate(map-get($value, size), map-get($value, weight), map-get($value, height));
+//     }
+// };

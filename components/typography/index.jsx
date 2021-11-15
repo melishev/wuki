@@ -1,4 +1,3 @@
-/* eslint-disable object-shorthand */
 import React from 'react';
 import propTypes from 'prop-types';
 import './index.scss';

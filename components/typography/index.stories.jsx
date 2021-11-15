@@ -3,8 +3,8 @@ import React from 'react';
 
 import Text from './index';
 
-import Row from '../grid/row';
-import Col from '../grid/col';
+import Row from '../row';
+import Col from '../col';
 
 export default {
   title: 'General/Typography',

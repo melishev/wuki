@@ -1,12 +1,9 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import { useTheme } from 'react-jss';
 import jss from './styles';
 
 const Text = ({ children, tag: Tag, var: Var }) => {
-  const theme = useTheme();
-  const styles = jss({ theme });
-
+  const styles = jss();
   return <Tag className={styles[Var]}>{children}</Tag>;
 };
 

@@ -25,18 +25,12 @@ const plugins = [
     extensions,
     presets: ['@babel/preset-env', '@babel/preset-react'],
   }),
-  cleaner({
-    targets: ['./dist/'],
-  }),
   postcss({
     minimize: true,
     plugins: [autoprefixer],
   }),
   nodeResolve({
     extensions,
-  }),
-  multiInput({
-    relative: 'components/',
   }),
   peerDepsExternal(),
   terser(),
@@ -52,7 +46,22 @@ export default [
       {
         format: 'cjs',
         exports: 'named',
-        dir: 'dist',
+        dir: 'dist/cjs',
+      },
+    ],
+    plugins: [
+      ...plugins,
+      multiInput({ relative: 'components/' }),
+      cleaner({ targets: ['./dist/'] }),
+    ],
+  },
+  {
+    input: ['components/index.js'],
+    output: [
+      {
+        format: 'esm',
+        exports: 'named',
+        dir: 'dist/es',
       },
     ],
     plugins,

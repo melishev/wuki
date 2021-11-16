@@ -45,6 +45,20 @@ export const Typography = () => (
         <Col col={24}>
           <Text tag="h6">The quick brown fox jumps over the lazy dog</Text>
         </Col>
+        <Col col={24}>
+          <Text tag="p">The quick brown fox jumps over the lazy dog</Text>
+        </Col>
+        <Col col={24}>
+          <Text tag="p" var="body1">
+            The quick brown fox jumps over the lazy dog
+          </Text>
+        </Col>
+        <Col col={24}>
+          <Text tag="p">The quick brown fox jumps over the lazy dog</Text>
+        </Col>
+        <Col col={24}>
+          <Text tag="small">The quick brown fox jumps over the lazy dog</Text>
+        </Col>
       </Row>
     </ThemeProvider>
   </>

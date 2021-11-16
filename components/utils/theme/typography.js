@@ -1,8 +1,8 @@
 export default {
   type: {
     base: 16,
-    fontFamily:
-      'Urbanist, "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif',
+    family:
+      'Manrope, "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif',
     variants: {
       h1: {
         size: 41.05,
@@ -41,17 +41,17 @@ export default {
       },
       body1: {
         size: 18,
-        weight: 600,
+        weight: 500,
         height: 1.54,
       },
       body2: {
         size: 16,
-        weight: 600,
+        weight: 400,
         height: 1.48,
       },
       small: {
         size: 12.64,
-        weight: 600,
+        weight: 500,
         height: 1.24,
       },
     },

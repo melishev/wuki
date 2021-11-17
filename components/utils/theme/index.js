@@ -1,3 +1,4 @@
+import grid from './grid';
 import typography from './typography';
 
-export default typography;
+export default { ...grid, ...typography };

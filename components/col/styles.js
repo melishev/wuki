@@ -1,5 +1,9 @@
 /* eslint-disable no-restricted-syntax */
-import { createUseStyles } from 'react-jss';
+import { createUseStyles, jss } from 'react-jss';
+
+// Фрагмент задает правило генерации названия класса
+const createGenerateId = () => (rule) => rule.key;
+jss.setup({ createGenerateId });
 
 const styles = createUseStyles((theme) => {
   // На основе переданного BreakPoint,

@@ -1,23 +1,21 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import './index.scss';
+import jss from './styles';
 
-const Row = ({ children, tag: Tag, gap }) => (
-  <Tag className="row" style={{ gap: `${gap}px` }}>
-    {children}
-  </Tag>
-);
+const Row = ({ children, tag: Tag }) => {
+  const styles = jss();
+
+  return <Tag className={styles.row}>{children}</Tag>;
+};
 
 Row.propTypes = {
   children: propTypes.node,
   tag: propTypes.string,
-  gap: propTypes.number,
 };
 
 Row.defaultProps = {
   children: '',
   tag: 'div',
-  gap: null,
 };
 
 export default Row;

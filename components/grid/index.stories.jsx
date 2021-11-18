@@ -11,9 +11,7 @@ import theme from '../utils/theme';
 import './stories.scss';
 
 import Row from '../row';
-import RowJss from '../row-jss';
 import Col from '../col';
-import ColJss from '../col-jss';
 
 export default {
   title: 'Layout/Grid',
@@ -48,13 +46,6 @@ export const Default = () => (
         </Col>
       ))}
     </Row>
-    <RowJss>
-      {[...Array(24)].map((item, index) => (
-        <ColJss col={item} key={index}>
-          <p>{index + 1}</p>
-        </ColJss>
-      ))}
-    </RowJss>
   </WrapperStoryBook>
 );
 
@@ -71,17 +62,6 @@ export const Offset = () => (
         <p>col: 4, offset: 21</p>
       </Col>
     </Row>
-    <RowJss>
-      <ColJss col={4}>
-        <p>col: 4</p>
-      </ColJss>
-      <ColJss col={4} offset={11}>
-        <p>col: 4, offset: 11</p>
-      </ColJss>
-      <ColJss col={4} offset={21}>
-        <p>col: 4, offset: 21</p>
-      </ColJss>
-    </RowJss>
   </WrapperStoryBook>
 );
 
@@ -101,17 +81,6 @@ export const Responsive = () => (
         <p>col: 12, col-xl: 8</p>
       </Col>
     </Row>
-    <RowJss>
-      <ColJss col={{ xs: 12, xl: 8 }}>
-        <p>col: 12, col-xl: 8</p>
-      </ColJss>
-      <ColJss col={{ xs: 12, xl: 8 }}>
-        <p>col: 12, col-xl: 8</p>
-      </ColJss>
-      <ColJss col={{ xs: 12, xl: 8 }}>
-        <p>col: 12, col-xl: 8</p>
-      </ColJss>
-    </RowJss>
     {/* Тут должен будет располагаться пример кода, благодаря которому был
     реализован данный пример, а лучше использовать встроенные функции
     StoryBook. */}

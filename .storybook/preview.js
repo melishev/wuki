@@ -1,3 +1,21 @@
+import React from 'react';
+
+import { WukiProvider, Row, Col, Text } from '../components';
+
+export const decorators = [
+  (Story, { args }) => (
+    <WukiProvider>
+      <Row>
+        <Col col={24}>
+          <Text tag="h1" textStyle="h3">{ args.title }</Text>
+          <Text>{ args.description }</Text>
+        </Col>
+      </Row>
+      <Story />
+    </WukiProvider>
+  ),
+];
+
 export const parameters = {
   actions: { argTypesRegex: "^on[a-z].*" },
   controls: {

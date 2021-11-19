@@ -1,8 +1,0 @@
-@import '../../assets/styles/vars';
-
-.row {
-    display: grid;
-    grid-template-columns: repeat(map-get($grid, col), 1fr);
-    gap: map-get($grid, gap) + px;
-    padding: 0 map-get($grid, margin) + px;
-}

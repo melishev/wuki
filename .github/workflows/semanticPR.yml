@@ -20,6 +20,7 @@ jobs:
             ci
             chore
             refactor
+            perf
           validateSingleCommit: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

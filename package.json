@@ -1,7 +1,8 @@
 {
   "name": "wuki",
-  "version": "1.1.2",
-  "main": "dist/index.js",
+  "version": "1.0.1",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "description": "🧸 Wuki is a UI Kit developed for React.js that brings together the best practices of the most popular UI libraries such as Ant Design, Bootstrap, Element and many others.",
   "homepage": "https://wuki.vercel.app",
   "files": [
@@ -15,7 +16,9 @@
     "stylelint": "stylelint */**/*.scss",
     "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react-jss": "^10.8.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
@@ -60,16 +63,17 @@
     "style-loader": "2.0.0",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-rational-order": "^0.0.4",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.2.0",
     "stylelint-scss": "^3.21.0"
   },
   "peerDependencies": {
+    "prop-types": "15.7.2",
     "react": ">=16.9.0",
     "react-dom": ">=16.9.0",
-    "prop-types": "15.7.2"
+    "react-jss": "^10.8.2"
   },
   "author": {
     "name": "Matvey Melishev",

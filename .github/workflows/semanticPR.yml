@@ -19,6 +19,7 @@ jobs:
             docs
             ci
             chore
+            refactor
             perf
           validateSingleCommit: true
         env:

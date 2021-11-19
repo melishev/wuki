@@ -21,6 +21,7 @@ jobs:
             chore
             refactor
             perf
+            build
           validateSingleCommit: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

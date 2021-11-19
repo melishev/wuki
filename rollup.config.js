@@ -1,8 +1,6 @@
-// import copy from 'rollup-plugin-copy';
-import autoprefixer from 'autoprefixer';
+import copy from 'rollup-plugin-copy';
 import { babel } from '@rollup/plugin-babel';
 import cleaner from 'rollup-plugin-cleaner';
-import postcss from 'rollup-plugin-postcss';
 import analyze from 'rollup-plugin-analyzer';
 import { terser } from 'rollup-plugin-terser';
 import commonjs from '@rollup/plugin-commonjs';
@@ -14,20 +12,11 @@ import multiInput from 'rollup-plugin-multi-input';
 const extensions = ['.js', '.jsx'];
 
 const plugins = [
-  // copy({
-  //   targets: [{ src: 'components/index.js', dest: 'dist' }],
-  //   verbose: true,
-  //   copyOnce: true,
-  // }),
   commonjs(),
   babel({
     exclude: 'node_modules/**',
     extensions,
     presets: ['@babel/preset-env', '@babel/preset-react'],
-  }),
-  postcss({
-    minimize: true,
-    plugins: [autoprefixer],
   }),
   nodeResolve({
     extensions,
@@ -53,6 +42,11 @@ export default [
       ...plugins,
       multiInput({ relative: 'components/' }),
       cleaner({ targets: ['./dist/'] }),
+      copy({
+        targets: [{ src: 'components/index.js', dest: 'dist/cjs' }],
+        verbose: true,
+        copyOnce: true,
+      }),
     ],
   },
   {
@@ -61,7 +55,7 @@ export default [
       {
         format: 'esm',
         exports: 'named',
-        dir: 'dist/es',
+        dir: 'dist/esm',
       },
     ],
     plugins,

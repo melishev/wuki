@@ -8,8 +8,6 @@ import React from 'react';
 import { ThemeProvider } from 'react-jss';
 import theme from '../utils/theme';
 
-import './stories.scss';
-
 import Row from '../row';
 import Col from '../col';
 

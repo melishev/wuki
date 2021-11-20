@@ -1,10 +1,10 @@
 import { createUseStyles, jss } from 'react-jss';
 
-const styles = createUseStyles((theme) => {
-  // Фрагмент задает правило генерации названия класса
-  const createGenerateId = () => (rule) => `type-${rule.key}`;
-  jss.setup({ createGenerateId });
+// Фрагмент задает правило генерации названия класса
+const createGenerateId = () => (rule) => `type-${rule.key}`;
+jss.setup({ createGenerateId });
 
+const styles = createUseStyles((theme) => {
   // Конфигурации выходящих стилей
   const fontGen = ({ size, weight, height }) => ({
     font: {

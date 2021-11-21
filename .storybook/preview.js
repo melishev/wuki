@@ -1,4 +1,5 @@
 import React from 'react';
+import { themes } from '@storybook/theming';
 
 import { WukiProvider, Row, Col, Text } from '../components';
 
@@ -18,6 +19,16 @@ export const decorators = [
 
 export const parameters = {
   actions: { argTypesRegex: "^on[a-z].*" },
+  docs: {
+    theme: themes.dark,
+  },
+  grid: {
+    gridOn: true, // ???
+    columns: 24, // set from config
+    gap: '21px', // set from congig
+    gutter: 'calc(1rem + 42px)', // set from config
+    maxWidth: 'auto',
+  },
   controls: {
     matchers: {
       color: /(background|color)$/i,

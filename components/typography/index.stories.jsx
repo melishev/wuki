@@ -6,9 +6,16 @@ import Text from './index';
 import Row from '../row';
 import Col from '../col';
 
+import Doc from './readme.mdx';
+
 export default {
   title: 'General/Typography',
   component: Text,
+  parameters: {
+    docs: {
+      page: Doc,
+    },
+  },
 };
 
 export const Default = () => (
@@ -55,6 +62,7 @@ export const Default = () => (
 );
 
 Default.args = {
-  title: 'Title',
-  description: 'Description',
+  title: 'Typography',
+  description:
+    'Use typography to present your design and content as clearly and efficiently as possible.',
 };

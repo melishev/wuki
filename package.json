@@ -17,6 +17,7 @@
     "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN"
   },
   "dependencies": {
+    "@fontsource/manrope": "^4.5.1",
     "react-jss": "^10.8.2"
   },
   "devDependencies": {

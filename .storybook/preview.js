@@ -81,3 +81,29 @@ export const parameters = {
     },
   },
 }
+
+export const globalTypes = {
+  // theme: {
+  //   name: 'Theme',
+  //   description: 'StoryBook theme',
+  //   defaultValue: 'Dark',
+  //   toolbar: {
+  //     icon: 'circlehollow',
+  //     items: ['Light', 'Dark'],
+  //     showName: true,
+  //   },
+  // },
+  locale: {
+    name: 'Translations',
+    description: 'Internationalization locale',
+    defaultValue: 'en',
+    toolbar: {
+      showName: true,
+      // icon: 'globe',
+      items: [
+        { value: 'en', right: '🇺🇸', title: 'English' },
+        { value: 'ru', right: '🇷🇺', title: 'Russia' },
+      ],
+    },
+  },
+};

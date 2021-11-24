@@ -1,31 +1,48 @@
-import { createUseStyles, jss } from 'react-jss';
+/* eslint-disable prettier/prettier */
+/* eslint-disable no-restricted-syntax */
+import { createUseStyles } from 'react-jss';
 
 // Фрагмент задает правило генерации названия класса
 const createGenerateId = () => (rule) => `type-${rule.key}`;
-jss.setup({ createGenerateId });
 
 const styles = createUseStyles((theme) => {
-  // Конфигурации выходящих стилей
-  const fontGen = ({ size, weight, height }) => ({
+  const { variants } = theme.type;
+  const { breakPoints } = theme.grid;
+
+  const fontStyle = (size, weight, height) => ({
     font: {
-      family: theme.type.family,
       size,
       weight,
     },
     lineHeight: height,
   });
 
+  // Конфигурации выходящих стилей
+  const genFontStyle = ({ size, weight, height, breakPoints: bp }) => {
+    const genbreakPoints = {};
+    if (bp) {
+      for (const [bpKey, bpValue] of Object.entries(bp)) {
+        const { size: bpSize, weight: bpWeight, height: bpHeight } = bpValue;
+        genbreakPoints[`@media (min-width: ${breakPoints[bpKey]}px)`] = fontStyle(bpSize, bpWeight, bpHeight);
+      }
+    }
+    return {
+      ...fontStyle(size, weight, height),
+      ...genbreakPoints,
+    };
+  };
+
   // Функция генерирует стили типографики
-  function mixVariants(variants) {
+  function genVariant() {
     return Object.keys(variants).reduce((acc, curr) => {
-      acc[curr] = fontGen(variants[curr]);
+      acc[curr] = genFontStyle(variants[curr]);
       return acc;
     }, {});
   }
 
   return {
-    ...mixVariants(theme.type.variants),
+    ...genVariant(),
   };
-});
+}, { generateId: createGenerateId() });
 
 export default styles;

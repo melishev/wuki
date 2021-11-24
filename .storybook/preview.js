@@ -4,7 +4,7 @@ import { WukiProvider, Row, Col, Text } from '../components';
 
 export const decorators = [
   (Story, { args }) => (
-    <WukiProvider>
+    <WukiProvider cssBaseLine={true}>
       <Row>
         <Col col={24}>
           <Text tag="h1" textStyle="h3">{ args.title }</Text>

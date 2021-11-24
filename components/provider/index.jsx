@@ -3,10 +3,16 @@ import propTypes from 'prop-types';
 import { ThemeProvider } from 'react-jss';
 import themeDefault from '../utils/theme';
 import style from '../utils/globalStyleSheet';
+import normalize from '../utils/normalize';
 
-const WukiProvider = ({ children, theme }) => {
+const WukiProvider = ({ children, theme, cssBaseLine }) => {
   const globalStyles = style(themeDefault);
   globalStyles();
+
+  if (cssBaseLine) {
+    normalize();
+  }
+
   return (
     <ThemeProvider theme={{ ...themeDefault, ...theme }}>
       {children}
@@ -17,10 +23,12 @@ const WukiProvider = ({ children, theme }) => {
 WukiProvider.propTypes = {
   children: propTypes.node.isRequired,
   theme: propTypes.oneOfType([propTypes.object, propTypes.func]),
+  cssBaseLine: propTypes.bool,
 };
 
 WukiProvider.defaultProps = {
   theme: {},
+  cssBaseLine: false,
 };
 
 export default WukiProvider;

@@ -75,7 +75,7 @@ export const Example = () => (
       </Col>
       <Col col={24}>
         <img
-          src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_14-16-inch_10182021_big.jpg.large.jpg"
+          src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_14-16-inch_10182021_big.jpg.large_2x.jpg"
           alt="Macbook Pro"
           style={{ width: '980px', display: 'block', margin: '0 auto' }}
         />
@@ -120,7 +120,7 @@ export const Example = () => (
       </Col>
       <Col col={24}>
         <img
-          src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_16-inch-Screen_10182021_big_carousel.jpg.large.jpg"
+          src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_16-inch-Screen_10182021_big_carousel.jpg.large_2x.jpg"
           alt="Macbook Pro"
           style={{ width: '980px', display: 'block', margin: '0 auto' }}
         />
@@ -155,7 +155,7 @@ export const Example = () => (
       </Col>
       <Col col={24} tag="figure">
         <img
-          src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_16-inch-Workflow_10182021_big.jpg.large.jpg"
+          src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_16-inch-Workflow_10182021_big.jpg.large_2x.jpg"
           alt="Macbook Pro"
           style={{ width: '980px', display: 'block', margin: '0 auto' }}
         />
@@ -243,7 +243,7 @@ export const Example = () => (
       </Col>
       <Col col={24}>
         <img
-          src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_16-inch-Final-Cut-Pro_10182021_big_carousel.jpg.large.jpg"
+          src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_16-inch-Final-Cut-Pro_10182021_big_carousel.jpg.large_2x.jpg"
           alt="Macbook Pro"
           style={{ width: '980px', display: 'block', margin: '0 auto' }}
         />

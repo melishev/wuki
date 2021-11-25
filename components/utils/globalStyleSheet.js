@@ -6,6 +6,10 @@ export default function style(theme) {
       '*': {
         boxSizing: 'border-box',
       },
+      html: {
+        WebkitFontSmoothing: 'antialiased',
+        MozOsxFontSmoothing: 'grayscale',
+      },
       body: {
         fontFamily: theme.type.family,
       },

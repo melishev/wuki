@@ -1,6 +1,6 @@
 name: 'Chromatic'
 
-on: pull_request
+on: push
 
 jobs:
   chromatic-deployment:
@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install dependencies
-        run: yarn
+        run: npm ci
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:

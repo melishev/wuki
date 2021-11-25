@@ -1,6 +1,7 @@
 import React from 'react';
 import { themes } from '@storybook/theming';
 
+import wukiTheme from '../components/utils/theme';
 import { WukiProvider, Row, Col, Text } from '../components';
 
 export const decorators = [
@@ -20,13 +21,13 @@ export const decorators = [
 export const parameters = {
   actions: { argTypesRegex: "^on[a-z].*" },
   docs: {
-    theme: themes.dark,
+    theme: themes.light,
   },
   grid: {
-    gridOn: true, // ???
-    columns: 24, // set from config
-    gap: '21px', // set from congig
-    gutter: 'calc(1rem + 42px)', // set from config
+    gridOn: false,
+    columns: wukiTheme.grid.col,
+    gap: wukiTheme.grid.gap,
+    gutter: `calc(1rem + ${wukiTheme.grid.margin}px)`,
     maxWidth: 'auto',
   },
   controls: {
@@ -37,6 +38,7 @@ export const parameters = {
     expanded: true,
   },
   backgrounds: {
+    disable: true,
     grid: {
       disable: true,
     }
@@ -81,29 +83,3 @@ export const parameters = {
     },
   },
 }
-
-export const globalTypes = {
-  // theme: {
-  //   name: 'Theme',
-  //   description: 'StoryBook theme',
-  //   defaultValue: 'Dark',
-  //   toolbar: {
-  //     icon: 'circlehollow',
-  //     items: ['Light', 'Dark'],
-  //     showName: true,
-  //   },
-  // },
-  locale: {
-    name: 'Translations',
-    description: 'Internationalization locale',
-    defaultValue: 'en',
-    toolbar: {
-      showName: true,
-      // icon: 'globe',
-      items: [
-        { value: 'en', right: '🇺🇸', title: 'English' },
-        { value: 'ru', right: '🇷🇺', title: 'Russia' },
-      ],
-    },
-  },
-};

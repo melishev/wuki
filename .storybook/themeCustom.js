@@ -1,7 +1,8 @@
 import { create } from '@storybook/theming';
+import wukiTheme from '../components/utils/theme';
 
 export default create({
-  base: 'dark',
+  base: 'light',
 
   colorPrimary: 'hotpink',
   colorSecondary: 'deepskyblue',
@@ -10,11 +11,11 @@ export default create({
   // appBg: 'white',
   // appContentBg: 'silver',
   // appBorderColor: 'grey',
-  // appBorderRadius: 4,
+  // appBorderRadius: 20,
 
   // // Typography
-  // fontBase: '"Open Sans", sans-serif',
-  // fontCode: 'monospace',
+  fontBase: wukiTheme.type.family,
+  fontCode: 'monospace',
 
   // // Text colors
   // textColor: 'black',
@@ -31,7 +32,7 @@ export default create({
   // inputTextColor: 'black',
   // inputBorderRadius: 4,
 
-  brandTitle: 'My custom storybook', // ??????
-  brandUrl: 'https://example.com', // Ссылка расположенная на логотипе
-  brandImage: 'https://place-hold.it/350x150', // Новый логотип
+  brandTitle: 'Wuki UI',
+  brandUrl: 'https://github.com/melishev/wuki',
+  brandImage: 'https://place-hold.it/350x150',
 });

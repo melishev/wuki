@@ -1,6 +1,43 @@
-# Typography
+import { Title, Description, Primary, ArgsTable, Source } from '@storybook/addon-docs';
 
-### Import
+<Title />
+
+<Description />
+
 ```
 import { Text } from 'wuki';
 ```
+
+## Important ⚡️
+Before using the component, make sure to import the font into the project. By default, Wuki UI uses Manrope font, here are a couple of examples of how to integrate it into your project:
+
+#### 1. Google Fonts
+```
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+/>
+```
+
+#### 2. NPM
+```
+npm install @fontsource/manrope
+```
+Then, you can import it in your entry-point.
+```
+import '@fontsource/manrope/200.css';
+import '@fontsource/manrope/300.css';
+import '@fontsource/manrope/400.css';
+import '@fontsource/manrope/500.css';
+import '@fontsource/manrope/600.css';
+import '@fontsource/manrope/700.css';
+import '@fontsource/manrope/800.css';
+```
+You can find all the basic information at [Fontsource](https://fontsource.org/fonts/manrope).
+
+## Component
+The Typography component makes it easy to apply a default set of font weights and sizes in your application.
+
+<Primary />
+
+<ArgsTable />

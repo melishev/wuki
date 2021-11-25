@@ -6,9 +6,20 @@ import Text from './index';
 import Row from '../row';
 import Col from '../col';
 
+import Doc from './readme.mdx';
+
 export default {
   title: 'General/Typography',
   component: Text,
+  parameters: {
+    docs: {
+      page: Doc,
+      description: {
+        component:
+          'Use typography to present your design and content as clearly and efficiently as possible.',
+      },
+    },
+  },
 };
 
 export const Default = () => (
@@ -37,14 +48,10 @@ export const Default = () => (
       </Text>
     </Col>
     <Col col={24}>
-      <Text tag="p" textStyle="body1">
-        The quick brown fox jumps over the lazy dog
-      </Text>
+      <Text textStyle="body1">The quick brown fox jumps over the lazy dog</Text>
     </Col>
     <Col col={24}>
-      <Text tag="p" textStyle="body2">
-        The quick brown fox jumps over the lazy dog
-      </Text>
+      <Text tag="p">The quick brown fox jumps over the lazy dog</Text>
     </Col>
     <Col col={24}>
       <Text tag="small" textStyle="small">
@@ -53,11 +60,6 @@ export const Default = () => (
     </Col>
   </Row>
 );
-
-Default.args = {
-  title: 'Title',
-  description: 'Description',
-};
 
 export const Example = () => (
   <>

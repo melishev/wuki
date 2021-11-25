@@ -1,8 +1,8 @@
-export default {
+module.exports = {
   grid: {
-    col: 24, // Количество колонок в проекте
-    gap: 21, // Отступ между колонками (px)
-    margin: 42, // Отступы по краям Row (px)
+    col: 24,
+    gap: 21,
+    margin: 42,
     breakPoints: {
       xs: 0,
       sm: 576,

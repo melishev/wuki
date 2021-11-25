@@ -1,4 +1,7 @@
-import grid from './grid';
-import typography from './typography';
+const grid = require('./grid');
+const typography = require('./typography');
 
-export default { ...grid, ...typography };
+module.exports = {
+  ...grid,
+  ...typography,
+};

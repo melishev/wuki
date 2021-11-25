@@ -10,8 +10,10 @@
   ],
   "scripts": {
     "dev": "start-storybook -p 6006",
+    "docs": "start-storybook --docs --no-manager-cache",
     "build": "rollup -c",
     "build:sb": "build-storybook",
+    "build:docs": "build-storybook --docs",
     "lint": "eslint --ext .jsx components/**",
     "stylelint": "stylelint */**/*.scss",
     "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN"
@@ -28,6 +30,7 @@
     "@rollup/plugin-node-resolve": "^13.0.5",
     "@semantic-release/git": "^10.0.0",
     "@semantic-release/github": "^8.0.1",
+    "@storybook/addon-a11y": "^6.3.12",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-docs": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",

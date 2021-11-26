@@ -51,7 +51,7 @@ export const Default = () => (
       <Text textStyle="body1">The quick brown fox jumps over the lazy dog</Text>
     </Col>
     <Col col={24}>
-      <Text tag="p">The quick brown fox jumps over the lazy dog</Text>
+      <Text textStyle="body2">The quick brown fox jumps over the lazy dog</Text>
     </Col>
     <Col col={24}>
       <Text tag="small" textStyle="small">
@@ -70,7 +70,6 @@ export const Example = () => (
         style={{
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center',
         }}
       >
         <Text tag="h1">
@@ -85,13 +84,13 @@ export const Example = () => (
         <img
           src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_14-16-inch_10182021_big.jpg.large_2x.jpg"
           alt="Macbook Pro"
-          style={{ maxWidth: '980px', width: '100vw', display: 'block' }}
+          style={{ maxWidth: '980px', width: '100vw', display: 'block', alignSelf: 'center' }}
         />
         <Text tag="small" textStyle="small">
           The completely reimagined 14- and 16-inch MacBook Pro is powered by
           the all-new M1 Pro and M1 Max chips.
         </Text>
-        <Text>
+        <Text textStyle="body2">
           CUPERTINO, CALIFORNIA - Apple today unveiled the completely reimagined
           MacBook Pro powered by the all-new M1 Pro and M1 Max — the first pro
           chips designed for the Mac. Available in 14- and 16-inch models,
@@ -112,7 +111,7 @@ export const Example = () => (
           MacBook Pro models today, and they will be available beginning
           Tuesday, October 26.
         </Text>
-        <Text>
+        <Text textStyle="body2">
           “We set out to create the world’s best pro notebook, and today we’re
           excited to introduce the all-new MacBook Pro with M1 Pro and M1 Max —
           a game-changing combination of phenomenal performance, unrivaled
@@ -126,14 +125,14 @@ export const Example = () => (
         <img
           src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_16-inch-Screen_10182021_big_carousel.jpg.large_2x.jpg"
           alt="Macbook Pro"
-          style={{ maxWidth: '980px', width: '100vw', display: 'block' }}
+          style={{ maxWidth: '980px', width: '100vw', display: 'block', alignSelf: 'center' }}
         />
         <Text tag="small" textStyle="small">
           The new MacBook Pro features an expansive Liquid Retina XDR display
           with ProMotion.
         </Text>
-        <Text tag="h2">Two New Pro Chips, Game-Changing Performance</Text>
-        <Text>
+        <Text tag="h2" textStyle="h5">Two New Pro Chips, Game-Changing Performance</Text>
+        <Text textStyle="body2">
           M1 Pro and M1 Max revolutionize the MacBook Pro experience and mark a
           huge step forward in the transition to Apple silicon on Mac. MacBook
           Pro with M1 Pro and M1 Max applies a system-on-a-chip (SoC)
@@ -142,7 +141,7 @@ export const Example = () => (
           with best-in-class performance per watt and industry-leading power
           efficiency.
         </Text>
-        <Text>
+        <Text textStyle="body2">
           M1 Pro takes the groundbreaking architecture of M1 to a whole new
           level. Featuring a powerful up-to-10-core CPU with eight
           high-performance cores and two high-efficiency cores, along with an
@@ -157,14 +156,14 @@ export const Example = () => (
         <img
           src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_16-inch-Workflow_10182021_big.jpg.large_2x.jpg"
           alt="Macbook Pro"
-          style={{ maxWidth: '980px', width: '100vw', display: 'block' }}
+          style={{ maxWidth: '980px', width: '100vw', display: 'block', alignSelf: 'center' }}
         />
         <Text tag="small" textStyle="small">
           The new MacBook Pro, powered by M1 Pro and M1 Max, enables workflows
           that were previously unthinkable on a notebook.
         </Text>
-        <Text tag="h2">Most Powerful Mac Notebooks Ever</Text>
-        <Text>
+        <Text tag="h2" textStyle="h5">Most Powerful Mac Notebooks Ever</Text>
+        <Text textStyle="body2">
           The new MacBook Pro pushes the limits of what a notebook can do,
           delivering incredible performance and all-new capabilities.
         </Text>
@@ -172,86 +171,86 @@ export const Example = () => (
           When compared to the previous-generation high-end 13-inch model, the
           all-new 14-inch MacBook Pro is immensely more powerful.
         </Text>
-        <Text>
+        <Text textStyle="body2">
           With the 10-core CPU in M1 Pro and M1 Max, the 14-inch MacBook Pro
           enables:
         </Text>
         <ol>
           <li>
-            <Text>Up to 3.7x faster project builds using Xcode.</Text>
+            <Text textStyle="body2">Up to 3.7x faster project builds using Xcode.</Text>
           </li>
           <li>
-            <Text>Up to 3x more Amp Designer plug-ins in Logic Pro.</Text>
+            <Text textStyle="body2">Up to 3x more Amp Designer plug-ins in Logic Pro.</Text>
           </li>
           <li>
-            <Text>
+            <Text textStyle="body2">
               Up to 2.8x faster computational fluid dynamics performance in NASA
               TetrUSS.
             </Text>
           </li>
         </ol>
-        <Text>
+        <Text textStyle="body2">
           Featuring the 16-core GPU in M1 Pro and the 32-core GPU in M1 Max, the
           14-inch MacBook Pro transforms graphics-intensive workflows with:
         </Text>
         <ol>
           <li>
-            <Text>
+            <Text textStyle="body2">
               Up to 9.2x faster 4K render in Final Cut Pro with M1 Pro, and up
               to 13.4x faster with M1 Max.
             </Text>
           </li>
           <li>
-            <Text>
+            <Text textStyle="body2">
               Up to 5.6x faster combined vector and raster GPU performance in
               Affinity Photo with M1 Pro, and up to 8.5x faster with M1 Max.
             </Text>
           </li>
           <li>
-            <Text>
+            <Text textStyle="body2">
               Up to 3.6x faster effect render in Blackmagic Design DaVinci
               Resolve Studio with M1 Pro, and up to 5x faster with M1 Max.
             </Text>
           </li>
         </ol>
-        <Text>
+        <Text textStyle="body2">
           Both M1 Pro and M1 Max are supercharged with a 16-core Neural Engine,
           allowing users to enjoy faster ML tasks, including:
         </Text>
         <ol>
           <li>
-            <Text>
+            <Text textStyle="body2">
               Up to 8.7x faster object tracking performance in Final Cut Pro
               with M1 Pro, and up to 11.5x faster with M1 Max.
             </Text>
           </li>
           <li>
-            <Text>
+            <Text textStyle="body2">
               Up to 7.2x faster scene edit detection in 1080p ProRes 422 video
               in Adobe Premiere Pro.
             </Text>
           </li>
           <li>
-            <Text>
+            <Text textStyle="body2">
               Up to 2.6x faster performance when selecting subjects in images in
               Adobe Photoshop.
             </Text>
           </li>
         </ol>
         <img
-          src="`https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_16-inch-Final-Cut-Pro_10182021_big_carousel.jpg.large_2x.jpg"
+          src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_16-inch-Final-Cut-Pro_10182021_big_carousel.jpg.large_2x.jpg"
           alt="Macbook Pro"
-          style={{ maxWidth: '980px', width: '100vw', display: 'block' }}
+          style={{ maxWidth: '980px', width: '100vw', display: 'block', alignSelf: 'center' }}
         />
         <Text tag="small" textStyle="small">
           The 16-inch MacBook Pro has up to 1.7x faster 8K render in Final Cut
           Pro with M1 Pro, and up to 2.9x faster with M1 Max.
         </Text>
-        <Text tag="h2">
+        <Text tag="h2" textStyle="h5">
           Up to 2.6x faster performance when selecting subjects in images in
           Adobe Photoshop.
         </Text>
-        <Text>
+        <Text textStyle="body2">
           Up to 2.6x faster performance when selecting subjects in images in
           Adobe Photoshop.
         </Text>

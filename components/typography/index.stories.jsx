@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-props-no-spreading, react/prop-types */
+/* eslint-disable max-len */
 import React from 'react';
 
 import Text from './index';
@@ -64,7 +64,15 @@ export const Default = () => (
 export const Example = () => (
   <>
     <Row>
-      <Col col={10} offset={8}>
+      <Col
+        col={10}
+        offset={8}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
         <Text tag="h1">
           Game-changing MacBook Pro with M1 Pro and M1 Max delivers
           extraordinary performance and battery life, and features the world’s
@@ -74,19 +82,15 @@ export const Example = () => (
           The new MacBook Pro features a 1080p camera, the best audio system in
           a notebook, and the most advanced connectivity ever in a MacBook Pro
         </Text>
-      </Col>
-      <Col col={24}>
         <img
           src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_14-16-inch_10182021_big.jpg.large_2x.jpg"
           alt="Macbook Pro"
-          style={{ width: '980px', display: 'block', margin: '0 auto' }}
+          style={{ maxWidth: '980px', width: '100vw', display: 'block' }}
         />
-        <Text tag="small">
+        <Text tag="small" textStyle="small">
           The completely reimagined 14- and 16-inch MacBook Pro is powered by
           the all-new M1 Pro and M1 Max chips.
         </Text>
-      </Col>
-      <Col col={10} offset={8}>
         <Text>
           CUPERTINO, CALIFORNIA - Apple today unveiled the completely reimagined
           MacBook Pro powered by the all-new M1 Pro and M1 Max — the first pro
@@ -119,19 +123,15 @@ export const Example = () => (
           in a stunning new design. The new MacBook Pro simply has no equal and
           is by far the best pro notebook we’ve ever built.”
         </Text>
-      </Col>
-      <Col col={24}>
         <img
           src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_16-inch-Screen_10182021_big_carousel.jpg.large_2x.jpg"
           alt="Macbook Pro"
-          style={{ width: '980px', display: 'block', margin: '0 auto' }}
+          style={{ maxWidth: '980px', width: '100vw', display: 'block' }}
         />
-        <Text tag="small">
+        <Text tag="small" textStyle="small">
           The new MacBook Pro features an expansive Liquid Retina XDR display
           with ProMotion.
         </Text>
-      </Col>
-      <Col col={10} offset={8}>
         <Text tag="h2">Two New Pro Chips, Game-Changing Performance</Text>
         <Text>
           M1 Pro and M1 Max revolutionize the MacBook Pro experience and mark a
@@ -154,19 +154,15 @@ export const Example = () => (
           accelerator in the media engine, delivering unbelievably fast and
           power-efficient video processing.
         </Text>
-      </Col>
-      <Col col={24} tag="figure">
         <img
           src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_16-inch-Workflow_10182021_big.jpg.large_2x.jpg"
           alt="Macbook Pro"
-          style={{ width: '980px', display: 'block', margin: '0 auto' }}
+          style={{ maxWidth: '980px', width: '100vw', display: 'block' }}
         />
-        <Text tag="figcaption" textStyle="small">
+        <Text tag="small" textStyle="small">
           The new MacBook Pro, powered by M1 Pro and M1 Max, enables workflows
           that were previously unthinkable on a notebook.
         </Text>
-      </Col>
-      <Col col={10} offset={8}>
         <Text tag="h2">Most Powerful Mac Notebooks Ever</Text>
         <Text>
           The new MacBook Pro pushes the limits of what a notebook can do,
@@ -242,19 +238,15 @@ export const Example = () => (
             </Text>
           </li>
         </ol>
-      </Col>
-      <Col col={24}>
         <img
-          src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_16-inch-Final-Cut-Pro_10182021_big_carousel.jpg.large_2x.jpg"
+          src="`https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_16-inch-Final-Cut-Pro_10182021_big_carousel.jpg.large_2x.jpg"
           alt="Macbook Pro"
-          style={{ width: '980px', display: 'block', margin: '0 auto' }}
+          style={{ maxWidth: '980px', width: '100vw', display: 'block' }}
         />
-        <Text tag="small">
+        <Text tag="small" textStyle="small">
           The 16-inch MacBook Pro has up to 1.7x faster 8K render in Final Cut
           Pro with M1 Pro, and up to 2.9x faster with M1 Max.
         </Text>
-      </Col>
-      <Col col={10} offset={8}>
         <Text tag="h2">
           Up to 2.6x faster performance when selecting subjects in images in
           Adobe Photoshop.

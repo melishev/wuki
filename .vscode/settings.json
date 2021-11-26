@@ -2,68 +2,72 @@
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "files.eol": "\n",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript"],
   "GitCommitPlugin.MaxSubjectWords": 72,
   "GitCommitPlugin.Templates": [
     {
       "templateName": "Angular",
       "templateContent": "<type>:<space><icon><space><subject><enter><body><enter><footer>",
       "default": true
-    },
+    }
   ],
   "GitCommitPlugin.CustomCommitType": [
     {
-      "key": "build", 
+      "key": "build",
       "label": "build",
       "detail": "Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)",
       "icon": "🚀"
     },
     {
-      "key": "ci", 
+      "key": "ci",
       "label": "ci",
       "detail": "Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)",
       "icon": "🤖"
     },
     {
-      "key": "docs", 
+      "key": "docs",
       "label": "docs",
       "detail": "Documentation only changes",
       "icon": "📝"
     },
     {
-      "key": "feat", 
+      "key": "feat",
       "label": "feat",
       "detail": "A new feature",
       "icon": "📦"
     },
     {
-      "key": "fix", 
+      "key": "fix",
       "label": "fix",
       "detail": "A bug fix",
       "icon": "🐛"
     },
     {
-      "key": "perf", 
+      "key": "perf",
       "label": "perf",
       "detail": "A code change that improves performance",
       "icon": "⚡️"
     },
     {
-      "key": "refactor", 
+      "key": "refactor",
       "label": "refactor",
       "detail": "A code change that neither fixes a bug nor adds a feature",
       "icon": "♻️"
     },
     {
-      "key": "style", 
+      "key": "style",
       "label": "style",
       "detail": "Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)",
       "icon": "🌈"
     },
     {
-      "key": "test", 
+      "key": "test",
       "label": "test",
       "detail": "Adding missing tests or correcting existing tests",
       "icon": "🧪"
-    },
+    }
   ]
 }

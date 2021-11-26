@@ -39,15 +39,15 @@ const converted = createUseStyles({
     'button, [type="button"], [type="reset"], [type="submit"]': {
       WebkitAppearance: 'button',
     },
-    // prettier-ignore
-    'button::-moz-focus-inner,\n[type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner': {
-      borderStyle: 'none',
-      padding: '0',
-    },
-    // prettier-ignore
-    'button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring': {
-      outline: '1px dotted ButtonText',
-    },
+    'button::-moz-focus-inner,\n[type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner':
+      {
+        borderStyle: 'none',
+        padding: '0',
+      },
+    'button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring':
+      {
+        outline: '1px dotted ButtonText',
+      },
     fieldset: { padding: '0.35em 0.75em 0.625em' },
     legend: {
       boxSizing: 'border-box',
@@ -63,10 +63,10 @@ const converted = createUseStyles({
       boxSizing: 'border-box',
       padding: '0',
     },
-    // prettier-ignore
-    '[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button': {
-      height: 'auto',
-    },
+    '[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button':
+      {
+        height: 'auto',
+      },
     '[type="search"]': { WebkitAppearance: 'textfield', outlineOffset: '-2px' },
     '[type="search"]::-webkit-search-decoration': { WebkitAppearance: 'none' },
     '::-webkit-file-upload-button': {

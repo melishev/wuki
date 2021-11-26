@@ -1,9 +1,3 @@
-/* eslint-disable react/no-array-index-key,
-                  react/jsx-props-no-spreading,
-                  import/no-unresolved,
-                  react/prop-types
-*/
-
 import React from 'react';
 
 import Row from '../row';
@@ -17,7 +11,7 @@ export default {
 export const Default = () => (
   <Row>
     {[...Array(24)].map((item, index) => (
-      <Col col={item} key={index}>
+      <Col col={item} key={item}>
         <p>{index + 1}</p>
       </Col>
     ))}
@@ -81,7 +75,8 @@ export const Tag = () => (
 Tag.args = {
   title: 'Grid using Tag',
   description:
-    'Sometimes, for better performance, you need to use semantic HTML tags. A props - tag has been added specifically for this. It allows the developer to override the default tag - div, which would be better suited. Props Tag is available for Row and Col.',
+    `Sometimes, for better performance, you need to use semantic HTML tags. A props - tag has been added specifically for this.
+    It allows the developer to override the default tag - div, which would be better suited. Props Tag is available for Row and Col.`,
 };
 
 export const Sandbox = () => <></>;

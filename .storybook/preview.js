@@ -7,12 +7,6 @@ import { WukiProvider, Row, Col, Text } from '../components';
 export const decorators = [
   (Story, { args }) => (
     <WukiProvider cssBaseLine={true}>
-      <Row>
-        <Col col={24}>
-          <Text tag="h1" textStyle="h3">{ args.title }</Text>
-          <Text>{ args.description }</Text>
-        </Col>
-      </Row>
       <Story />
     </WukiProvider>
   ),
@@ -27,7 +21,7 @@ export const parameters = {
     gridOn: false,
     columns: wukiTheme.grid.col,
     gap: wukiTheme.grid.gap,
-    gutter: `calc(1rem + ${wukiTheme.grid.margin}px)`,
+    gutter: `${wukiTheme.grid.margin}px`,
     maxWidth: 'auto',
   },
   controls: {

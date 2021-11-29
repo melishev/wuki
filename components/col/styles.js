@@ -1,16 +1,21 @@
 /* eslint-disable no-restricted-syntax */
-import { createUseStyles, jss } from 'react-jss';
+import { createUseStyles } from 'react-jss';
 
-// Фрагмент задает правило генерации названия класса
+/**
+ * Фрагмент задает правило генерации названия класса
+ */
 const createGenerateId = () => (rule) => rule.key;
-jss.setup({ createGenerateId });
 
-const styles = createUseStyles((theme) => {
-  // На основе переданного BreakPoint,
-  // проходит по всем колонкам и в
-  // зависимости от bp возвращает объект стилей.
+const useStyles = createUseStyles(({ grid }) => {
+  const { col, breakPoints } = grid;
+
+  /**
+   * На основе переданного BreakPoint,
+   * проходит по всем колонкам и в
+   * зависимости от bp возвращает объект стилей.
+   */
   function colGenerate(bpKey, bpValue) {
-    const arrCol = [...Array(theme.grid.col).keys()];
+    const arrCol = [...Array(col).keys()];
 
     return arrCol.reduce((acc, curr) => {
       let className;
@@ -24,7 +29,6 @@ const styles = createUseStyles((theme) => {
         mediaQuery = `@media (min-width: ${bpValue}px)`;
       }
 
-      // Создаем класс с медиа-запросом и свойствами
       acc[className] = {
         [mediaQuery]: {
           gridColumn: `auto/span ${curr + 1}`,
@@ -34,21 +38,25 @@ const styles = createUseStyles((theme) => {
     }, {});
   }
 
-  // Создает цикл, при каждой итерации
-  // вызывается функция возвращающая
-  // обьект классов для определенного BreakPoint
+  /**
+   * Создает цикл, при каждой итерации
+   * вызывается функция возвращающая
+   * обьект классов для определенного BreakPoint
+   */
   function colBreakPoints() {
     let a = {};
-    for (const [bpKey, bpValue] of Object.entries(theme.grid.breakPoints)) {
+    for (const [bpKey, bpValue] of Object.entries(breakPoints)) {
       a = { ...a, ...colGenerate(bpKey, bpValue) };
     }
     return a;
   }
 
-  // Возвращает объект классов отступов
-  // для каждого размера колонки
+  /**
+   * Возвращает объект классов отступов
+   * для каждого размера колонки
+   */
   function colOffset() {
-    const arrCol = [...Array(theme.grid.col).keys()];
+    const arrCol = [...Array(col).keys()];
 
     return arrCol.reduce((acc, curr) => {
       acc[`col-offset-${curr + 1}`] = {
@@ -58,7 +66,11 @@ const styles = createUseStyles((theme) => {
     }, {});
   }
 
-  return { ...colBreakPoints(), ...colOffset() };
-});
+  return {
+    ...colBreakPoints(),
+    ...colOffset(),
+  };
+},
+{ generateId: createGenerateId() });
 
-export default styles;
+export default useStyles;

@@ -73,10 +73,10 @@ Responsive.parameters = {
 export const Tag = () => (
   <Row>
     <Col col={6} tag="aside">
-      <p>col: 4, tag: aside</p>
+      <p>col: 6, tag: aside</p>
     </Col>
     <Col col={18} tag="main">
-      <p>col 20, tag: main</p>
+      <p>col 18, tag: main</p>
     </Col>
   </Row>
 );

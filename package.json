@@ -58,8 +58,7 @@
   "peerDependencies": {
     "prop-types": "15.7.2",
     "react": ">=16.9.0",
-    "react-dom": ">=16.9.0",
-    "react-jss": "^10.8.2"
+    "react-dom": ">=16.9.0"
   },
   "author": {
     "name": "Matvey Melishev",

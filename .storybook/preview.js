@@ -2,7 +2,7 @@ import React from 'react';
 import { themes } from '@storybook/theming';
 
 import wukiTheme from '../components/utils/theme';
-import { WukiProvider, Row, Col, Text } from '../components';
+import { WukiProvider } from '../components';
 
 export const decorators = [
   (Story, { args }) => (
@@ -39,7 +39,7 @@ export const parameters = {
   },
   viewport: {
     viewports: {
-      xs: {
+      sm: {
         name: 'SM - 576px',
         styles: {
           width: '576px',

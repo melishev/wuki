@@ -2,35 +2,46 @@
 import React, { useState, useEffect } from 'react';
 import propTypes from 'prop-types';
 import useStyles from './styles';
-import { convertStylesToCss, unionClassNames, globalPropTypes } from '../utils/helpers';
+import { convertStylesToCss, unionClassNames, globalPropTypes, globalDefaultProps } from '../utils/helpers';
 
 const Col = ({ children, tag: Tag, col, offset, style }) => {
   const jssCSS = useStyles();
   const inlineCSS = convertStylesToCss(style);
-  const [arrClass, setArrClass] = useState();
+
+  const [classCol, setClassCol] = useState('');
+  const [classOffset, setClassOffset] = useState('');
+
+  /**
+   * Creates and returns a className col
+   */
+  const classNameCol = () => {
+    if (typeof col === 'object') {
+      let a = '';
+      for (const [bpKey, bpValue] of Object.entries(col)) {
+        a = `${a} ${jssCSS[`col-${bpKey}-${bpValue}`]}`;
+      }
+      setClassCol(a);
+    } else {
+      setClassCol(jssCSS[`col-xs-${col}`]);
+    }
+  };
+
+  /**
+   * Creates and returns a class Name offset
+   */
+  const classNameOffset = () => {
+    if (offset) {
+      setClassOffset(jssCSS[`col-offset-${offset}`]);
+    }
+  };
 
   useEffect(() => {
-    const styleCol = [];
-    // Переписать на вывод обьекта
-    switch (typeof col) {
-    case 'object':
-      for (const [bpKey, bpValue] of Object.entries(col)) {
-        if (bpKey === 'xs') {
-          styleCol.push(jssCSS[`col-${bpValue}`]);
-        } else {
-          styleCol.push(jssCSS[`col-${bpKey}-${bpValue}`]);
-        }
-      }
-      break;
-    default:
-      styleCol.push(jssCSS[`col-${col}`]);
-    }
-
-    setArrClass(styleCol.join(' '));
-  }, [col]);
+    classNameCol();
+    classNameOffset();
+  }, [col, offset]);
 
   return (
-    <Tag className={unionClassNames(arrClass, offset ? jssCSS[`col-offset-${offset}`] : '', inlineCSS)}>
+    <Tag className={unionClassNames(classCol, classOffset, inlineCSS)}>
       {children}
     </Tag>
   );
@@ -38,16 +49,16 @@ const Col = ({ children, tag: Tag, col, offset, style }) => {
 
 Col.propTypes = {
   ...globalPropTypes,
+  tag: propTypes.string,
   col: propTypes.oneOfType([propTypes.number, propTypes.object]),
   offset: propTypes.number,
 };
 
 Col.defaultProps = {
-  children: '',
+  ...globalDefaultProps,
   tag: 'div',
   col: 1,
   offset: null,
-  style: null,
 };
 
 export default Col;

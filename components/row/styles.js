@@ -1,9 +1,5 @@
 import { createUseStyles } from 'react-jss';
-
-/**
- * Фрагмент задает правило генерации названия класса
- */
-const createGenerateId = () => (rule) => `wk-${rule.key}`;
+import { createGenerateId } from '../utils/helpers';
 
 const useStyles = createUseStyles(({ grid }) => {
   const { col, gap, margin } = grid;

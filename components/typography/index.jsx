@@ -1,36 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import propTypes from 'prop-types';
 import useStyles from './styles';
-import { convertStylesToCss, unionClassNames } from '../utils/helpers';
+import { convertStylesToCss, unionClassNames, globalPropTypes, globalDefaultProps } from '../utils/helpers';
 
-const Text = ({ children, tag: Tag, textStyle: TextStyle, style }) => {
+const Text = ({ children, tag: Tag, variant, style }) => {
   const jssCSS = useStyles();
   const inlineCSS = convertStylesToCss(style);
-  const [textStyle, setTextStyle] = useState('');
+  const [classVariant, setClassVariant] = useState('');
 
   useEffect(() => {
     if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(Tag)) {
-      setTextStyle(jssCSS[TextStyle] || jssCSS[Tag]);
+      setClassVariant(jssCSS[variant] || jssCSS[Tag]);
     } else {
-      setTextStyle(jssCSS[TextStyle]);
+      setClassVariant(jssCSS[variant]);
     }
-  }, [Tag, TextStyle]);
+  }, [Tag, variant]);
 
-  return <Tag className={unionClassNames(textStyle, inlineCSS)}>{children}</Tag>;
+  return <Tag className={unionClassNames(classVariant, inlineCSS)}>{children}</Tag>;
 };
 
 Text.propTypes = {
-  children: propTypes.node,
+  ...globalPropTypes,
   tag: propTypes.string,
-  textStyle: propTypes.string,
-  style: propTypes.objectOf(propTypes.string),
+  variant: propTypes.string,
 };
 
 Text.defaultProps = {
-  children: '',
+  ...globalDefaultProps,
   tag: 'p',
-  textStyle: '',
-  style: null,
+  variant: '',
 };
 
 export default Text;

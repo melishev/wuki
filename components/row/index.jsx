@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import useStyles from './styles';
-import { convertStylesToCss, unionClassNames } from '../utils/helpers';
+import { convertStylesToCss, unionClassNames, globalPropTypes, globalDefaultProps } from '../utils/helpers';
 
 const Row = ({ children, tag: Tag, style }) => {
   const jssCSS = useStyles();
@@ -11,15 +11,13 @@ const Row = ({ children, tag: Tag, style }) => {
 };
 
 Row.propTypes = {
-  children: propTypes.node,
+  ...globalPropTypes,
   tag: propTypes.string,
-  style: propTypes.objectOf(propTypes.string),
 };
 
 Row.defaultProps = {
-  children: '',
+  ...globalDefaultProps,
   tag: 'div',
-  style: null,
 };
 
 export default Row;

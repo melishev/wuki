@@ -15,7 +15,6 @@ export const unionClassNames = (...classNames) => classNames.join(' ').trim();
 
 export const globalPropTypes = {
   children: propTypes.node,
-  tag: propTypes.string,
   style: propTypes.oneOfType([
     propTypes.string,
     propTypes.number,
@@ -24,6 +23,5 @@ export const globalPropTypes = {
 
 export const globalDefaultProps = {
   children: '',
-  tag: 'div',
   style: null,
 };

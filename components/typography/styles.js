@@ -1,15 +1,23 @@
 /* eslint-disable no-restricted-syntax */
 import { createUseStyles } from 'react-jss';
+import { createGenerateId } from '../utils/helpers';
 
-// Фрагмент задает правило генерации названия класса
-const createGenerateId = () => (rule) => `type-${rule.key}`;
+const useStyles = createUseStyles(
+  ({ type, grid }) => {
+    const { variants } = type;
+    const { breakPoints } = grid;
 
-const styles = createUseStyles(
-  (theme) => {
-    const { variants } = theme.type;
-    const { breakPoints } = theme.grid;
-
-    const fontStyle = (size, weight, height) => ({
+    /**
+     * - EN
+     * Basic styles for typography
+     * - RU
+     * Базовые стили для типографики
+     * @param {number} size
+     * @param {(number|string)} weight
+     * @param {number} height
+     * @returns {object}
+     */
+    const baseTextStyle = (size, weight, height) => ({
       font: {
         size,
         weight,
@@ -17,34 +25,60 @@ const styles = createUseStyles(
       lineHeight: height,
     });
 
-    // Конфигурации выходящих стилей
-    const genFontStyle = ({ size, weight, height, breakPoints: bp }) => {
-      const genbreakPoints = {};
-      if (bp) {
-        for (const [bpKey, bpValue] of Object.entries(bp)) {
-          const { size: bpSize, weight: bpWeight, height: bpHeight } = bpValue;
-          genbreakPoints[`@media (min-width: ${breakPoints[bpKey]}px)`] = fontStyle(bpSize, bpWeight, bpHeight);
-        }
+    /**
+     * - EN
+     * Styles for the main element of typography
+     * - RU
+     * Стили для основного элемента типографики
+     * @returns {object}
+     */
+    const mainTextStyle = () => ({
+      margin: '0',
+    });
+
+    /**
+     * - EN
+     * Receives one of the options and generates styles for it
+     * - RU
+     * Получает один из вариантов и генерирует для него стили
+     * @param {object} - All available variation properties with BreakPoint / Все доступные свойства вариации вместе с BreakPoint
+     * @returns {object} - Returns the styles object for the variation / Возвращает объект стилей для вариации
+     */
+    const genFontStyle = ({ size, weight, height, breakPoints: variantBreakPoints }) => {
+      let genBreakPoints = {};
+      if (variantBreakPoints) {
+        genBreakPoints = Object.entries(variantBreakPoints).reduce((acc, [currName, currValue]) => {
+          acc[`@media (min-width: ${breakPoints[currName]}px)`] = baseTextStyle(currValue.size, currValue.weight, currValue.height);
+          return acc;
+        }, {});
       }
       return {
-        ...fontStyle(size, weight, height),
-        ...genbreakPoints,
+        ...{ ...baseTextStyle(size, weight, height), ...mainTextStyle() },
+        ...genBreakPoints,
       };
     };
 
-    // Функция генерирует стили типографики
-    function genVariant() {
-      return Object.keys(variants).reduce((acc, curr) => {
+    /**
+     * - EN
+     * Loops through all declared variations
+     * - RU
+     * Проходится по всем объявленным вариациям
+     * @returns {object} - Returns the final styles object / Возвращает конечный объект стилей
+     */
+    function genVariants() {
+      const themeVariants = Object.keys(variants);
+
+      return themeVariants.reduce((acc, curr) => {
         acc[curr] = genFontStyle(variants[curr]);
         return acc;
       }, {});
     }
 
     return {
-      ...genVariant(),
+      ...genVariants(),
     };
   },
   { generateId: createGenerateId() },
 );
 
-export default styles;
+export default useStyles;

@@ -6,8 +6,7 @@ import style from '../utils/globalStyleSheet';
 import normalize from '../utils/normalize';
 
 const WukiProvider = ({ children, theme, cssBaseLine }) => {
-  const globalStyles = style(themeDefault);
-  globalStyles();
+  style(themeDefault)();
 
   if (cssBaseLine) {
     normalize();

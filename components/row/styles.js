@@ -1,19 +1,23 @@
-import { createUseStyles, jss } from 'react-jss';
+import { createUseStyles } from 'react-jss';
+import { createGenerateId } from '../utils/helpers';
 
-// Фрагмент задает правило генерации названия класса
-const createGenerateId = () => (rule) => rule.key;
-jss.setup({ createGenerateId });
+const useStyles = createUseStyles(
+  ({ grid }) => {
+    const { col, gap, margin } = grid;
 
-const styles = createUseStyles((theme) => ({
-  row: {
-    display: 'grid',
-    gridTemplateColumns: `repeat(${theme.grid.col}, 1fr)`,
-    gap: theme.grid.gap,
-    padding: {
-      right: theme.grid.margin,
-      left: theme.grid.margin,
-    },
+    return {
+      row: {
+        display: 'grid',
+        gridTemplateColumns: `repeat(${col}, 1fr)`,
+        gap,
+        padding: {
+          right: margin,
+          left: margin,
+        },
+      },
+    };
   },
-}));
+  { generateId: createGenerateId() },
+);
 
-export default styles;
+export default useStyles;

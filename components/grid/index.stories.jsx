@@ -6,6 +6,14 @@ import Col from '../col';
 export default {
   title: 'Layout/Grid',
   component: [Row, Col],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'In standard configuration, grid has the following settings: colCount: 24, gapSize: 21, rowGap: 42',
+      },
+    },
+  },
 };
 
 export const Default = () => (
@@ -17,12 +25,6 @@ export const Default = () => (
     ))}
   </Row>
 );
-
-Default.args = {
-  title: 'Default Grid',
-  description:
-    'In standard configuration, grid has the following settings: colCount: 24, gapSize: 21, rowGap: 42',
-};
 
 export const Offset = () => (
   <Row>
@@ -38,8 +40,12 @@ export const Offset = () => (
   </Row>
 );
 
-Offset.args = {
-  title: 'Grid using offset',
+Offset.parameters = {
+  docs: {
+    description: {
+      story: 'Need description!',
+    },
+  },
 };
 
 export const Responsive = () => (
@@ -56,33 +62,40 @@ export const Responsive = () => (
   </Row>
 );
 
-Responsive.args = {
-  title: 'Grid using responsive',
-  description: 'Use responsive classes to adjust your layout across viewports.',
+Responsive.parameters = {
+  docs: {
+    description: {
+      story: 'Use responsive classes to adjust your layout across viewports.',
+    },
+  },
 };
 
 export const Tag = () => (
   <Row>
     <Col col={6} tag="aside">
-      <p>col: 4, tag: aside</p>
+      <p>col: 6, tag: aside</p>
     </Col>
     <Col col={18} tag="main">
-      <p>col 20, tag: main</p>
+      <p>col 18, tag: main</p>
     </Col>
   </Row>
 );
 
-Tag.args = {
-  title: 'Grid using Tag',
-  description:
-    `Sometimes, for better performance, you need to use semantic HTML tags. A props - tag has been added specifically for this.
-    It allows the developer to override the default tag - div, which would be better suited. Props Tag is available for Row and Col.`,
+Tag.parameters = {
+  docs: {
+    description: {
+      story: `Sometimes, for better performance, you need to use semantic HTML tags. A props - tag has been added specifically for this.
+      It allows the developer to override the default tag - div, which would be better suited. Props Tag is available for Row and Col.`,
+    },
+  },
 };
 
-export const Sandbox = () => <></>;
+// export const Sandbox = () => <></>;
 
-Sandbox.args = {
-  title: 'Sandbox',
-  description:
-    'Here you can customize the Grid and its contents however you like to get a better understanding of how it actually works.',
-};
+// Sandbox.parameters = {
+//   docs: {
+//     description: {
+//       story: 'Here you can customize the Grid and its contents however you like to get a better understanding of how it actually works.',
+//     },
+//   },
+// };

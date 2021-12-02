@@ -1,64 +1,80 @@
 /* eslint-disable no-restricted-syntax */
-import { createUseStyles, jss } from 'react-jss';
+import { createUseStyles } from 'react-jss';
+import { createGenerateId } from '../utils/helpers';
 
-// Фрагмент задает правило генерации названия класса
-const createGenerateId = () => (rule) => rule.key;
-jss.setup({ createGenerateId });
+const useStyles = createUseStyles(
+  ({ grid }) => {
+    const { col, breakPoints } = grid;
 
-const styles = createUseStyles((theme) => {
-  // На основе переданного BreakPoint,
-  // проходит по всем колонкам и в
-  // зависимости от bp возвращает объект стилей.
-  function colGenerate(bpKey, bpValue) {
-    const arrCol = [...Array(theme.grid.col).keys()];
+    /**
+     * - EN
+     * Based on the supplied BreakPoint,
+     * traverses all the columns and
+     * returns a styles object.
+     * - RU
+     * На основе переданного BreakPoint,
+     * проходит по всем колонкам и
+     * возвращает объект стилей.
+     */
+    function colGenerate([breakPointKey, breakPointValue]) {
+      const themeCol = [...Array(col).keys()];
 
-    return arrCol.reduce((acc, curr) => {
-      let className;
-      let mediaQuery;
+      return themeCol.reduce((acc, curr) => {
+        const className = `col-${breakPointKey}-${curr + 1}`;
+        const mediaQuery = (breakPointKey === 'xs') ? '&' : `@media (min-width: ${breakPointValue}px)`;
 
-      if (bpKey === 'xs') {
-        className = `col-${curr + 1}`;
-        mediaQuery = '&';
-      } else {
-        className = `col-${bpKey}-${curr + 1}`;
-        mediaQuery = `@media (min-width: ${bpValue}px)`;
-      }
-
-      // Создаем класс с медиа-запросом и свойствами
-      acc[className] = {
-        [mediaQuery]: {
-          gridColumn: `auto/span ${curr + 1}`,
-        },
-      };
-      return acc;
-    }, {});
-  }
-
-  // Создает цикл, при каждой итерации
-  // вызывается функция возвращающая
-  // обьект классов для определенного BreakPoint
-  function colBreakPoints() {
-    let a = {};
-    for (const [bpKey, bpValue] of Object.entries(theme.grid.breakPoints)) {
-      a = { ...a, ...colGenerate(bpKey, bpValue) };
+        acc[className] = {
+          [mediaQuery]: {
+            gridColumn: `auto/span ${curr + 1}`,
+          },
+        };
+        return acc;
+      }, {});
     }
-    return a;
-  }
 
-  // Возвращает объект классов отступов
-  // для каждого размера колонки
-  function colOffset() {
-    const arrCol = [...Array(theme.grid.col).keys()];
+    /**
+     * - EN
+     * Creates a loop, with each iteration a function
+     * is called that returns an object of classes
+     * for a specific BreakPoint
+     * - RU
+     * Создает цикл, при каждой итерации
+     * вызывается функция возвращающая
+     * объект классов для определенного BreakPoint
+     */
+    function colBreakPoints() {
+      let a = {};
+      for (const breakPoint of Object.entries(breakPoints)) {
+        a = { ...a, ...colGenerate(breakPoint) };
+      }
+      return a;
+    }
 
-    return arrCol.reduce((acc, curr) => {
-      acc[`col-offset-${curr + 1}`] = {
-        gridColumnStart: curr + 1,
-      };
-      return acc;
-    }, {});
-  }
+    /**
+     * - EN
+     * Returns an object of the indentation
+     * classes for each column size
+     * - RU
+     * Возвращает объект классов отступов
+     * для каждого размера колонки
+     */
+    function colOffset() {
+      const themeCol = [...Array(col).keys()];
 
-  return { ...colBreakPoints(), ...colOffset() };
-});
+      return themeCol.reduce((acc, curr) => {
+        acc[`col-offset-${curr + 1}`] = {
+          gridColumnStart: curr + 1,
+        };
+        return acc;
+      }, {});
+    }
 
-export default styles;
+    return {
+      ...colBreakPoints(),
+      ...colOffset(),
+    };
+  },
+  { generateId: createGenerateId() },
+);
+
+export default useStyles;

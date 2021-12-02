@@ -2,17 +2,11 @@ import React from 'react';
 import { themes } from '@storybook/theming';
 
 import wukiTheme from '../components/utils/theme';
-import { WukiProvider, Row, Col, Text } from '../components';
+import { WukiProvider } from '../components';
 
 export const decorators = [
   (Story, { args }) => (
     <WukiProvider cssBaseLine={true}>
-      <Row>
-        <Col col={24}>
-          <Text tag="h1" textStyle="h3">{ args.title }</Text>
-          <Text>{ args.description }</Text>
-        </Col>
-      </Row>
       <Story />
     </WukiProvider>
   ),
@@ -27,7 +21,7 @@ export const parameters = {
     gridOn: false,
     columns: wukiTheme.grid.col,
     gap: wukiTheme.grid.gap,
-    gutter: `calc(1rem + ${wukiTheme.grid.margin}px)`,
+    gutter: `${wukiTheme.grid.margin}px`,
     maxWidth: 'auto',
   },
   controls: {
@@ -45,7 +39,7 @@ export const parameters = {
   },
   viewport: {
     viewports: {
-      xs: {
+      sm: {
         name: 'SM - 576px',
         styles: {
           width: '576px',

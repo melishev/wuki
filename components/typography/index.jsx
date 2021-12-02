@@ -6,6 +6,7 @@ import { convertStylesToCss, unionClassNames, globalPropTypes, globalDefaultProp
 const Text = ({ children, tag: Tag, variant, style }) => {
   const jssCSS = useStyles();
   const inlineCSS = convertStylesToCss(style);
+
   const [classVariant, setClassVariant] = useState('');
 
   useEffect(() => {

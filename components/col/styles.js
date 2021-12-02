@@ -1,33 +1,25 @@
-/* eslint-disable no-restricted-syntax */
 import { createUseStyles } from 'react-jss';
-
-/**
- * Фрагмент задает правило генерации названия класса
- */
-const createGenerateId = () => (rule) => rule.key;
+import { createGenerateId } from '../utils/helpers';
 
 const useStyles = createUseStyles(({ grid }) => {
   const { col, breakPoints } = grid;
 
   /**
+   * - EN
+   * Based on the supplied BreakPoint,
+   * traverses all the columns and
+   * returns a styles object.
+   * - RU
    * На основе переданного BreakPoint,
-   * проходит по всем колонкам и в
-   * зависимости от bp возвращает объект стилей.
+   * проходит по всем колонкам и
+   * возвращает объект стилей.
    */
-  function colGenerate(bpKey, bpValue) {
-    const arrCol = [...Array(col).keys()];
+  function colGenerate([breakPointKey, breakPointValue]) {
+    const themeCol = [...Array(col).keys()];
 
-    return arrCol.reduce((acc, curr) => {
-      let className;
-      let mediaQuery;
-
-      if (bpKey === 'xs') {
-        className = `col-${curr + 1}`;
-        mediaQuery = '&';
-      } else {
-        className = `col-${bpKey}-${curr + 1}`;
-        mediaQuery = `@media (min-width: ${bpValue}px)`;
-      }
+    return themeCol.reduce((acc, curr) => {
+      const className = `col-${breakPointKey}-${curr + 1}`;
+      const mediaQuery = (breakPointKey === 'xs') ? '&' : `@media (min-width: ${breakPointValue}px)`;
 
       acc[className] = {
         [mediaQuery]: {
@@ -39,26 +31,35 @@ const useStyles = createUseStyles(({ grid }) => {
   }
 
   /**
+   * - EN
+   * Creates a loop, with each iteration a function
+   * is called that returns an object of classes
+   * for a specific BreakPoint
+   * - RU
    * Создает цикл, при каждой итерации
    * вызывается функция возвращающая
-   * обьект классов для определенного BreakPoint
+   * объект классов для определенного BreakPoint
    */
   function colBreakPoints() {
     let a = {};
-    for (const [bpKey, bpValue] of Object.entries(breakPoints)) {
-      a = { ...a, ...colGenerate(bpKey, bpValue) };
+    for (const breakPoint of Object.entries(breakPoints)) {
+      a = { ...a, ...colGenerate(breakPoint) };
     }
     return a;
   }
 
   /**
+   * - EN
+   * Returns an object of the indentation
+   * classes for each column size
+   * - RU
    * Возвращает объект классов отступов
    * для каждого размера колонки
    */
   function colOffset() {
-    const arrCol = [...Array(col).keys()];
+    const themeCol = [...Array(col).keys()];
 
-    return arrCol.reduce((acc, curr) => {
+    return themeCol.reduce((acc, curr) => {
       acc[`col-offset-${curr + 1}`] = {
         gridColumnStart: curr + 1,
       };

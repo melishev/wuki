@@ -90,12 +90,12 @@ Tag.parameters = {
   },
 };
 
-export const Sandbox = () => <></>;
+// export const Sandbox = () => <></>;
 
-Sandbox.parameters = {
-  docs: {
-    description: {
-      story: 'Here you can customize the Grid and its contents however you like to get a better understanding of how it actually works.',
-    },
-  },
-};
+// Sandbox.parameters = {
+//   docs: {
+//     description: {
+//       story: 'Here you can customize the Grid and its contents however you like to get a better understanding of how it actually works.',
+//     },
+//   },
+// };

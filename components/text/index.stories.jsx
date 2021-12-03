@@ -6,7 +6,7 @@ import { Grid, Text } from '../index';
 import Doc from './readme.mdx';
 
 export default {
-  title: 'General/Typography',
+  title: 'General/Text',
   component: Text,
   parameters: {
     docs: {

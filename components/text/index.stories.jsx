@@ -9,7 +9,7 @@ import Col from '../col';
 import Doc from './readme.mdx';
 
 export default {
-  title: 'General/Typography',
+  title: 'General/Text',
   component: Text,
   parameters: {
     docs: {

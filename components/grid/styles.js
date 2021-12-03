@@ -4,7 +4,7 @@ import { createGenerateId } from '../utils/helpers';
 
 const useStyles = createUseStyles(
   ({ grid }) => {
-    const { col, breakPoints } = grid;
+    const { col, gap, margin, breakPoints } = grid;
 
     /**
      * - EN
@@ -69,9 +69,31 @@ const useStyles = createUseStyles(
       }, {});
     }
 
+    /**
+     * - EN
+     * Returns the styles for the Grid Container
+     * - RU
+     * Возвращает стили для Grid Container
+     * @returns {object}
+     */
+    function gridContainer() {
+      return {
+        row: {
+          display: 'grid',
+          gridTemplateColumns: `repeat(${col}, 1fr)`,
+          gap,
+          padding: {
+            right: margin,
+            left: margin,
+          },
+        },
+      };
+    }
+
     return {
       ...colBreakPoints(),
       ...colOffset(),
+      ...gridContainer(),
     };
   },
   { generateId: createGenerateId() },

@@ -1,10 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-import Text from './index';
-
-import Row from '../row';
-import Col from '../col';
+import { Grid, Text } from '../index';
 
 import Doc from './readme.mdx';
 
@@ -23,42 +20,42 @@ export default {
 };
 
 export const Default = () => (
-  <Row>
-    <Col col={24}>
+  <Grid container>
+    <Grid col={24}>
       <Text tag="h1">The quick brown fox jumps over the lazy dog</Text>
-    </Col>
-    <Col col={24}>
+    </Grid>
+    <Grid col={24}>
       <Text tag="h2">The quick brown fox jumps over the lazy dog</Text>
-    </Col>
-    <Col col={24}>
+    </Grid>
+    <Grid col={24}>
       <Text tag="h3">The quick brown fox jumps over the lazy dog</Text>
-    </Col>
-    <Col col={24}>
+    </Grid>
+    <Grid col={24}>
       <Text tag="h4">The quick brown fox jumps over the lazy dog</Text>
-    </Col>
-    <Col col={24}>
+    </Grid>
+    <Grid col={24}>
       <Text tag="h5">The quick brown fox jumps over the lazy dog</Text>
-    </Col>
-    <Col col={24}>
+    </Grid>
+    <Grid col={24}>
       <Text tag="h6">The quick brown fox jumps over the lazy dog</Text>
-    </Col>
-    <Col col={24}>
+    </Grid>
+    <Grid col={24}>
       <Text tag="p" variant="subTitle">
         The quick brown fox jumps over the lazy dog
       </Text>
-    </Col>
-    <Col col={24}>
+    </Grid>
+    <Grid col={24}>
       <Text variant="body1">The quick brown fox jumps over the lazy dog</Text>
-    </Col>
-    <Col col={24}>
+    </Grid>
+    <Grid col={24}>
       <Text variant="body2">The quick brown fox jumps over the lazy dog</Text>
-    </Col>
-    <Col col={24}>
+    </Grid>
+    <Grid col={24}>
       <Text tag="small" variant="small">
         The quick brown fox jumps over the lazy dog
       </Text>
-    </Col>
-  </Row>
+    </Grid>
+  </Grid>
 );
 
 export const Example = () => {
@@ -66,8 +63,8 @@ export const Example = () => {
   const figcaptionStyle = { color: '#757575', margin: '8px 0 48px' };
 
   return (
-    <Row>
-      <Col
+    <Grid container>
+      <Grid
         col={10}
         offset={8}
         style={{
@@ -257,8 +254,8 @@ export const Example = () => {
           Up to 2.6x faster performance when selecting subjects in images in
           Adobe Photoshop.
         </Text>
-      </Col>
-    </Row>
+      </Grid>
+    </Grid>
   );
 };
 

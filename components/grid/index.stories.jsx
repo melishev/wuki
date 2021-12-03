@@ -1,11 +1,10 @@
 import React from 'react';
 
-import Row from '../row';
-import Col from '../col';
+import { Grid } from '../index';
 
 export default {
   title: 'Layout/Grid',
-  component: [Row, Col],
+  component: Grid,
   parameters: {
     docs: {
       description: {
@@ -17,27 +16,27 @@ export default {
 };
 
 export const Default = () => (
-  <Row>
+  <Grid container>
     {[...Array(24)].map((item, index) => (
-      <Col col={item} key={item}>
+      <Grid key={item}>
         <p>{index + 1}</p>
-      </Col>
+      </Grid>
     ))}
-  </Row>
+  </Grid>
 );
 
 export const Offset = () => (
-  <Row>
-    <Col col={4}>
+  <Grid container>
+    <Grid col={4}>
       <p>col: 4</p>
-    </Col>
-    <Col col={4} offset={11}>
+    </Grid>
+    <Grid col={4} offset={11}>
       <p>col: 4, offset: 11</p>
-    </Col>
-    <Col col={4} offset={21}>
+    </Grid>
+    <Grid col={4} offset={21}>
       <p>col: 4, offset: 21</p>
-    </Col>
-  </Row>
+    </Grid>
+  </Grid>
 );
 
 Offset.parameters = {
@@ -49,17 +48,17 @@ Offset.parameters = {
 };
 
 export const Responsive = () => (
-  <Row>
-    <Col col={{ xs: 12, xl: 8 }}>
+  <Grid container>
+    <Grid col={{ xs: 12, xl: 8 }}>
       <p>col: 12, col-xl: 8</p>
-    </Col>
-    <Col col={{ xs: 12, xl: 8 }}>
+    </Grid>
+    <Grid col={{ xs: 12, xl: 8 }}>
       <p>col: 12, col-xl: 8</p>
-    </Col>
-    <Col col={{ xs: 12, xl: 8 }}>
+    </Grid>
+    <Grid col={{ xs: 12, xl: 8 }}>
       <p>col: 12, col-xl: 8</p>
-    </Col>
-  </Row>
+    </Grid>
+  </Grid>
 );
 
 Responsive.parameters = {
@@ -71,14 +70,14 @@ Responsive.parameters = {
 };
 
 export const Tag = () => (
-  <Row>
-    <Col col={6} tag="aside">
+  <Grid container>
+    <Grid col={6} tag="aside">
       <p>col: 6, tag: aside</p>
-    </Col>
-    <Col col={18} tag="main">
+    </Grid>
+    <Grid col={18} tag="main">
       <p>col 18, tag: main</p>
-    </Col>
-  </Row>
+    </Grid>
+  </Grid>
 );
 
 Tag.parameters = {
@@ -90,6 +89,16 @@ Tag.parameters = {
   },
 };
 
+export const Style = () => (
+  <Grid container>
+    <Grid col={6} tag="aside" style={{ color: 'red' }}>
+      <p>col: 6, tag: aside</p>
+    </Grid>
+    <Grid col={18} tag="main" style={{ color: 'blue' }}>
+      <p>col 18, tag: main</p>
+    </Grid>
+  </Grid>
+);
 // export const Sandbox = () => <></>;
 
 // Sandbox.parameters = {

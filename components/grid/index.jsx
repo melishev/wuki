@@ -1,15 +1,16 @@
 /* eslint-disable guard-for-in, no-restricted-syntax */
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import propTypes from 'prop-types';
 import useStyles from './styles';
 import { convertStylesToCss, unionClassNames, globalPropTypes, globalDefaultProps } from '../utils/helpers';
 
-const Col = ({ children, tag: Tag, col, offset, style }) => {
+const Grid = ({ children, tag: Tag, col, offset, container, style }) => {
   const jssCSS = useStyles();
   const inlineCSS = convertStylesToCss(style);
 
   const [classCol, setClassCol] = useState('');
   const [classOffset, setClassOffset] = useState('');
+  const [classContainer, setClassContainer] = useState('');
 
   /**
    * Creates and returns a className col
@@ -36,29 +37,33 @@ const Col = ({ children, tag: Tag, col, offset, style }) => {
   };
 
   useEffect(() => {
-    classNameCol();
-    classNameOffset();
-  }, [col, offset]);
+    if (container) {
+      setClassContainer(jssCSS.row);
+    } else {
+      classNameCol();
+      classNameOffset();
+    }
+  }, [container, col, offset]);
 
   return (
-    <Tag className={unionClassNames(classCol, classOffset, inlineCSS)}>
-      {children}
-    </Tag>
+    <Tag className={unionClassNames(classCol, classOffset, classContainer, inlineCSS)}>{children}</Tag>
   );
 };
 
-Col.propTypes = {
+Grid.propTypes = {
   ...globalPropTypes,
   tag: propTypes.string,
   col: propTypes.oneOfType([propTypes.number, propTypes.object]),
   offset: propTypes.number,
+  container: propTypes.bool,
 };
 
-Col.defaultProps = {
+Grid.defaultProps = {
   ...globalDefaultProps,
   tag: 'div',
   col: 1,
   offset: null,
+  container: false,
 };
 
-export default Col;
+export default Grid;

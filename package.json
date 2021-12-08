@@ -14,12 +14,11 @@
     "build": "rollup -c",
     "build:sb": "build-storybook",
     "build:docs": "build-storybook --docs",
-    "lint": "eslint --ext .jsx components/**",
-    "stylelint": "stylelint */**/*.scss",
+    "lint": "eslint --ext .jsx --ext .js components/**",
     "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN"
   },
   "dependencies": {
-    "react-jss": "^10.8.2"
+    "react-jss": ">=10.8.2"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
@@ -43,6 +42,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rollup": "^2.58.0",

@@ -149,39 +149,3 @@ export const Style = () => (
     </Grid>
   </Grid>
 );
-
-const testStyle = {
-  border: '1px solid #696969',
-};
-
-export const Example = () => (
-  <Grid container tag="main">
-    <Grid col={24} tag="header" style={{ ...testStyle, height: '60px' }} />
-    <Grid col={4} tag="ul" style={{ ...testStyle, height: '100vh' }}>
-      <li>Lifestyle</li>
-      <li>Jordan</li>
-      <li>Running</li>
-      <li>Basketball</li>
-      <li>Football</li>
-      <li>Soccer</li>
-      <li>Training & Gym</li>
-      <li>Skateboarding</li>
-      <li>Baseball</li>
-      <li>Golf</li>
-      <li>Tennis</li>
-      <li>Walking</li>
-      <li>Track & Field</li>
-      <li>Sandals & Slides</li>
-    </Grid>
-    <Grid col={20} style={{ ...testStyle, height: '100vh' }} />
-  </Grid>
-);
-// export const Sandbox = () => <></>;
-
-// Sandbox.parameters = {
-//   docs: {
-//     description: {
-//       story: 'Here you can customize the Grid and its contents however you like to get a better understanding of how it actually works.',
-//     },
-//   },
-// };

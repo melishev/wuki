@@ -21,7 +21,8 @@ const styleCol = {
   border: '1px solid black',
 };
 
-export const Default = () => (
+export function Default() {
+  return (
   <Grid container>
     {[...Array(24)].map((item, index) => (
       <Grid key={item} style={styleCol}>
@@ -38,7 +39,7 @@ export const Default = () => (
       <Text variant="body2">4</Text>
     </Grid>
   </Grid>
-);
+)};
 
 export const Offset = () => (
   <Grid container>

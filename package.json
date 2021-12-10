@@ -13,7 +13,8 @@
     "build": "rollup -c",
     "build:sb": "build-storybook --docs",
     "lint": "eslint --ext .jsx --ext .js components/**",
-    "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN"
+    "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN",
+    "commit": "cz"
   },
   "dependencies": {
     "react-jss": ">=10.8.2"

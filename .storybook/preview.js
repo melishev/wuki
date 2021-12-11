@@ -9,7 +9,7 @@ import { MDXEmbedProvider } from 'mdx-embed';
 
 export const decorators = [
   (Story, { args }) => (
-    <WukiProvider cssBaseLine={true}>
+    <WukiProvider cssBaseLine>
       <Story />
     </WukiProvider>
   ),

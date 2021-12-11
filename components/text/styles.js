@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax */
 import { createUseStyles } from 'react-jss';
 import { createGenerateId } from '../utils/helpers';
 

@@ -1,4 +1,4 @@
-/* eslint-disable guard-for-in, no-restricted-syntax */
+/* eslint-disable no-restricted-syntax */
 import React, { useEffect, useState } from 'react';
 import propTypes from 'prop-types';
 import useStyles from './styles';

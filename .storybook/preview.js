@@ -6,7 +6,7 @@ import { WukiProvider } from '../components';
 
 export const decorators = [
   (Story, { args }) => (
-    <WukiProvider cssBaseLine={true}>
+    <WukiProvider cssBaseLine>
       <Story />
     </WukiProvider>
   ),

@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Grid, Text } from '../index';
 
-import Doc from './readme.mdx';
+import Doc from './docs.mdx';
 
 export default {
   title: 'General/Text',

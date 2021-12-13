@@ -22,6 +22,7 @@ jobs:
             refactor
             perf
             build
+            test
           validateSingleCommit: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

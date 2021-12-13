@@ -62,7 +62,7 @@ const useStyles = createUseStyles(
       const themeCol = [...Array(col).keys()];
 
       return themeCol.reduce((acc, curr) => {
-        acc[`col-offset-${curr + 1}`] = {
+        acc[`offset-${curr + 1}`] = {
           gridColumnStart: curr + 1,
         };
         return acc;
@@ -78,7 +78,7 @@ const useStyles = createUseStyles(
      */
     function gridContainer() {
       return {
-        row: {
+        con: {
           display: 'grid',
           gridTemplateColumns: `repeat(${col}, 1fr)`,
           gap,

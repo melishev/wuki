@@ -32,13 +32,13 @@ const Grid = ({ children, tag: Tag, col, offset, container, style }) => {
    */
   const classNameOffset = () => {
     if (offset) {
-      setClassOffset(jssCSS[`col-offset-${offset}`]);
+      setClassOffset(jssCSS[`offset-${offset}`]);
     }
   };
 
   useEffect(() => {
     if (container) {
-      setClassContainer(jssCSS.row);
+      setClassContainer(jssCSS.con);
     } else {
       classNameCol();
       classNameOffset();

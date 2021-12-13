@@ -35,7 +35,6 @@ describe('Grid', () => {
         <Grid offset={4}>Grid item</Grid>
       </Grid>,
     );
-    screen.debug();
     expect(screen.getByText('Grid item')).toHaveClass('wk-col-xs-1 wk-offset-4');
   });
 });

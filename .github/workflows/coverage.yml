@@ -16,13 +16,6 @@ jobs:
       
       - name: Launch tests
         run: npm test
-
-      - uses: actions/checkout@master
-      - uses: codecov/codecov-action@v2
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          directory: ./coverage
-          flags: unittests
           
       - name: Run codacy-coverage-reporter
         uses: codacy/codacy-coverage-reporter-action@v1

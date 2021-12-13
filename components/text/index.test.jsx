@@ -7,7 +7,7 @@ describe('Text', () => {
     render(
       <Text>Hello, world!</Text>,
     );
-    expect(screen.getByText('Hello, world!')).toBeInTheDocument(); // Исправить на нахождение текста
+    expect(screen.getByText('Hello, world!')).toBeInTheDocument();
   });
   it('with a className equal to the Tag', () => {
     render(
@@ -15,11 +15,11 @@ describe('Text', () => {
     );
     expect(screen.getByText('Heading 1')).toHaveClass('wk-h1');
   });
-  it('with a className equal to the variant', () => {
+  it('with a className equal to the Variant', () => {
     render(
-      <Text variant="body1">Heading 1</Text>,
+      <Text variant="body1">Body 1</Text>,
     );
-    expect(screen.getByText('Heading 1')).toHaveClass('wk-body1');
+    expect(screen.getByText('Body 1')).toHaveClass('wk-body1');
   });
   // it('with a className equal to the style', () => {
   //   render(

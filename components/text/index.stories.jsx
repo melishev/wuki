@@ -23,35 +23,15 @@ export const Default = () => (
   <Grid container>
     <Grid col={24}>
       <Text tag="h1">The quick brown fox jumps over the lazy dog</Text>
-    </Grid>
-    <Grid col={24}>
       <Text tag="h2">The quick brown fox jumps over the lazy dog</Text>
-    </Grid>
-    <Grid col={24}>
       <Text tag="h3">The quick brown fox jumps over the lazy dog</Text>
-    </Grid>
-    <Grid col={24}>
       <Text tag="h4">The quick brown fox jumps over the lazy dog</Text>
-    </Grid>
-    <Grid col={24}>
       <Text tag="h5">The quick brown fox jumps over the lazy dog</Text>
-    </Grid>
-    <Grid col={24}>
       <Text tag="h6">The quick brown fox jumps over the lazy dog</Text>
-    </Grid>
-    <Grid col={24}>
-      <Text tag="p" variant="subTitle">
-        The quick brown fox jumps over the lazy dog
-      </Text>
-    </Grid>
-    <Grid col={24}>
+      <Text tag="p" variant="subTitle">The quick brown fox jumps over the lazy dog</Text>
       <Text variant="body1">The quick brown fox jumps over the lazy dog</Text>
-    </Grid>
-    <Grid col={24}>
       <Text variant="body2">The quick brown fox jumps over the lazy dog</Text>
-    </Grid>
-    <Grid col={24}>
-      <Text tag="small" variant="small">
+      <Text tag="small">
         The quick brown fox jumps over the lazy dog
       </Text>
     </Grid>

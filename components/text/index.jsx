@@ -10,7 +10,7 @@ const Text = ({ children, tag: Tag, variant, style }) => {
   const [classVariant, setClassVariant] = useState('');
 
   useEffect(() => {
-    if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(Tag)) {
+    if (Object.keys(jssCSS).includes(Tag)) {
       setClassVariant(jssCSS[variant] || jssCSS[Tag]);
     } else {
       setClassVariant(jssCSS[variant]);

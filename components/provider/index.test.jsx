@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '../utils/setupTests';
+import { render } from '../utils/wrapperTests';
 import { WukiProvider } from '../index';
 
 describe('Provider', () => {

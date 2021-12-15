@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '../utils/setupTests';
+import { render, screen } from '../utils/wrapperTests';
 import { Grid } from '../index';
 
 describe('Grid', () => {

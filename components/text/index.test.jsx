@@ -1,32 +1,25 @@
 import React from 'react';
-import { render, screen } from '../utils/setupTests';
+import { render, screen } from '../utils/wrapperTests';
 import { Text } from '../index';
 
 describe('Text', () => {
-  it('`Hello, world!` message', () => {
-    render(
-      <Text>Hello, world!</Text>,
-    );
-    expect(screen.getByText('Hello, world!')).toBeInTheDocument();
-  });
-  it('with a className equal to the Tag', () => {
+  it('with a Tag', () => {
     render(
       <Text tag="h1">Heading 1</Text>,
     );
     expect(screen.getByText('Heading 1')).toHaveClass('wk-h1');
   });
-  it('with a className equal to the Variant', () => {
+  it('with a Variant', () => {
     render(
       <Text variant="body1">Body 1</Text>,
     );
     expect(screen.getByText('Body 1')).toHaveClass('wk-body1');
   });
-  // it('with a className equal to the style', () => {
-  //   render(
-  //     <Text style={{ color: 'red' }}>Inline styles</Text>,
-  //   );
-  //   screen.debug();
-  //   expect(screen.getByText('Inline styles')).toHaveClass(/wk-s/i);
-  // });
-  // /wk-s/i - тестировать встроенные в класс строковые стили
+  it('with a Tag and Variant', () => {
+    render(
+      <Text tag="h1" variant="h2">Heading 1</Text>,
+    );
+    expect(screen.getByText('Heading 1')).not.toHaveClass('wk-h1');
+    expect(screen.getByText('Heading 1')).toHaveClass('wk-h2');
+  });
 });

@@ -1,52 +1,58 @@
 import { createUseStyles } from 'react-jss';
 import { createGenerateId } from '../utils/helpers';
 
-const useStyles = createUseStyles(({ type }) => ({
+const colors = {
+  gray1: '#E5E5E5',
+  gray2: '#6D6D6D',
+  gray3: '#1D1D1F',
+  orange1: '#FFB45B',
+};
+
+const useStyles = createUseStyles({
   code: {
-    // Под сомнением
-    cursor: 'text',
-    //
     display: 'block',
     whiteSpace: 'pre',
-    padding: '1rem',
-    border: '1px solid #E5E5E5',
+    padding: 'calc(1rem - 1px)',
+    border: `1px solid ${colors.gray1}`,
     borderRadius: 10,
-    color: '#1D1D1F',
+    color: colors.gray3,
     font: '400 .9rem IBM Plex Mono',
-    position: 'relative',
+    overflow: 'auto',
     '& button': {
       // не уверен
       display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
+      // placeItems: 'center',
       cursor: 'pointer',
       //
-      width: '2rem',
-      height: '2rem',
-      border: '1px solid #E5E5E5',
+      // width: '2rem',
+      // height: '2rem',
+      border: `1px solid ${colors.gray1}`,
+      // border: 'unset',
+      // outline: `1px solid ${colors.gray1}`,
       borderRadius: 6,
       // перебивает дефолтные стили кнопки
       background: 'unset',
-      padding: 0,
+      // padding: 0,
+      padding: 'calc(1rem - 10px - 1px)', // 10 - половина ширины и высоты иконки, 1 - из-за бордера
       //
-      position: 'absolute',
-      top: '1rem',
-      right: '1rem',
-      stroke: '#E5E5E5',
+      position: 'sticky',
+      float: 'right',
+      left: 'calc(100% - 2rem)',
+      stroke: colors.gray1,
       '& svg': {
         stroke: 'inherit',
       },
       '&:hover': {
-        borderColor: '#6D6D6D',
-        stroke: '#6D6D6D',
+        borderColor: colors.gray2,
+        stroke: colors.gray2,
       },
-      '&:active': {
-        borderColor: '#FFB45B',
-        stroke: '#FFB45B',
+      '&.active': {
+        borderColor: colors.orange1,
+        stroke: colors.orange1,
       },
     },
   },
-}),
+},
 { generateId: createGenerateId() });
 
 export default useStyles;

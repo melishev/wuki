@@ -7,29 +7,44 @@ export default {
   component: Code,
 };
 
-export const Default = () => {
-  const code = `<div>
+const codeInline = 'npm install wuki';
+const codeHTML = `<div>
   <p>Hello, world!</p>
 </div>
 `;
+const codeJS = `insertAt(index, value) {
+  const previousNode = this.nodes[index - 1] || null;
+  const nextNode = this.nodes[index] || null;
+  const node = { value, next: nextNode };
 
-  return (
-    <Grid container>
-      <Grid col={7}>
-        <Code code={code} />
-      </Grid>
+  if (previousNode) previousNode.next = node;
+  this.nodes.splice(index, 0, node);
+}`;
+
+export const Default = () => (
+  <Grid container>
+    <Grid col={8}>
+      <Code code={codeInline} />
     </Grid>
-  );
-};
-
-export const InlineCode = () => {
-  const code = 'npm install wuki';
-
-  return (
-    <Grid container>
-      <Grid col={7}>
-        <Code code={code} />
-      </Grid>
+    <Grid col={8}>
+      <Code code={codeHTML} />
     </Grid>
-  );
-};
+    <Grid col={8}>
+      <Code code={codeJS} />
+    </Grid>
+  </Grid>
+);
+
+export const Hover = () => (
+  <Grid container>
+    <Grid col={8}>
+      <Code code={codeInline} />
+    </Grid>
+    <Grid col={8}>
+      <Code code={codeHTML} />
+    </Grid>
+    <Grid col={8}>
+      <Code code={codeJS} />
+    </Grid>
+  </Grid>
+);

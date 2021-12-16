@@ -5,7 +5,7 @@ import useStyles from './styles';
 import { convertStylesToCss, unionClassNames, globalPropTypes, globalDefaultProps } from '../utils/helpers';
 
 const Grid = ({ children, tag: Tag, col, offset, container, style }) => {
-  const jssCSS = useStyles();
+  useStyles();
   const inlineCSS = convertStylesToCss(style);
 
   const [classCol, setClassCol] = useState('');
@@ -19,11 +19,11 @@ const Grid = ({ children, tag: Tag, col, offset, container, style }) => {
     if (typeof col === 'object') {
       let a = '';
       for (const [bpKey, bpValue] of Object.entries(col)) {
-        a = `${a} ${jssCSS[`col-${bpKey}-${bpValue}`]}`;
+        a = `${a} wk-col-${bpKey}-${bpValue}`;
       }
       setClassCol(a);
     } else {
-      setClassCol(jssCSS[`col-xs-${col}`]);
+      setClassCol(`wk-col-xs-${col}`);
     }
   };
 
@@ -32,13 +32,13 @@ const Grid = ({ children, tag: Tag, col, offset, container, style }) => {
    */
   const classNameOffset = () => {
     if (offset) {
-      setClassOffset(jssCSS[`offset-${offset}`]);
+      setClassOffset(`wk-offset-${offset}`);
     }
   };
 
   useEffect(() => {
     if (container) {
-      setClassContainer(jssCSS.con);
+      setClassContainer('wk-con');
     } else {
       classNameCol();
       classNameOffset();

@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "dev": "start-storybook -p 6006",
+    "dev:docs": "start-storybook --docs --no-manager-cache",
     "build": "rollup -c",
     "build:sb": "build-storybook --docs",
     "lint": "eslint --ext .jsx --ext .js components/**",

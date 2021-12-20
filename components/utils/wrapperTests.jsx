@@ -4,16 +4,14 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { WukiProvider } from '../index';
 
-const testsDecorator = ({ children }) => (
+const componentWrapper = ({ children }) => (
   <WukiProvider cssBaseLine>
-    {children}
+    { children }
   </WukiProvider>
 );
 
-const customRender = (ui, options) => render(ui, { wrapper: testsDecorator, ...options });
+const customRender = (ui, options) => render(ui, { wrapper: componentWrapper, ...options });
 
-// re-export everything
 export * from '@testing-library/react';
 
-// override render method
 export { customRender as render };

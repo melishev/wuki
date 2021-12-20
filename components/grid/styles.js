@@ -19,17 +19,22 @@ const useStyles = createUseStyles(
     function colGenerate([breakPointKey, breakPointValue]) {
       const themeCol = [...Array(col).keys()];
 
-      return themeCol.reduce((acc, curr) => {
+      const genCol = themeCol.reduce((acc, curr) => {
         const className = `col-${breakPointKey}-${curr + 1}`;
-        const mediaQuery = (breakPointKey === 'xs') ? '&' : `@media (min-width: ${breakPointValue}px)`;
 
         acc[className] = {
-          [mediaQuery]: {
-            gridColumn: `auto/span ${curr + 1}`,
-          },
+          width: '100%', // necessary for FireFox
+          gridColumn: `auto/span ${curr + 1}`,
         };
         return acc;
       }, {});
+
+      if (breakPointKey !== 'xs') {
+        return {
+          [`@media (min-width: ${breakPointValue}px)`]: genCol,
+        };
+      }
+      return genCol;
     }
 
     /**
@@ -62,7 +67,7 @@ const useStyles = createUseStyles(
       const themeCol = [...Array(col).keys()];
 
       return themeCol.reduce((acc, curr) => {
-        acc[`col-offset-${curr + 1}`] = {
+        acc[`offset-${curr + 1}`] = {
           gridColumnStart: curr + 1,
         };
         return acc;
@@ -78,14 +83,11 @@ const useStyles = createUseStyles(
      */
     function gridContainer() {
       return {
-        row: {
+        con: {
           display: 'grid',
           gridTemplateColumns: `repeat(${col}, 1fr)`,
           gap,
-          padding: {
-            right: margin,
-            left: margin,
-          },
+          padding: `0 ${margin}px`,
         },
       };
     }

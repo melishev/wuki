@@ -8,6 +8,7 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    'storybook-addon-mdx-embed',
     'storybook-addon-grid/preset',
     'storybook-addon-grid/chromatic',
   ],
@@ -20,9 +21,28 @@ module.exports = {
       body {
         padding-left: 0 !important;
         padding-right: 0 !important;
+        background: #fafafa;
       }
       h1, h2, h3, h4, h5, h6, p {
         font-family: ${theme.type.family} !important;
+      }
+      .sbdocs.sbdocs-wrapper {
+        background: #fafafa;
+      }
+    </style>
+  `),
+  managerHead: (head) => (`
+    ${head}
+    <style>
+      div[role="main"] {
+        top: 0 !important;
+        height: 100% !important;
+      }
+      div[role="main"] > div {
+        box-shadow: unset;
+      }
+      .sbdocs.sbdocs-wrapper {
+        background: #fafafa;
       }
     </style>
   `)

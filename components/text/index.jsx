@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import propTypes from 'prop-types';
 import useStyles from './styles';
-import { convertStylesToCss, unionClassNames, globalPropTypes, globalDefaultProps } from '../utils/helpers';
+import { convertStylesToCss, unionClassNames } from '../utils/helpers';
 
 const Text = ({ children, tag: Tag, variant, style }) => {
   const jssCSS = useStyles();
@@ -21,13 +21,21 @@ const Text = ({ children, tag: Tag, variant, style }) => {
 };
 
 Text.propTypes = {
-  ...globalPropTypes,
+  children: propTypes.node,
+  /** Inline Styles assigned to the component will be converted to CSS class */
+  style: propTypes.oneOfType([
+    propTypes.string,
+    propTypes.number,
+  ]),
+  /** For better semantics, you can override the default HTML tag */
   tag: propTypes.string,
+  /** Allows you to tell the component to use any variation from the theme */
   variant: propTypes.string,
 };
 
 Text.defaultProps = {
-  ...globalDefaultProps,
+  children: '',
+  style: null,
   tag: 'p',
   variant: '',
 };

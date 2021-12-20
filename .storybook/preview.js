@@ -4,6 +4,9 @@ import { themes } from '@storybook/theming';
 import wukiTheme from '../components/utils/theme';
 import { WukiProvider } from '../components';
 
+import { DocsContainer } from '@storybook/addon-docs/blocks';
+import { MDXEmbedProvider } from 'mdx-embed';
+
 export const decorators = [
   (Story, { args }) => (
     <WukiProvider cssBaseLine>
@@ -16,6 +19,11 @@ export const parameters = {
   actions: { argTypesRegex: "^on[a-z].*" },
   docs: {
     theme: themes.light,
+    container: ({ children, context }) => (
+      <DocsContainer context={context}>
+        <MDXEmbedProvider>{children}</MDXEmbedProvider>
+      </DocsContainer>
+    ),
   },
   grid: {
     gridOn: false,

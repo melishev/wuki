@@ -6,7 +6,7 @@ addons.setConfig({
   theme: themeCustom,
   initialActive: 'sidebar',
   sidebar: {
-    showRoots: false,
+    showRoots: true,
   },
   toolbar: {
     title: { hidden: false, },

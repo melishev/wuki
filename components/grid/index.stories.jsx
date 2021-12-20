@@ -24,15 +24,6 @@ export const Default = () => (
         <Text variant="body2">{index + 1}</Text>
       </Grid>
     ))}
-    <Grid col={8}>
-      <Text variant="body2">8</Text>
-    </Grid>
-    <Grid col={12}>
-      <Text variant="body2">12</Text>
-    </Grid>
-    <Grid col={4}>
-      <Text variant="body2">4</Text>
-    </Grid>
   </Grid>
 );
 
@@ -53,21 +44,6 @@ export const Offset = () => (
         col: 4, offset: 21
       </Text>
     </Grid>
-    <Grid col={4} offset={6}>
-      <Text variant="body2">
-        col: 4, offset: 6
-      </Text>
-    </Grid>
-    <Grid col={4} offset={12}>
-      <Text variant="body2">
-        col: 4, offset: 12
-      </Text>
-    </Grid>
-    <Grid col={8} offset={17}>
-      <Text variant="body2">
-        col: 4, offset: 17
-      </Text>
-    </Grid>
   </Grid>
 );
 
@@ -81,17 +57,17 @@ Offset.parameters = {
 
 export const Responsive = () => (
   <Grid container>
-    <Grid col={{ xs: 24, md: 12, xl: 8 }}>
+    <Grid col={{ xs: 12, xl: 8 }}>
       <Text variant="body2">
         col: 12, col-md: 12, col-xl: 8
       </Text>
     </Grid>
-    <Grid col={{ xs: 24, md: 12, xl: 8 }}>
+    <Grid col={{ xs: 12, xl: 8 }}>
       <Text variant="body2">
         col: 12, col-md: 12, col-xl: 8
       </Text>
     </Grid>
-    <Grid col={{ xs: 24, md: 12, xl: 8 }}>
+    <Grid col={{ xs: 12, xl: 8 }}>
       <Text variant="body2">
         col: 12, col-md: 12, col-xl: 8
       </Text>

@@ -17,24 +17,20 @@ export default {
   },
 };
 
-const styleCol = {
-  border: '1px solid black',
-};
-
 export const Default = () => (
   <Grid container>
     {[...Array(24)].map((item, index) => (
-      <Grid key={item} style={styleCol}>
+      <Grid key={item}>
         <Text variant="body2">{index + 1}</Text>
       </Grid>
     ))}
-    <Grid col={8} style={styleCol}>
+    <Grid col={8}>
       <Text variant="body2">8</Text>
     </Grid>
-    <Grid col={12} style={styleCol}>
+    <Grid col={12}>
       <Text variant="body2">12</Text>
     </Grid>
-    <Grid col={4} style={styleCol}>
+    <Grid col={4}>
       <Text variant="body2">4</Text>
     </Grid>
   </Grid>
@@ -42,32 +38,32 @@ export const Default = () => (
 
 export const Offset = () => (
   <Grid container>
-    <Grid col={4} style={styleCol}>
+    <Grid col={4}>
       <Text variant="body2">
         col: 4
       </Text>
     </Grid>
-    <Grid col={4} offset={11} style={styleCol}>
+    <Grid col={4} offset={11}>
       <Text variant="body2">
         col: 4, offset: 11
       </Text>
     </Grid>
-    <Grid col={4} offset={21} style={styleCol}>
+    <Grid col={4} offset={21}>
       <Text variant="body2">
         col: 4, offset: 21
       </Text>
     </Grid>
-    <Grid col={4} offset={6} style={styleCol}>
+    <Grid col={4} offset={6}>
       <Text variant="body2">
         col: 4, offset: 6
       </Text>
     </Grid>
-    <Grid col={4} offset={12} style={styleCol}>
+    <Grid col={4} offset={12}>
       <Text variant="body2">
         col: 4, offset: 12
       </Text>
     </Grid>
-    <Grid col={8} offset={17} style={styleCol}>
+    <Grid col={8} offset={17}>
       <Text variant="body2">
         col: 4, offset: 17
       </Text>
@@ -85,17 +81,17 @@ Offset.parameters = {
 
 export const Responsive = () => (
   <Grid container>
-    <Grid col={{ xs: 24, md: 12, xl: 8 }} style={styleCol}>
+    <Grid col={{ xs: 24, md: 12, xl: 8 }}>
       <Text variant="body2">
         col: 12, col-md: 12, col-xl: 8
       </Text>
     </Grid>
-    <Grid col={{ xs: 24, md: 12, xl: 8 }} style={styleCol}>
+    <Grid col={{ xs: 24, md: 12, xl: 8 }}>
       <Text variant="body2">
         col: 12, col-md: 12, col-xl: 8
       </Text>
     </Grid>
-    <Grid col={{ xs: 24, md: 12, xl: 8 }} style={styleCol}>
+    <Grid col={{ xs: 24, md: 12, xl: 8 }}>
       <Text variant="body2">
         col: 12, col-md: 12, col-xl: 8
       </Text>
@@ -113,12 +109,12 @@ Responsive.parameters = {
 
 export const Tag = () => (
   <Grid container>
-    <Grid col={6} tag="aside" style={styleCol}>
+    <Grid col={6} tag="aside">
       <Text variant="body2">
         col: 6, tag: aside
       </Text>
     </Grid>
-    <Grid col={18} tag="main" style={styleCol}>
+    <Grid col={18} tag="main">
       <Text variant="body2">
         col: 18, tag: main
       </Text>
@@ -137,13 +133,13 @@ Tag.parameters = {
 
 export const Style = () => (
   <Grid container>
-    <Grid col={6} tag="aside" style={{ color: 'red', ...styleCol }}>
+    <Grid col={6} tag="aside" style={{ color: 'red' }}>
       <Text variant="body2">
         col: 6, tag: aside
       </Text>
     </Grid>
     <Grid col={18} tag="main">
-      <Text variant="body2" style={{ color: 'blue', ...styleCol }}>
+      <Text variant="body2" style={{ color: 'blue' }}>
         col: 6, tag: aside
       </Text>
     </Grid>

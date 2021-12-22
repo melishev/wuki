@@ -7,15 +7,26 @@ import { WukiProvider } from '../components';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
 import { MDXEmbedProvider } from 'mdx-embed';
 
+import { useGlobals } from '@storybook/client-api';
+
 export const decorators = [
-  (Story, { args }) => (
+  (Story, { args }) => {
+    const [{locale}] = useGlobals();
+    console.log(locale)
+
+    return (
     <WukiProvider cssBaseLine>
       <Story />
     </WukiProvider>
-  ),
+  )},
 ];
 
 export const parameters = {
+  locale: "en",
+  locales: {
+    en: {title: "English", left: '🇺🇸'},
+    ru: {title: "Русский", left: '🇷🇺'},
+  },
   actions: { argTypesRegex: "^on[a-z].*" },
   docs: {
     theme: themes.light,

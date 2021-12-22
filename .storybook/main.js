@@ -11,6 +11,7 @@ module.exports = {
     'storybook-addon-mdx-embed',
     'storybook-addon-grid/preset',
     'storybook-addon-grid/chromatic',
+    'storybook-i18n',
   ],
   previewHead: (head) => (`
     ${head}

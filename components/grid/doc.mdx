@@ -6,7 +6,9 @@ import {
   Props
 } from '@storybook/addon-docs';
 
-<Vimeo vimeoId="281513522" />
+<!-- <Vimeo vimeoId="281513522" /> -->
+
+![image](https://paradigm.mail.ru/notionStatic/938bf97d-d8f9-48cb-ba4d-9fe4c6c027de.png)
 
 <br />
 
@@ -18,9 +20,30 @@ import {
 import { Grid } from 'wuki';
 ```
 
+## Entities
+
+Grid contains two entities:
+  1. Container - defines a columnar system built on CSS Grid, which is many times more convenient and easier to use than CSS FlexBox.
+```
+<Grid container>
+</Grid>
+```
+  2. Element - is a column in a column system.
+```
+<Grid col={12}>
+</Grid>
+```
+In standard situations, you should stick to as few `<Grid container>` as possible. One container is enough to create standard page layout and cover all needs.
+
+## Адаптивность
+
 ## Component
 
-The ```Text``` component makes it easy to apply a default set of font weights and sizes in your application.
+<Primary />
+
+## Examples
+
+<Primary />
 
 ## Component API (props)
 

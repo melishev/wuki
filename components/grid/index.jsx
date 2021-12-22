@@ -59,8 +59,11 @@ Grid.propTypes = {
   ]),
   /** For better semantics, you can override the default HTML tag */
   tag: propTypes.string,
+  /** Number of occupied columns in the grid */
   col: propTypes.oneOfType([propTypes.number, propTypes.object]),
+  /** Left indent, relative to the entire grid */
   offset: propTypes.number,
+  /** Defines the entity of a component */
   container: propTypes.bool,
 };
 

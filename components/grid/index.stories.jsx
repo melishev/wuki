@@ -10,8 +10,8 @@ export default {
     docs: {
       page: Doc,
       description: {
-        component:
-          'In standard configuration, grid has the following settings: colCount: 24, gapSize: 21, rowGap: 42',
+        component: `This is the foundation of the entire application.
+        The grid allows you to correctly position all elements on the screen of any device.`,
       },
     },
   },

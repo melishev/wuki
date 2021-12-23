@@ -4,7 +4,7 @@ import { themes } from '@storybook/theming';
 import wukiTheme from '../components/utils/theme';
 import { WukiProvider } from '../components';
 
-import { DocsContainer } from '@storybook/addon-docs/blocks';
+import { DocsContainer } from '@storybook/addon-docs';
 
 export const decorators = [
   (Story, { args }) => (

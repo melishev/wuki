@@ -17,6 +17,11 @@
     "object-curly-newline": "off",
     "max-len": ["error", 140, 2],
     "indent": ["error", 2],
-    "react/jsx-props-no-spreading": ["error", { "exceptions": ["Tag"] }]
+    "react/jsx-props-no-spreading": ["error",
+      {
+        "exceptions": ["Tag"],
+        "html": "ignore"
+      }
+    ]
   }
 }

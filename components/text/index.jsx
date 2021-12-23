@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import useStyles from './styles';
 import { convertStylesToCss, unionClassNames } from '../utils/helpers';
 
-const Text = ({ children, tag: Tag, variant, style }) => {
+const Text = ({ children, tag: Tag, variant, style, ...props }) => {
   const jssCSS = useStyles();
   const inlineCSS = convertStylesToCss(style);
 
@@ -17,7 +17,7 @@ const Text = ({ children, tag: Tag, variant, style }) => {
     }
   }, [Tag, variant]);
 
-  return <Tag className={unionClassNames(classVariant, inlineCSS)}>{children}</Tag>;
+  return <Tag className={unionClassNames(classVariant, inlineCSS)} {...props}>{children}</Tag>;
 };
 
 Text.propTypes = {

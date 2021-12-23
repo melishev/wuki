@@ -17,7 +17,6 @@ const Text = ({ children, tag: Tag, variant, style, ...props }) => {
     }
   }, [Tag, variant]);
 
-  // eslint-disable-next-line react/jsx-props-no-spreading
   return <Tag className={unionClassNames(classVariant, inlineCSS)} {...props}>{children}</Tag>;
 };
 

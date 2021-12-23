@@ -8,47 +8,57 @@ const colors = {
   orange1: '#FFB45B',
 };
 
+const globalCSS = {
+  background: 'white',
+  border: `1px solid ${colors.gray1}`,
+  font: '400 .9rem IBM Plex Mono',
+  color: colors.gray3,
+};
+
 const useStyles = createUseStyles({
+  codeInline: {
+    ...globalCSS,
+    display: 'inline-block',
+    padding: 'calc(0.25rem - 1px) calc(.75rem - 1px)',
+    borderRadius: 6,
+    cursor: 'copy',
+    '&:hover': {
+      borderColor: colors.gray2,
+    },
+    '&.active': {
+      borderColor: colors.orange1,
+    },
+  },
   code: {
+    ...globalCSS,
     display: 'block',
     whiteSpace: 'pre',
     padding: 'calc(1rem - 1px)',
-    border: `1px solid ${colors.gray1}`,
     borderRadius: 10,
-    color: colors.gray3,
-    font: '400 .9rem IBM Plex Mono',
     overflow: 'auto',
+    '&.active': {
+      '& button': {
+        borderColor: colors.orange1,
+        stroke: colors.orange1,
+      },
+    },
     '& button': {
-      // не уверен
       display: 'flex',
-      // placeItems: 'center',
-      cursor: 'pointer',
-      //
-      // width: '2rem',
-      // height: '2rem',
+      background: 'white',
       border: `1px solid ${colors.gray1}`,
-      // border: 'unset',
-      // outline: `1px solid ${colors.gray1}`,
       borderRadius: 6,
-      // перебивает дефолтные стили кнопки
-      background: 'unset',
-      // padding: 0,
-      padding: 'calc(1rem - 10px - 1px)', // 10 - половина ширины и высоты иконки, 1 - из-за бордера
-      //
+      padding: 'calc(1rem - 10px - 1px)',
       position: 'sticky',
       float: 'right',
       left: 'calc(100% - 2rem)',
       stroke: colors.gray1,
+      cursor: 'pointer',
       '& svg': {
         stroke: 'inherit',
       },
       '&:hover': {
         borderColor: colors.gray2,
         stroke: colors.gray2,
-      },
-      '&.active': {
-        borderColor: colors.orange1,
-        stroke: colors.orange1,
       },
     },
   },

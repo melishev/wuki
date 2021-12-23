@@ -1,50 +1,50 @@
 import React from 'react';
 
-import { Grid, Code } from '../index';
+import { Grid, Text, Code } from '../index';
 
 export default {
   title: '👨🏻‍💻 IN DEVELOP/Code',
   component: Code,
 };
 
-const codeInline = 'npm install wuki';
-const codeHTML = `<div>
-  <p>Hello, world!</p>
-</div>
-`;
-const codeJS = `insertAt(index, value) {
-  const previousNode = this.nodes[index - 1] || null;
-  const nextNode = this.nodes[index] || null;
-  const node = { value, next: nextNode };
+const codeInline = 'npm install wuki@latest';
 
-  if (previousNode) previousNode.next = node;
-  this.nodes.splice(index, 0, node);
-}`;
-
-export const Default = () => (
+export const Inline = () => (
   <Grid container>
     <Grid col={8}>
-      <Code code={codeInline} />
-    </Grid>
-    <Grid col={8}>
-      <Code code={codeHTML} />
-    </Grid>
-    <Grid col={8}>
-      <Code code={codeJS} />
+      <Text variant="body2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Ullam maxime inventore,
+        odio itaque minima quasi cum facere
+        {' '}
+        <Code code={codeInline} inline />
+        {' '}
+        quia quisquam expedita unde beatae officia aspernatur, quae,
+        dignissimos nobis culpa accusamus quo!
+      </Text>
     </Grid>
   </Grid>
 );
 
-export const Hover = () => (
+const codeSingleLine = 'npm install wuki npm install wuki npm install wuki npm install wuki';
+
+export const SingleLine = () => (
   <Grid container>
     <Grid col={8}>
-      <Code code={codeInline} />
+      <Code code={codeSingleLine} />
     </Grid>
+  </Grid>
+);
+
+const codeMultiLine = `<div>
+  <p>Hello, world!</p>
+</div>
+`;
+
+export const MultiLine = () => (
+  <Grid container>
     <Grid col={8}>
-      <Code code={codeHTML} />
-    </Grid>
-    <Grid col={8}>
-      <Code code={codeJS} />
+      <Code code={codeMultiLine} />
     </Grid>
   </Grid>
 );

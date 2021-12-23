@@ -8,10 +8,8 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    'storybook-addon-mdx-embed',
     'storybook-addon-grid/preset',
     'storybook-addon-grid/chromatic',
-    'storybook-i18n',
   ],
   previewHead: (head) => (`
     ${head}

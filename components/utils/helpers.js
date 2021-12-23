@@ -1,24 +1,4 @@
-import propTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
-
-/**
- * Global props types
- */
-export const globalPropTypes = {
-  children: propTypes.node,
-  style: propTypes.oneOfType([
-    propTypes.string,
-    propTypes.number,
-  ]),
-};
-
-/**
- * Global default props value
- */
-export const globalDefaultProps = {
-  children: '',
-  style: null,
-};
 
 /**
  * Specifies the rule for generating the className

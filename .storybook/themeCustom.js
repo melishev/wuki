@@ -7,11 +7,11 @@ export default create({
   colorPrimary: 'hotpink',
   colorSecondary: 'deepskyblue',
 
-  // // UI
-  // appBg: 'white',
-  // appContentBg: 'silver',
-  // appBorderColor: 'grey',
-  // appBorderRadius: 20,
+  // UI
+  appBg: '#fafafa',
+  appContentBg: '#fafafa',
+  // appBorderColor: 'blue',
+  appBorderRadius: 0,
 
   // // Typography
   fontBase: wukiTheme.type.family,
@@ -24,7 +24,7 @@ export default create({
   // // Toolbar default and active colors
   // barTextColor: 'silver',
   // barSelectedColor: 'black',
-  // barBg: 'hotpink',
+  barBg: '#fafafa',
 
   // // Form colors
   // inputBg: 'white',
@@ -34,5 +34,5 @@ export default create({
 
   brandTitle: 'Wuki UI',
   brandUrl: 'https://github.com/melishev/wuki',
-  brandImage: 'https://place-hold.it/350x150',
+  brandImage: 'https://raw.githubusercontent.com/melishev/wuki/master/.github/assets/logo.svg',
 });

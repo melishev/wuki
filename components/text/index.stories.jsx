@@ -12,8 +12,7 @@ export default {
     docs: {
       page: Doc,
       description: {
-        component:
-          'Use typography to present your design and content as clearly and efficiently as possible.',
+        component: 'Use typography to present your design and content as clearly and efficiently as possible.',
       },
     },
   },

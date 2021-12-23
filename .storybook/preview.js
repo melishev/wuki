@@ -2,39 +2,39 @@ import React from 'react';
 import { themes } from '@storybook/theming';
 
 import wukiTheme from '../components/utils/theme';
-import { WukiProvider } from '../components';
+import { WukiProvider, Text } from '../components';
 
-import { DocsContainer } from '@storybook/addon-docs/blocks';
-import { MDXEmbedProvider } from 'mdx-embed';
+import { DocsContainer } from '@storybook/addon-docs';
 
-import { useGlobals } from '@storybook/client-api';
+import { I18nextProvider, useTranslation } from 'react-i18next';
+import i18nConfig from './i18next.js'
 
 export const decorators = [
-  (Story, { args }) => {
-    const [{locale}] = useGlobals();
-    console.log(locale)
-
-    return (
+  (Story, { args }) => (
     <WukiProvider cssBaseLine>
       <Story />
     </WukiProvider>
-  )},
+  ),
 ];
 
 export const parameters = {
-  locale: "en",
-  locales: {
-    en: {title: "English", left: '🇺🇸'},
-    ru: {title: "Русский", left: '🇷🇺'},
-  },
   actions: { argTypesRegex: "^on[a-z].*" },
   docs: {
     theme: themes.light,
-    container: ({ children, context }) => (
-      <DocsContainer context={context}>
-        <MDXEmbedProvider>{children}</MDXEmbedProvider>
-      </DocsContainer>
-    ),
+    container: ({ children, context }) => {
+      const { t, i18n } = useTranslation()
+
+      return (
+      <I18nextProvider i18n={i18nConfig}>
+        <WukiProvider cssBaseLine>
+          <DocsContainer context={context}>
+              <Text variant='body2' onClick={() => i18n.changeLanguage('ru')}>Russia 🇷🇺</Text>
+              <Text variant='body2' onClick={() => i18n.changeLanguage('en')}>English 🇺🇸</Text>
+              {children}
+          </DocsContainer>
+        </WukiProvider>
+      </I18nextProvider>
+    )},
   },
   grid: {
     gridOn: false,

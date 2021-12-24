@@ -14,7 +14,7 @@ import { useTranslation } from 'react-i18next'
 
 <Title />
 
-<p>{useTranslation().t('description')}</p>
+<p>{useTranslation('text').t('description')}</p>
 
 <Description />
 
@@ -22,9 +22,9 @@ import { useTranslation } from 'react-i18next'
 import { Text } from 'wuki';
 ```
 
-<h2>{useTranslation().t('subTitle')}</h2>
+<h2>{useTranslation('text').t('subTitle')}</h2>
 
-<p>{useTranslation().t('test')}</p>
+<p>{useTranslation('text').t('test')}</p>
 
 #### 1. Google Fonts
 
@@ -41,7 +41,7 @@ import { Text } from 'wuki';
 npm install @fontsource/manrope
 ```
 
-<p>{useTranslation().t('test2')}</p>
+<p>{useTranslation('text').t('test2')}</p>
 
 ```
 import '@fontsource/manrope/200.css';
@@ -53,7 +53,7 @@ import '@fontsource/manrope/700.css';
 import '@fontsource/manrope/800.css';
 ```
 
-<p>{useTranslation().t('test3')} <a href="https://fontsource.org/fonts/manrope">Fontsource</a></p>
+<p>{useTranslation('text').t('test3')} <a href="https://fontsource.org/fonts/manrope">Fontsource</a></p>
 
 ## Component
 

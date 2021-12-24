@@ -1,16 +1,14 @@
 /* eslint-disable max-len */
 import React from 'react';
-
+import Documentation from './docs/index.mdx';
 import { Grid, Text } from '../index';
-
-import Doc from './docs.mdx';
 
 export default {
   title: 'General/Text',
   component: Text,
   parameters: {
     docs: {
-      page: Doc,
+      page: Documentation,
     },
   },
 };

@@ -1,7 +1,9 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-const ns = ['common'];
+const allComponents = [
+  'text',
+];
 const supportedLngs = ['en', 'ru'];
 
 i18n.use(initReactI18next)
@@ -9,15 +11,15 @@ i18n.use(initReactI18next)
       lng: 'en',
       fallbackLng: false,
       supportedLngs,
-      ns,
+      resources: {}
     });
 
 supportedLngs.forEach((lang) => {
-  ns.forEach((n) => {
+  allComponents.forEach((component) => {
     i18n.addResourceBundle(
       lang,
-      n,
-      require(`../public/locales/${lang}/${n}.json`)
+      component,
+      require(`../components/${component}/docs/locales/${lang}.json`)
     );
   });
 });

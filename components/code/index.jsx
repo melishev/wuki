@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import propTypes from 'prop-types';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Copy, Check } from 'react-feather';
@@ -9,16 +9,7 @@ const Code = ({ style, code, inline, ...props }) => {
   const jssCSS = useStyles();
   const inlineCSS = convertStylesToCss(style);
 
-  const [classInline, setClassInline] = useState('');
   const [status, setStatus] = useState('');
-
-  useEffect(() => {
-    if (inline) {
-      setClassInline(jssCSS.codeInline);
-    } else {
-      setClassInline(jssCSS.code);
-    }
-  }, [inline]);
 
   function copyCode() {
     navigator.clipboard.writeText(code)
@@ -28,21 +19,33 @@ const Code = ({ style, code, inline, ...props }) => {
       });
   }
 
-  return (
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
-    <code className={unionClassNames(classInline, inlineCSS, status)} role="note" onClick={inline ? copyCode : null} {...props}>
-      {!inline
-        ? (
-          <button type="button" aria-label="Copy" className={status} onClick={copyCode}>
-            {!status
-              ? <Copy size={20} strokeWidth={1} />
-              : <Check size={20} strokeWidth={1} /> }
-          </button>
-        )
-        : ''}
+  const codeMultiLine = (
+    <pre className={unionClassNames(jssCSS.code, inlineCSS, status)} {...props}>
+      <button type="button" aria-label="Copy" onClick={copyCode}>
+        {!status
+          ? <Copy size={20} strokeWidth={1} />
+          : <Check size={20} strokeWidth={1} /> }
+      </button>
+      <code>{code}</code>
+    </pre>
+  );
+
+  const codeInline = (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+    <code
+      className={unionClassNames(jssCSS.codeInline, inlineCSS, status)}
+      onClick={copyCode}
+      role="button"
+      tabIndex={0}
+      {...props}
+    >
       {code}
     </code>
   );
+
+  return !inline
+    ? codeMultiLine
+    : codeInline;
 };
 
 Code.propTypes = {

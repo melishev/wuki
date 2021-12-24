@@ -31,8 +31,6 @@ const useStyles = createUseStyles({
   },
   code: {
     ...globalCSS,
-    display: 'block',
-    whiteSpace: 'pre',
     padding: 'calc(1rem - 1px)',
     borderRadius: 10,
     overflow: 'auto',
@@ -60,6 +58,9 @@ const useStyles = createUseStyles({
         borderColor: colors.gray2,
         stroke: colors.gray2,
       },
+    },
+    '& code': {
+      marginRight: '3rem',
     },
   },
 },

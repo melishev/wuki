@@ -26,7 +26,7 @@ export const Inline = () => (
   </Grid>
 );
 
-const codeSingleLine = 'npm install wuki npm install wuki npm install wuki npm install wuki';
+const codeSingleLine = 'npm install wuki';
 
 export const SingleLine = () => (
   <Grid container>
@@ -38,8 +38,7 @@ export const SingleLine = () => (
 
 const codeMultiLine = `<div>
   <p>Hello, world!</p>
-</div>
-`;
+</div>`;
 
 export const MultiLine = () => (
   <Grid container>

@@ -8,7 +8,6 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    'storybook-addon-mdx-embed',
     'storybook-addon-grid/preset',
     'storybook-addon-grid/chromatic',
   ],
@@ -44,7 +43,7 @@ module.exports = {
       #storybook-explorer-tree > div {
         margin-right: unset;
       }
-      a.sidebar-item {
+      a.sidebar-item, button.sidebar-item {
         color: #1e1e1f;
         padding-top: .5rem;
         padding-bottom: .5rem;
@@ -53,10 +52,10 @@ module.exports = {
         font-size: 1rem;
         font-weight: 400;
       }
-      a.sidebar-item svg {
+      a.sidebar-item svg, button.sidebar-item svg {
         display: none;
       }
-      a.sidebar-item:hover {
+      a.sidebar-item:hover, button.sidebar-item:hover {
         background: rgba(0,16,61,.04);
       }
       a.sidebar-item[data-selected="true"] {

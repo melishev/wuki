@@ -28,8 +28,8 @@ export const parameters = {
       <I18nextProvider i18n={i18nConfig}>
         <WukiProvider cssBaseLine>
           <DocsContainer context={context}>
-            <Text variant='body2' onClick={() => i18n.changeLanguage('ru')}>Russia 🇷🇺</Text>
-            <Text variant='body2' onClick={() => i18n.changeLanguage('en')}>English 🇺🇸</Text>
+            <button><Text variant='body2' onClick={() => i18n.changeLanguage('ru')}>Russia 🇷🇺</Text></button>
+            <button><Text variant='body2' onClick={() => i18n.changeLanguage('en')}>English 🇺🇸</Text></button>
             {children}
           </DocsContainer>
         </WukiProvider>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { themes } from '@storybook/theming';
 
-import wukiTheme from '../components/utils/theme';
+import { grid } from '../components/utils/theme';
 import { WukiProvider, Text } from '../components';
 
 import { DocsContainer } from '@storybook/addon-docs';
@@ -38,9 +38,9 @@ export const parameters = {
   },
   grid: {
     gridOn: false,
-    columns: wukiTheme.grid.col,
-    gap: wukiTheme.grid.gap,
-    gutter: `${wukiTheme.grid.margin}px`,
+    columns: grid.col,
+    gap: grid.gap,
+    gutter: `${grid.margin}px`,
     maxWidth: 'auto',
   },
   controls: {

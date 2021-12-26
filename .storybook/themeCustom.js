@@ -1,20 +1,20 @@
 import { create } from '@storybook/theming';
-import wukiTheme from '../components/utils/theme';
+import { type, colors } from '../components/utils/theme';
 
 export default create({
   base: 'light',
 
-  colorPrimary: 'hotpink',
-  colorSecondary: 'deepskyblue',
+  // colorPrimary: 'hotpink',
+  colorSecondary: colors.orange[500],
 
   // UI
-  appBg: '#fafafa',
-  appContentBg: '#fafafa',
-  // appBorderColor: 'blue',
+  appBg: colors.grey[100],
+  appContentBg: colors.grey[100],
+  appBorderColor: colors.grey[200],
   appBorderRadius: 0,
 
-  // // Typography
-  fontBase: wukiTheme.type.family,
+  // Typography
+  fontBase: type.family,
   fontCode: 'monospace',
 
   // // Text colors
@@ -24,7 +24,7 @@ export default create({
   // // Toolbar default and active colors
   // barTextColor: 'silver',
   // barSelectedColor: 'black',
-  barBg: '#fafafa',
+  barBg: colors.grey[100],
 
   // // Form colors
   // inputBg: 'white',

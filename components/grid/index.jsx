@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 import useStyles from './styles';
 import { convertStylesToCss, unionClassNames } from '../utils/helpers';
 
-const Grid = ({ children, tag: Tag, col, offset, container, style }) => {
+const Grid = ({ children, tag: Tag, col, offset, container, style, ...props }) => {
   useStyles();
   const inlineCSS = convertStylesToCss(style);
 
@@ -46,7 +46,7 @@ const Grid = ({ children, tag: Tag, col, offset, container, style }) => {
   }, [container, col, offset]);
 
   return (
-    <Tag className={unionClassNames(classCol, classOffset, classContainer, inlineCSS)}>{children}</Tag>
+    <Tag className={unionClassNames(classCol, classOffset, classContainer, inlineCSS)} {...props}>{children}</Tag>
   );
 };
 

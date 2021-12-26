@@ -9,10 +9,6 @@ export default {
   parameters: {
     docs: {
       page: Doc,
-      description: {
-        component: `This is the foundation of the entire application.
-        The grid allows you to correctly position all elements on the screen of any device.`,
-      },
     },
   },
 };

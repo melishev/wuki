@@ -2,6 +2,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 const allComponents = [
+  'grid',
   'text',
 ];
 const supportedLngs = ['en', 'ru'];
@@ -19,7 +20,7 @@ supportedLngs.forEach((lang) => {
     i18n.addResourceBundle(
       lang,
       component,
-      require(`../components/${component}/docs/locales/${lang}.json`)
+      require(`../../components/${component}/docs/locales/${lang}.json`)
     );
   });
 });

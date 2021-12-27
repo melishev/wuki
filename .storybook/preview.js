@@ -7,7 +7,7 @@ import { WukiProvider, Text } from '../components';
 import { DocsContainer } from '@storybook/addon-docs';
 
 import { I18nextProvider, useTranslation } from 'react-i18next';
-import i18nConfig from './i18next.js'
+import i18nConfig from './helpers/i18next.js'
 
 export const decorators = [
   (Story, { args }) => (

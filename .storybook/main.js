@@ -40,6 +40,7 @@ module.exports = {
       div[role="main"] > div {
         box-shadow: unset;
       }
+      // STORYBOOK SIDEBAR
       #storybook-explorer-tree > div {
         margin-right: unset;
       }

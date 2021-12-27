@@ -76,14 +76,6 @@ export const Offset = () => (
   </Grid>
 );
 
-Offset.parameters = {
-  docs: {
-    description: {
-      story: 'Need description!',
-    },
-  },
-};
-
 export const Responsive = () => (
   <Grid container>
     <Grid col={{ xs: 24, md: 12, xl: 8 }} style={exampleStyle}>
@@ -103,14 +95,6 @@ export const Responsive = () => (
     </Grid>
   </Grid>
 );
-
-Responsive.parameters = {
-  docs: {
-    description: {
-      story: 'Use responsive classes to adjust your layout across viewports.',
-    },
-  },
-};
 
 export const Tag = () => (
   <Grid container>
@@ -136,15 +120,6 @@ export const Tag = () => (
     </Grid>
   </Grid>
 );
-
-Tag.parameters = {
-  docs: {
-    description: {
-      story: `Sometimes, for better performance, you need to use semantic HTML tags. A props - tag has been added specifically for this.
-      It allows the developer to override the default tag - div, which would be better suited. Props Tag is available for Row and Col.`,
-    },
-  },
-};
 
 export const Style = () => (
   <Grid container>

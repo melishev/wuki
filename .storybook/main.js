@@ -1,4 +1,4 @@
-const theme = require('../components/utils/theme');
+const { colors, type} = require('../components/utils/theme');
 
 module.exports = {
   stories: [
@@ -20,13 +20,13 @@ module.exports = {
       body {
         padding-left: 0 !important;
         padding-right: 0 !important;
-        background: #fafafa;
+        background: ${colors.grey[100]};
       }
       h1, h2, h3, h4, h5, h6, p, li {
-        font-family: ${theme.type.family} !important;
+        font-family: ${type.family} !important;
       }
       .sbdocs.sbdocs-wrapper {
-        background: #fafafa;
+        background: ${colors.grey[100]};
       }
     </style>
   `),
@@ -40,11 +40,12 @@ module.exports = {
       div[role="main"] > div {
         box-shadow: unset;
       }
+      // STORYBOOK SIDEBAR
       #storybook-explorer-tree > div {
         margin-right: unset;
       }
       a.sidebar-item, button.sidebar-item {
-        color: #1e1e1f;
+        color: ${colors.grey[900]};
         padding-top: .5rem;
         padding-bottom: .5rem;
         margin: .5rem 0 .5rem 18px;
@@ -56,12 +57,12 @@ module.exports = {
         display: none;
       }
       a.sidebar-item:hover, button.sidebar-item:hover {
-        background: rgba(0,16,61,.04);
+        background: ${colors.grey[200]};
       }
       a.sidebar-item[data-selected="true"] {
-        background: rgb(224 224 224);
+        background: ${colors.orange[500]};
         font-weight: 400;
-        color: #1e1e1f;
+        color: ${colors.grey[900]};
       }
       button.sidebar-subheading-action {
         display: none;

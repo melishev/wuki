@@ -23,10 +23,7 @@ const Text = ({ children, tag: Tag, variant, style, ...props }) => {
 Text.propTypes = {
   children: propTypes.node,
   /** Inline Styles assigned to the component will be converted to CSS class */
-  style: propTypes.oneOfType([
-    propTypes.string,
-    propTypes.number,
-  ]),
+  style: propTypes.oneOfType([propTypes.object]),
   /** For better semantics, you can override the default HTML tag */
   tag: propTypes.string,
   /** Allows you to tell the component to use any variation from the theme */

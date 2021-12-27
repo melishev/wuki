@@ -5,7 +5,10 @@ import {
   Source,
   ArgsTable
 } from '@storybook/addon-docs';
+
 import { Code } from '../index';
+
+import { useTranslation } from 'react-i18next'
 
 ![image](https://paradigm.mail.ru/notionStatic/d6b09a0e-f167-4b18-92a0-b62611c6b536.png)
 
@@ -13,7 +16,7 @@ import { Code } from '../index';
 
 <Title />
 
-<Description />
+<p>{useTranslation('text').t('description')}</p>
 
 <Code code="import { Text } from 'wuki';" />
 
@@ -21,9 +24,9 @@ import { Code } from '../index';
 import { Text } from 'wuki';
 ```
 
-## Important ⚡️
+<h2>{useTranslation('text').t('subTitle')}</h2>
 
-Before using the component, make sure to import the font into the project. By default, Wuki UI uses Manrope font, here are a couple of examples of how to integrate it into your project:
+<p>{useTranslation('text').t('test')}</p>
 
 #### 1. Google Fonts
 
@@ -47,7 +50,7 @@ Before using the component, make sure to import the font into the project. By de
 npm install @fontsource/manrope
 ```
 
-Then, you can import it in your entry-point.
+<p>{useTranslation('text').t('test2')}</p>
 
 <Code code="import '@fontsource/manrope/200.css';
 import '@fontsource/manrope/300.css';
@@ -69,15 +72,13 @@ import '@fontsource/manrope/700.css';
 import '@fontsource/manrope/800.css';
 ```
 
-You can find all the basic information at [Fontsource](https://fontsource.org/fonts/manrope).
+<p>{useTranslation('text').t('test3')} <a href="https://fontsource.org/fonts/manrope">Fontsource</a></p>
 
 ## Component
 
 <Text>The <Code code="Text" inline /> component makes it easy to apply a default set of font weights and sizes in your application.</Text>
 
 The ```Text``` component makes it easy to apply a default set of font weights and sizes in your application.
-
-<!-- ```<Text />``` is by default equal to ```<p>```. To change that tag tag props can be passed to the component. -->
 
 <Primary />
 <Code code={`() => (

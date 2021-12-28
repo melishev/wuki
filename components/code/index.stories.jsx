@@ -1,13 +1,17 @@
 import React from 'react';
+import Documentation from './docs/index.mdx';
 
 import { Grid, Text, Code } from '../index';
 
 export default {
-  title: '👨🏻‍💻 IN DEVELOP/Code',
+  title: 'Components/Code',
   component: Code,
+  parameters: {
+    docs: {
+      page: Documentation,
+    },
+  },
 };
-
-const codeInline = 'npm install wuki@latest';
 
 export const Inline = () => (
   <Grid container>
@@ -17,7 +21,7 @@ export const Inline = () => (
         Ullam maxime inventore,
         odio itaque minima quasi cum facere
         {' '}
-        <Code code={codeInline} inline />
+        <Code code="npm install wuki@latest" inline />
         {' '}
         quia quisquam expedita unde beatae officia aspernatur, quae,
         dignissimos nobis culpa accusamus quo!

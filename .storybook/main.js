@@ -6,8 +6,15 @@ module.exports = {
   ],
   addons: [
     '@storybook/addon-a11y',
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        actions: false,
+        measure: false,
+        outline: false,
+        backgrounds: false,
+      }
+    },
     'storybook-addon-grid/preset',
     'storybook-addon-grid/chromatic',
   ],

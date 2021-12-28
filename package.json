@@ -30,9 +30,7 @@
     "@rollup/plugin-commonjs": "^21.0.0",
     "@rollup/plugin-node-resolve": "^13.0.5",
     "@storybook/addon-a11y": "^6.3.12",
-    "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/addon-links": "^6.3.12",
     "@storybook/react": "^6.3.12",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -74,13 +72,13 @@
   "author": {
     "name": "Matvey Melishev",
     "email": "matvey@melishev.ru",
-    "url": "https://melishev.ru"
+    "url": "https://melishev.com"
   },
   "maintainers": [
     {
       "name": "Matvey Melishev",
       "email": "matvey@melishev.ru",
-      "url": "https://melishev.ru"
+      "url": "https://melishev.com"
     }
   ],
   "repository": {
@@ -96,9 +94,16 @@
   },
   "keywords": [
     "react",
+    "bootstrap",
     "apple",
     "ui",
-    "antd"
+    "uikit",
+    "storybook",
+    "antd",
+    "figma",
+    "element-ui",
+    "design-system",
+    "carbon-design-system"
   ],
   "license": "MIT"
 }

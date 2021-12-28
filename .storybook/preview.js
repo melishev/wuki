@@ -43,19 +43,6 @@ export const parameters = {
     gutter: `${grid.margin}px`,
     maxWidth: 'auto',
   },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-    expanded: true,
-  },
-  backgrounds: {
-    disable: true,
-    grid: {
-      disable: true,
-    }
-  },
   viewport: {
     viewports: {
       sm: {

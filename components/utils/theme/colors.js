@@ -2,6 +2,7 @@ module.exports = {
   grey: {
     100: '#FAFAFA',
     200: '#E9E8E8',
+    500: '#666666',
     900: '#2A2A2A',
   },
   orange: {

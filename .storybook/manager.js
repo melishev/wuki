@@ -5,9 +5,6 @@ addons.setConfig({
   showPanel: false,
   theme: themeCustom,
   initialActive: 'sidebar',
-  sidebar: {
-    showRoots: false,
-  },
   toolbar: {
     title: { hidden: false, },
     zoom: { hidden: true, },

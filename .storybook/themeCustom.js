@@ -1,20 +1,20 @@
 import { create } from '@storybook/theming';
-import wukiTheme from '../components/utils/theme';
+import { type, colors } from '../components/utils/theme';
 
 export default create({
   base: 'light',
 
-  colorPrimary: 'hotpink',
-  colorSecondary: 'deepskyblue',
+  // colorPrimary: 'hotpink',
+  colorSecondary: colors.orange[500],
 
-  // // UI
-  // appBg: 'white',
-  // appContentBg: 'silver',
-  // appBorderColor: 'grey',
-  // appBorderRadius: 20,
+  // UI
+  appBg: colors.grey[100],
+  appContentBg: colors.grey[100],
+  appBorderColor: colors.grey[200],
+  appBorderRadius: 0,
 
-  // // Typography
-  fontBase: wukiTheme.type.family,
+  // Typography
+  fontBase: type.family,
   fontCode: 'monospace',
 
   // // Text colors
@@ -24,7 +24,7 @@ export default create({
   // // Toolbar default and active colors
   // barTextColor: 'silver',
   // barSelectedColor: 'black',
-  // barBg: 'hotpink',
+  barBg: colors.grey[100],
 
   // // Form colors
   // inputBg: 'white',
@@ -34,5 +34,5 @@ export default create({
 
   brandTitle: 'Wuki UI',
   brandUrl: 'https://github.com/melishev/wuki',
-  brandImage: 'https://place-hold.it/350x150',
+  brandImage: 'https://raw.githubusercontent.com/melishev/wuki/master/.github/assets/logo.svg',
 });

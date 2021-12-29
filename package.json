@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "dev": "start-storybook -p 6006",
+    "dev:docs": "start-storybook --docs --no-manager-cache",
     "build": "rollup -c",
     "build:sb": "build-storybook --docs",
     "lint": "eslint --ext .jsx --ext .js components/**",
@@ -29,9 +30,7 @@
     "@rollup/plugin-commonjs": "^21.0.0",
     "@rollup/plugin-node-resolve": "^13.0.5",
     "@storybook/addon-a11y": "^6.3.12",
-    "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/addon-links": "^6.3.12",
     "@storybook/react": "^6.3.12",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -47,9 +46,12 @@
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^7.0.4",
+    "i18next": "^21.6.3",
     "jest": "^26.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-feather": "^2.0.9",
+    "react-i18next": "^11.15.1",
     "react-test-renderer": "^17.0.2",
     "rollup": "^2.58.0",
     "rollup-plugin-analyzer": "^4.0.0",
@@ -70,13 +72,13 @@
   "author": {
     "name": "Matvey Melishev",
     "email": "matvey@melishev.ru",
-    "url": "https://melishev.ru"
+    "url": "https://melishev.com"
   },
   "maintainers": [
     {
       "name": "Matvey Melishev",
       "email": "matvey@melishev.ru",
-      "url": "https://melishev.ru"
+      "url": "https://melishev.com"
     }
   ],
   "repository": {
@@ -92,9 +94,16 @@
   },
   "keywords": [
     "react",
+    "bootstrap",
     "apple",
     "ui",
-    "antd"
+    "uikit",
+    "storybook",
+    "antd",
+    "figma",
+    "element-ui",
+    "design-system",
+    "carbon-design-system"
   ],
   "license": "MIT"
 }

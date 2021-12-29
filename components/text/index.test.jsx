@@ -1,13 +1,25 @@
 import React from 'react';
-import { render, screen } from '../utils/setupTests';
+import { render, screen } from '../utils/wrapperTests';
 import { Text } from '../index';
 
 describe('Text', () => {
-  it('renders welcome message', () => {
+  it('with a Tag', () => {
     render(
-      <Text>Hello, world!</Text>,
+      <Text tag="h1">Heading 1</Text>,
     );
-    screen.debug();
-    expect(screen.getByText('Hello, world!')).toBeInTheDocument();
+    expect(screen.getByText('Heading 1')).toHaveClass('wk-h1');
+  });
+  it('with a Variant', () => {
+    render(
+      <Text variant="body1">Body 1</Text>,
+    );
+    expect(screen.getByText('Body 1')).toHaveClass('wk-body1');
+  });
+  it('with a Tag and Variant', () => {
+    render(
+      <Text tag="h1" variant="h2">Heading 1</Text>,
+    );
+    expect(screen.getByText('Heading 1')).not.toHaveClass('wk-h1');
+    expect(screen.getByText('Heading 1')).toHaveClass('wk-h2');
   });
 });

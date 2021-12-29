@@ -1,7 +1,9 @@
 const grid = require('./grid');
-const typography = require('./typography');
+const type = require('./type');
+const colors = require('./colors');
 
 module.exports = {
-  ...grid,
-  ...typography,
+  grid,
+  type,
+  colors,
 };

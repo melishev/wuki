@@ -17,49 +17,49 @@ import { useTranslation } from 'react-i18next'
 
 <Title />
 
-Компонент `<Code />` позволяет отобразить исходный код. 
+<p>{useTranslation('code').t('description')}</p>
 
 <Code code="import { Code } from 'wuki';" />
 
-<h2>{useTranslation('text').t('subTitle')}</h2>
+<h2>{useTranslation('code').t('important.title')}</h2>
 
-<p>{useTranslation('text').t('test')}</p>
+<p>{useTranslation('code').t('important.text1')}</p>
 
-#### 1. Google Fonts
+<h4>1. Google Fonts</h4>
 
 <Code code={`<link
   rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
 />`} />
 
-#### 2. NPM
+<h4>2. NPM</h4>
 
-<Code code="npm install @fontsource/manrope" />
+<Code code="npm install @fontsource/ibm-plex-mono" />
 
-<p>{useTranslation('text').t('test2')}</p>
+<p>{useTranslation('code').t('important.text2')}</p>
 
-<Code code="import '@fontsource/manrope/200.css';
-import '@fontsource/manrope/300.css';
-import '@fontsource/manrope/400.css';
-import '@fontsource/manrope/500.css';
-import '@fontsource/manrope/600.css';
-import '@fontsource/manrope/700.css';
-import '@fontsource/manrope/800.css';" />
+<Code code="import '@fontsource/ibm-plex-mono'" />
 
-<p>{useTranslation('text').t('test3')} <a href="https://fontsource.org/fonts/manrope">Fontsource</a></p>
+<p>{useTranslation('code').t('important.text3')} <a href="https://fontsource.org/fonts/ibm-plex-mono">Fontsource</a></p>
 
-<h2>Примеры</h2>
+<h2>{useTranslation('code').t('subTitle2')}</h2>
 <br/>
 
-<h3>Default</h3>
-<p>По умолчанию вам не нужно передавать какие либо параметры кроме `code` в этот компонент. Он прекрасен и удобен уже из коробки. {`<Code />`} будет автоматически подстравиваться под передаваемые данные.</p>
-<p>В одну строку:</p>
-<DocsStory id="components-code--single-line" />
-<p>В несколько строк:</p>
-<DocsStory id="components-code--multi-line" />
+<h3>{useTranslation('code').t('examples.0.title')}</h3>
+<p>{useTranslation('code').t('examples.0.description')}</p>
+<ol>
+  <li>
+    <p>{useTranslation('code').t('examples.0.text1')}</p>
+  </li>
+  <DocsStory id="components-code--single-line" />
+  <li>
+    <p>{useTranslation('code').t('examples.0.text2')}</p>
+  </li>
+  <DocsStory id="components-code--multi-line" />
+</ol>
 
-<h3>Inline</h3>
-<p>Компонент `Code` может использоваться как вставка в текст, для этого необходимо передать компоненту параметр `inline`</p>
+<h3>{useTranslation('code').t('examples.1.title')}</h3>
+<p>{useTranslation('code').t('examples.1.description')}</p>
 <DocsStory id="components-code--inline" />
 
 ## Component API (props)

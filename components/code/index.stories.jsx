@@ -30,24 +30,21 @@ export const Inline = () => (
   </Grid>
 );
 
-const codeSingleLine = 'npm install wuki';
-
 export const SingleLine = () => (
   <Grid container>
     <Grid col={8}>
-      <Code code={codeSingleLine} />
+      <Code code="npm install wuki" />
     </Grid>
   </Grid>
 );
 
-const codeMultiLine = `<div>
-  <p>Hello, world!</p>
-</div>`;
-
 export const MultiLine = () => (
   <Grid container>
     <Grid col={8}>
-      <Code code={codeMultiLine} />
+      <Code code={`<div>
+  <p>Hello, world!</p>
+</div>`}
+      />
     </Grid>
   </Grid>
 );

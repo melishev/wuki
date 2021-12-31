@@ -4,7 +4,7 @@
   "main": "./dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "description": "🧸 Wuki is a UI Kit developed for React.js that brings together the best practices of the most popular UI libraries such as Ant Design, Bootstrap, Element and many others.",
-  "homepage": "https://wuki.vercel.app",
+  "homepage": "https://wuki.melishev.com",
   "files": [
     "/dist"
   ],

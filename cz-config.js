@@ -32,7 +32,7 @@ module.exports = {
     },
     {
       value: 'chore',
-      name: `chore: ${devmoji[7].graphic}    Minor minor work done (ex: updated dependencies)`,
+      name: `chore: ${devmoji[7].graphic}    Minor work (ex: updated dependencies)`,
     },
     {
       value: 'build',

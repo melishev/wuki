@@ -16,7 +16,6 @@
     "lint": "eslint --ext .jsx --ext .js components/**",
     "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN",
     "test": "jest",
-    "commit": "cz",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -36,8 +35,7 @@
     "@testing-library/react": "^12.1.2",
     "babel-jest": "^27.4.4",
     "chromatic": "^6.0.5",
-    "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.3.0",
     "devmoji": "^2.3.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -87,6 +85,14 @@
   },
   "bugs": {
     "url": "https://github.com/melishev/wuki/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./cz-config.js"
+    }
   },
   "storybook": {
     "title": "Wuki UI Kit",

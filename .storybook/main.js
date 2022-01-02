@@ -2,6 +2,7 @@ const { colors, type} = require('../components/utils/theme');
 
 module.exports = {
   stories: [
+    './docs/*.stories.mdx',
     '../components/**/*.stories.@(js|jsx|mdx)'
   ],
   addons: [

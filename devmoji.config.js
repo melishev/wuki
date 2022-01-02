@@ -31,11 +31,6 @@ module.exports = {
       graphic: '🧪',
     },
     {
-      code: 'ci',
-      emoji: 'construction_worker',
-      graphic: '👷',
-    },
-    {
       code: 'chore',
       emoji: 'wrench',
       graphic: '🔧',
@@ -46,10 +41,9 @@ module.exports = {
       graphic: '📦️',
     },
     {
-      code: 'WIP',
-      emoji: 'construction',
-      description: 'Work in progress',
-      graphic: '🚧',
+      code: 'ci',
+      emoji: 'construction_worker',
+      graphic: '👷',
     },
   ],
 };

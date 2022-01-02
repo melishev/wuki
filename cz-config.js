@@ -27,20 +27,16 @@ module.exports = {
       name: `test: ${devmoji[5].graphic}     Adding missing tests or correcting existing tests`,
     },
     {
-      value: 'ci',
-      name: `ci: ${devmoji[6].graphic}       Changes to our CI configuration files and scripts\n               (ex: Github Actions)`,
-    },
-    {
       value: 'chore',
-      name: `chore: ${devmoji[7].graphic}    Minor work (ex: updated dependencies)`,
+      name: `chore: ${devmoji[6].graphic}    Minor work (ex: updated dependencies)`,
     },
     {
       value: 'build',
-      name: `build: ${devmoji[8].graphic}    Changes that affect the build system (ex: rollup, npm)`,
+      name: `build: ${devmoji[7].graphic}    Changes that affect the build system (ex: rollup, npm)`,
     },
     {
-      value: 'WIP',
-      name: `WIP: ${devmoji[9].graphic}      Work in progress`,
+      value: 'ci',
+      name: `ci: ${devmoji[8].graphic}       Changes to our CI configuration files and scripts\n               (ex: Github Actions)`,
     },
   ],
   scopes: [

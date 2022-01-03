@@ -45,5 +45,10 @@ module.exports = {
       emoji: 'construction_worker',
       graphic: '👷',
     },
+    {
+      code: 'WIP',
+      emoji: 'construction',
+      graphic: '🚧',
+    },
   ],
 };

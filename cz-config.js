@@ -38,6 +38,10 @@ module.exports = {
       value: 'ci',
       name: `ci: ${devmoji[8].graphic}       Changes to our CI configuration files and scripts\n               (ex: Github Actions)`,
     },
+    {
+      value: 'WIP',
+      name: `WIP: ${devmoji[9].graphic}      Work in progress.`,
+    },
   ],
   scopes: [
     { name: 'components' },

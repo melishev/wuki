@@ -19,6 +19,7 @@ module.exports = {
     'storybook-addon-grid/preset',
     'storybook-addon-grid/chromatic',
   ],
+  staticDirs: ['../public'],
   previewHead: (head) => (`
     ${head}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,10 +37,20 @@ module.exports = {
       .sbdocs.sbdocs-wrapper {
         background: ${colors.grey[100]};
       }
+      .i18n_controller {
+        display: flex;
+        gap: 1rem;
+        position: fixed;
+        top: calc(4rem + 16px);
+        right: 1rem;
+      }
     </style>
   `),
   managerHead: (head) => (`
     ${head}
+    <meta name="theme-color" content="${colors.orange[700]}">
+    <link rel="shortcut icon" href="/wukiFavicon.ico">
+    <link rel="icon" type="image/png" href="/wukiFavicon.png" sizes="192x192">
     <style>
       div[role="main"] {
         top: 0 !important;

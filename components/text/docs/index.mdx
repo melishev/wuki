@@ -3,6 +3,7 @@ import {
   Description,
   Primary,
   Source,
+  DocsStory,
   ArgsTable
 } from '@storybook/addon-docs';
 
@@ -20,9 +21,9 @@ import { useTranslation } from 'react-i18next'
 import { Text } from 'wuki';
 ```
 
-<h2>{useTranslation('text').t('subTitle')}</h2>
+<h2>{useTranslation('text').t('important.title')}</h2>
 
-<p>{useTranslation('text').t('test')}</p>
+<p>{useTranslation('text').t('important.text1')}</p>
 
 #### 1. Google Fonts
 
@@ -39,7 +40,7 @@ import { Text } from 'wuki';
 npm install @fontsource/manrope
 ```
 
-<p>{useTranslation('text').t('test2')}</p>
+<p>{useTranslation('text').t('important.text2')}</p>
 
 ```
 import '@fontsource/manrope/200.css';
@@ -51,13 +52,18 @@ import '@fontsource/manrope/700.css';
 import '@fontsource/manrope/800.css';
 ```
 
-<p>{useTranslation('text').t('test3')} <a href="https://fontsource.org/fonts/manrope">Fontsource</a></p>
+<p>{useTranslation('text').t('important.text3')} <a href="https://fontsource.org/fonts/manrope">Fontsource</a></p>
 
-## Component
+<h2>{useTranslation('text').t('examples.title')}</h2>
+<br/>
 
-The ```Text``` component makes it easy to apply a default set of font weights and sizes in your application.
+<h3>{useTranslation('text').t('examples.items.0.title')}</h3>
+<p>{useTranslation('text').t('examples.items.0.description')}</p>
+<DocsStory id="general-text--variant" />
 
-<Primary />
+<h3>{useTranslation('text').t('examples.items.1.title')}</h3>
+<p>{useTranslation('text').t('examples.items.1.description')}</p>
+<DocsStory id="general-text--tag" />
 
 ## Component API (props)
 

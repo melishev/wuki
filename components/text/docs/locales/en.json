@@ -1,7 +1,22 @@
 {
   "description": "Use typography to present your design and content as clearly and efficiently as possible.",
-  "subTitle": "Important ⚡️",
-  "test": "Before using the component, make sure to import the font into the project. By default, Wuki UI uses Manrope font, here are a couple of examples of how to integrate it into your project:",
-  "test2": "Then, you can import it in your entry-point.",
-  "test3": "You can find all the basic information at"
+  "important": {
+    "title": "Important ⚡️",
+    "text1": "Before using the component, make sure to import the font into the project. By default, Wuki UI uses Manrope font, here are a couple of examples of how to integrate it into your project:",
+    "text2": "Then, you can import it in your entry-point.",
+    "text3": "You can find all the basic information at"
+  },
+  "examples": {
+    "title": "Examples",
+    "items": [
+      {
+        "title": "Variant",
+        "description": "NOT READY"
+      },
+      {
+        "title": "Tag",
+        "description": "NOT READY"
+      }
+    ]
+  }
 }

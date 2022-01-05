@@ -49,11 +49,11 @@ const Code = ({ style, code, inline, ...props }) => {
 };
 
 Code.propTypes = {
-  style: propTypes.oneOfType([
-    propTypes.string,
-    propTypes.number,
-  ]),
+  /** Inline Styles assigned to the component will be converted to CSS class */
+  style: propTypes.oneOfType([propTypes.object]),
+  /** Submits the source code to be displayed */
   code: propTypes.string,
+  /** Should the source code be mapped to a string */
   inline: propTypes.bool,
 };
 

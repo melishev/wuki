@@ -38,6 +38,11 @@ export const parameters = {
       </I18nextProvider>
     )},
   },
+  options: {
+    storySort: {
+      order: ['Getting Start', ['Start', 'Installation', 'Theming'], 'General', 'Layout'],
+    },
+  },
   grid: {
     gridOn: false,
     columns: grid.col,

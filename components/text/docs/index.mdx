@@ -1,21 +1,4 @@
-import {
-  Title,
-  Description,
-  Primary,
-  Source,
-  DocsStory,
-  ArgsTable
-} from '@storybook/addon-docs';
-
 import { useTranslation } from 'react-i18next'
-
-<Title />
-
-<p>{useTranslation('text').t('description')}</p>
-
-```
-import { Text } from 'wuki';
-```
 
 <h2>{useTranslation('text').t('important.title')} ⚠️</h2>
 
@@ -49,18 +32,3 @@ import '@fontsource/manrope/800.css';
 ```
 
 <p>{useTranslation('text').t('important.text3')} <a href="https://fontsource.org/fonts/manrope">Fontsource</a></p>
-
-<h2>{useTranslation('text').t('examples.title')}</h2>
-<br/>
-
-<h3>{useTranslation('text').t('examples.items.0.title')}</h3>
-<p>{useTranslation('text').t('examples.items.0.description')}</p>
-<DocsStory id="general-text--variant" />
-
-<h3>{useTranslation('text').t('examples.items.1.title')}</h3>
-<p>{useTranslation('text').t('examples.items.1.description')}</p>
-<DocsStory id="general-text--tag" />
-
-## Component API (props)
-
-<ArgsTable />

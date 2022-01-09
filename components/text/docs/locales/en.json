@@ -14,7 +14,7 @@
     },
     "variant": {
       "title": "Variations",
-      "description": "If you just use a component without any props, then it will not use any styles from the UI. To assign a variation from a theme, pass the `variant` props with the name of the variation."
+      "description": "If you just use a component without any props, then it will not use any styles from the UI. To assign a variation from a theme, pass the `Variant` prop with the name of the variation."
     },
     "tag": {
       "title": "Tag",

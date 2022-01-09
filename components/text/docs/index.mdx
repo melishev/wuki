@@ -1,34 +1,64 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next";
+import { Text, Code } from "../../index";
+import { colors } from "../../utils/theme";
 
-<h2>{useTranslation('text').t('important.title')} ⚠️</h2>
+export const t = (key) => useTranslation("text").t(key);
 
-<p>{useTranslation('text').t('important.text1')}</p>
+<Text
+  tag="h2"
+  variant="h4"
+  style={{ marginBottom: 28, color: colors.grey[900] }}
+>
+  {t("important.title")} ⚠️
+</Text>
 
-#### 1. Google Fonts
+<Text variant="body2" style={{ marginBottom: 24, color: colors.grey[500] }}>
+  {t("important.text1")}
+</Text>
 
-```
-<link
+<Text
+  tag="h3"
+  variant="h6"
+  style={{ marginBottom: 24, color: colors.grey[900] }}
+>
+  1. Google Fonts
+</Text>
+
+<Code
+  code={`<link
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+/>`}
+  style={{ marginBottom: 24 }}
 />
-```
 
-#### 2. NPM
+<Text
+  tag="h3"
+  variant="h6"
+  style={{ marginBottom: 24, color: colors.grey[900] }}
+>
+  2. NPM
+</Text>
 
-```
-npm install @fontsource/manrope
-```
+<Code code={`npm install @fontsource/manrope`} style={{ marginBottom: 24 }} />
 
-<p>{useTranslation('text').t('important.text2')}</p>
+<Text variant="body2" style={{ marginBottom: 24, color: colors.grey[500] }}>
+  {t("important.text2")}
+</Text>
 
-```
-import '@fontsource/manrope/200.css';
+<Code
+  code={`import '@fontsource/manrope/200.css';
 import '@fontsource/manrope/300.css';
 import '@fontsource/manrope/400.css';
 import '@fontsource/manrope/500.css';
 import '@fontsource/manrope/600.css';
 import '@fontsource/manrope/700.css';
-import '@fontsource/manrope/800.css';
-```
+import '@fontsource/manrope/800.css';`}
+  style={{ marginBottom: 24 }}
+/>
 
-<p>{useTranslation('text').t('important.text3')} <a href="https://fontsource.org/fonts/manrope">Fontsource</a></p>
+<Text variant="body2">
+  {t("important.text3")}
+  {" "}
+  <a href="https://fontsource.org/fonts/manrope">Fontsource</a>
+</Text>

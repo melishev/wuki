@@ -1,25 +1,4 @@
-import {
-  Title,
-  Description,
-  Primary,
-  Source,
-  Story,
-  Stories,
-  DocsStory,
-  ArgsTable
-} from '@storybook/addon-docs';
-
-import { Text } from '../../index';
-
 import { useTranslation } from 'react-i18next'
-
-<Title />
-
-<p>{useTranslation('grid').t('description')}</p>
-
-```
-import { Grid } from 'wuki';
-```
 
 <h2>{useTranslation('grid').t('subTitle1')}</h2>
 <p>{useTranslation('grid').t('text1')}</p>
@@ -44,32 +23,3 @@ import { Grid } from 'wuki';
 ```
 
 <p>{useTranslation('grid').t('text4')}</p>
-
-<h2>{useTranslation('grid').t('subTitle2')}</h2>
-<br/>
-
-<h3>{useTranslation('grid').t('examples.0.title')}</h3>
-<p>{useTranslation('grid').t('examples.0.description')}</p>
-<DocsStory id="layout-grid--offset" />
-
-<h3>{useTranslation('grid').t('examples.1.title')}</h3>
-<p>{useTranslation('grid').t('examples.1.description')}</p>
-<DocsStory id="layout-grid--responsive" />
-
-<h3>{useTranslation('grid').t('examples.2.title')}</h3>
-<small>{useTranslation('grid').t('examples.2.subTitle')}</small>
-<p>{useTranslation('grid').t('examples.2.description')}</p>
-<DocsStory id="layout-grid--tag" />
-
-<h3>{useTranslation('grid').t('examples.3.title')}</h3>
-<small>{useTranslation('grid').t('examples.3.subTitle')}</small>
-<p>{useTranslation('grid').t('examples.3.description')}</p>
-<DocsStory id="layout-grid--style" />
-
-## Component API (props)
-
-<!-- Благодаря простому API(props) вы можете настроить компонент под ваши нужды. Чаще всего в этом не будет нужды, но для лучшего эффекта они и существуют -->
-
-<!-- Divide the table into two parts, the first will contain the props of the component itself, the second will contain global -->
-
-<ArgsTable />

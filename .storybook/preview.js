@@ -7,7 +7,9 @@ import { WukiProvider, Text } from '../components';
 import { DocsContainer } from '@storybook/addon-docs';
 
 import { I18nextProvider, useTranslation } from 'react-i18next';
-import i18nConfig from './helpers/i18next.js'
+import i18nConfig from './helpers/i18next.js';
+
+import DocsWrapper from './components/docsWrapper';
 
 export const decorators = [
   (Story, { args }) => (
@@ -32,7 +34,10 @@ export const parameters = {
               <button><Text variant='body2' onClick={() => i18n.changeLanguage('ru')}>Russia 🇷🇺</Text></button>
               <button><Text variant='body2' onClick={() => i18n.changeLanguage('en')}>English 🇺🇸</Text></button>
             </div>
-            {children}
+            {context.component
+              ? <DocsWrapper context={context}>{children}</DocsWrapper>
+              : children
+            }
           </DocsContainer>
         </WukiProvider>
       </I18nextProvider>

@@ -32,6 +32,18 @@ export const Default = () => (
   </Grid>
 );
 
+export const Variant = () => (
+  <Grid container>
+    <Grid col={24}>
+      <Text variant="h6">Heading 6</Text>
+      <Text variant="subTitle">SubTitle</Text>
+      <Text tag="p" variant="body1">Body 1</Text>
+      <Text tag="h3" variant="body2">Body 2</Text>
+      <Text tag="span" variant="small">Small</Text>
+    </Grid>
+  </Grid>
+);
+
 export const Tag = () => (
   <Grid container>
     <Grid col={24}>
@@ -43,18 +55,6 @@ export const Tag = () => (
       <Text tag="h6">Heading 6</Text>
       <Text tag="p">Paragraph</Text>
       <Text tag="small">Small</Text>
-    </Grid>
-  </Grid>
-);
-
-export const Variant = () => (
-  <Grid container>
-    <Grid col={24}>
-      <Text variant="h6">Heading 6</Text>
-      <Text variant="subTitle">SubTitle</Text>
-      <Text tag="p" variant="body1">Body 1</Text>
-      <Text tag="h3" variant="body2">Body 2</Text>
-      <Text tag="span" variant="small">Small</Text>
     </Grid>
   </Grid>
 );

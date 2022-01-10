@@ -1,5 +1,5 @@
 {
-  "description": "This is the foundation of the entire application. The grid allows you to correctly position all elements on the screen of any device.",
+  "description": "This is the foundation of the entire application. The Grid component allows you to correctly position all elements on the screen of any device.",
   "subTitle1": "Entities",
   "text1": "Grid contains two entities:",
   "text2": "Container - defines a columnar system built on CSS Grid, which is many times more convenient and easier to use than CSS FlexBox.",

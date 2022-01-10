@@ -16,7 +16,6 @@ export default {
 export const Default = () => (
   <Grid container>
     <Grid col={8}>
-      <Code code="npm install wuki" />
       <Code>npm install wuki</Code>
     </Grid>
   </Grid>
@@ -29,11 +28,6 @@ export const MultiLine = () => (
   <p>Hello, world!</p>
 </div>`}
       />
-      <Code>
-        {`<div>
-  <p>Hello, world!</p>
-</div>`}
-      </Code>
     </Grid>
   </Grid>
 );

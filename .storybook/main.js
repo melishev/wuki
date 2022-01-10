@@ -49,6 +49,7 @@ module.exports = {
   managerHead: (head) => (`
     ${head}
     <meta name="theme-color" content="${colors.orange[700]}">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="${colors.orange[500]}">
     <link rel="shortcut icon" href="/wukiFavicon.ico">
     <link rel="icon" type="image/png" href="/wukiFavicon.png" sizes="192x192">
     <style>

@@ -5,7 +5,7 @@ import { Text, Code } from '../../components';
 
 import { DocsStory, ArgsTable } from '@storybook/addon-docs';
 
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 function docsWrapper({context, children}) {
   const { name } = context.component
@@ -17,7 +17,9 @@ function docsWrapper({context, children}) {
         {name}
       </Text>
       <Text variant="body1" style={{marginBottom: 32, color: colors.grey[500]}}>
-        {t('description')}
+        <Trans t={t} components={{ code: <Code inline/> }}>
+          {'description'}
+        </Trans>
       </Text>
       <Code
         code={`import { ${name} } from 'wuki'`}
@@ -26,11 +28,15 @@ function docsWrapper({context, children}) {
       {children}
       <Text tag="h2" variant="h3" style={{margin: '48px 0 32px'}}>{t('examples.title')}</Text>
       {context.componentStories().map((story) => (
-        <div key={story.id}>
+        <React.Fragment key={story.id}>
           <Text tag="h3" variant="h6" style={{marginBottom: 24}}>{t(`examples.${story.name.toLowerCase()}.title`)}</Text>
-          <Text variant="body2" style={{marginBottom: 24}}>{t(`examples.${story.name.toLowerCase()}.description`)}</Text>
+          <Text variant="body2" style={{marginBottom: 24}}>
+            <Trans t={t} components={{ code: <Code inline/> }}>
+              {`examples.${story.name.toLowerCase()}.description`}
+            </Trans>
+          </Text>
           <DocsStory id={story.id} style={{marginBottom: 32}} />
-        </div>
+        </React.Fragment>
       ))}
       <Text tag="h2" variant="h3">Component API (props)</Text>
       <Text variant="small">Благодаря простому API(props) вы можете настроить компонент под ваши нужды. Чаще всего в этом не будет нужды, но для лучшего эффекта они и существуют</Text>

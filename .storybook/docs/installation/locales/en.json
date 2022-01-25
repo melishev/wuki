@@ -1,0 +1,21 @@
+{
+  "title": "Installation",
+  "description": "This guide was created to show how a developer can install Wuki UI into an existing project or into a project created with Create React App.",
+  "text1": "First you need to install Wuki in your React app. This can be done with Npm:",
+  "text2": "or Yarn:",
+  "provider": {
+    "title": "Provider",
+    "description": {
+      "text1": "The provider passes",
+      "link1": "the global configuration file",
+      "text2": "to all components,",
+      "link2": "normalize.css",
+      "text3": " is also used internally. The provider is required for the correct operation of the UI library."
+    },
+    "text": "Declare a Provider in your application globally:"
+  },
+  "components": {
+    "title": "Components",
+    "description": "After successful Provider integration, you can use any component anywhere in your application without any restrictions. To do this, simply import the component from Wuki:"
+  }
+}

@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/addon-docs'
+import { useTranslation } from 'react-i18next'
+import { Text, Code } from '../../../components'
+import { colors } from '../../../components/utils/theme'
+
+<Meta title="Getting Start/Installation" />
+
+<Text tag="h1" style={{marginBottom: 32, color: colors.grey[900]}}>
+  {useTranslation('installation').t('title')}
+</Text>
+
+<Text variant="body1" style={{marginBottom: 32, color: colors.grey[500]}}>{useTranslation('installation').t('description')}</Text>
+
+<Text variant="body2" style={{margin: '20px 0'}}>{useTranslation('installation').t('text1')}</Text>
+
+<Code>npm install wuki</Code>
+
+<Text variant="body2" style={{margin: '20px 0'}}>{useTranslation('installation').t('text2')}</Text>
+
+<Code>yarn add wuki</Code>
+
+<Text tag="h2" variant="h4" style={{margin: '34px 0 24px'}}>{useTranslation('installation').t('provider.title')}</Text>
+
+<Text variant="body2" style={{margin: '20px 0'}}>
+  {useTranslation('installation').t('provider.description.text1')}
+  {' '}
+  <a href="?path=/docs/getting-start-theming--page">{useTranslation('installation').t('provider.description.link1')}</a>
+  {' '}
+  {useTranslation('installation').t('provider.description.text2')}
+  {' '}
+  <a href="https://necolas.github.io/normalize.css/">{useTranslation('installation').t('provider.description.link2')}</a>
+  {useTranslation('installation').t('provider.description.text3')}
+</Text>
+
+<Code>{`import { WukiProvider } from 'wuki';`}</Code>
+
+<Text variant="body2" style={{margin: '20px 0'}}>{useTranslation('installation').t('provider.text')}</Text>
+
+<Code>{`ReactDOM.render(
+  <WukiProvider>
+    <App />
+  </WukiProvider>,
+  document.getElementById('root')
+);`}</Code>
+
+> 🚨 Изначально Провайдер будет использовать стандартную конфигурацию Wuki UI, подробнее о том как изменить и создать свою конфигурацию будет рассказано в документации к WukiProvider.
+
+<Text tag="h2" variant="h4" style={{margin: '34px 0 24px'}}>{useTranslation('installation').t('components.title')}</Text>
+
+<Text variant="body2" style={{margin: '20px 0'}}>{useTranslation('installation').t('components.description')}</Text>
+
+<Code>{`import { Text } from 'wuki'`}</Code>

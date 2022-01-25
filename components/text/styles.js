@@ -8,51 +8,22 @@ const useStyles = createUseStyles(
 
     /**
      * - EN
-     * Basic styles for typography
-     * - RU
-     * Базовые стили для типографики
-     * @param {number} size
-     * @param {(number|string)} weight
-     * @param {number} height
-     * @returns {object}
-     */
-    const baseTextStyle = (size, weight, height) => ({
-      font: {
-        size,
-        weight,
-      },
-      lineHeight: height,
-    });
-
-    /**
-     * - EN
-     * Styles for the main element of typography
-     * - RU
-     * Стили для основного элемента типографики
-     * @returns {object}
-     */
-    const mainTextStyle = () => ({
-      margin: '0',
-    });
-
-    /**
-     * - EN
      * Receives one of the options and generates styles for it
      * - RU
      * Получает один из вариантов и генерирует для него стили
      * @param {object} - All available variation properties with BreakPoint / Все доступные свойства вариации вместе с BreakPoint
      * @returns {object} - Returns the styles object for the variation / Возвращает объект стилей для вариации
      */
-    const genFontStyle = ({ size, weight, height, breakPoints: variantBreakPoints }) => {
+    const genFontStyle = ({ breakPoints: variantBreakPoints, ...props }) => {
       let genBreakPoints = {};
       if (variantBreakPoints) {
         genBreakPoints = Object.entries(variantBreakPoints).reduce((acc, [currName, currValue]) => {
-          acc[`@media (min-width: ${breakPoints[currName]}px)`] = baseTextStyle(currValue.size, currValue.weight, currValue.height);
+          acc[`@media (min-width: ${breakPoints[currName]}px)`] = currValue;
           return acc;
         }, {});
       }
       return {
-        ...{ ...baseTextStyle(size, weight, height), ...mainTextStyle() },
+        ...props,
         ...genBreakPoints,
       };
     };

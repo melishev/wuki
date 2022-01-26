@@ -1,4 +1,4 @@
-const { colors, type} = require('../components/utils/theme');
+const { colors, type} = require('../theme');
 
 module.exports = {
   stories: [

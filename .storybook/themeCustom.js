@@ -1,5 +1,5 @@
 import { create } from '@storybook/theming';
-import { type, colors } from '../components/utils/theme';
+import { type, colors } from '../theme';
 
 export default create({
   base: 'light',

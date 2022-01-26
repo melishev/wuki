@@ -1,3 +1,5 @@
+const colors = require('./colors');
+
 module.exports = {
   base: 16,
   family:
@@ -7,7 +9,8 @@ module.exports = {
       fontSize: '2.566rem',
       fontWeight: 'bold',
       lineHeight: 1.18,
-      margin: '0',
+      color: colors.grey[900],
+      margin: '0 0 1em',
       breakPoints: {
         xs: {
           fontSize: '1.764rem',
@@ -33,7 +36,8 @@ module.exports = {
       fontSize: '2.281rem',
       fontWeight: 'bold',
       lineHeight: 1.2,
-      margin: '0',
+      color: colors.grey[900],
+      margin: '0 0 1em',
       breakPoints: {
         xl: {
           fontSize: '2.138rem',
@@ -47,7 +51,8 @@ module.exports = {
       fontSize: '2.027rem',
       fontWeight: 'bold',
       lineHeight: 1.24,
-      margin: '0',
+      color: colors.grey[900],
+      margin: '0 0 1em',
       breakPoints: {
         xl: {
           fontSize: '1.901rem',
@@ -61,7 +66,8 @@ module.exports = {
       fontSize: '1.802rem',
       fontWeight: 'bold',
       lineHeight: 1.26,
-      margin: '0',
+      color: colors.grey[900],
+      margin: '0 0 1em',
       breakPoints: {
         xl: {
           fontSize: '1.689rem',
@@ -75,7 +81,8 @@ module.exports = {
       fontSize: '1.602rem',
       fontWeight: 'bold',
       lineHeight: 1.24,
-      margin: '0',
+      color: colors.grey[900],
+      margin: '0 0 1em',
       breakPoints: {
         xl: {
           fontSize: '1.502rem',
@@ -89,7 +96,8 @@ module.exports = {
       fontSize: '1.424rem',
       fontWeight: 'bold',
       lineHeight: 1.22,
-      margin: '0',
+      color: colors.grey[900],
+      margin: '0 0 1em',
       breakPoints: {
         xl: {
           fontSize: '1.335rem',
@@ -103,7 +111,8 @@ module.exports = {
       fontSize: '1.266rem',
       fontWeight: 600,
       lineHeight: 1.4,
-      margin: '0',
+      color: colors.grey[900],
+      margin: '0 0 1em',
       breakPoints: {
         xl: {
           fontSize: '1.186rem',
@@ -117,7 +126,8 @@ module.exports = {
       fontSize: '1.125rem',
       fontWeight: 500,
       lineHeight: 1.54,
-      margin: '0',
+      color: colors.grey[900],
+      margin: '0 0 1em',
       breakPoints: {
         xl: {
           fontSize: '1.055rem',
@@ -131,7 +141,8 @@ module.exports = {
       fontSize: '1rem',
       fontWeight: 400,
       lineHeight: 1.48,
-      margin: '0',
+      color: colors.grey[900],
+      margin: '0 0 1em',
       breakPoints: {
         xl: {
           fontSize: '0.938rem',
@@ -145,7 +156,8 @@ module.exports = {
       fontSize: '0.79rem',
       fontWeight: 500,
       lineHeight: 1.24,
-      margin: '0',
+      color: colors.grey[900],
+      margin: '0 0 1em',
       breakPoints: {
         xl: {
           fontSize: '0.741rem',

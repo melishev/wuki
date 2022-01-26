@@ -1,8 +1,11 @@
 {
-  "title": "Installation",
+  "title": "Beginning of work",
   "description": "This guide was created to show how a developer can install Wuki UI into an existing project or into a project created with Create React App.",
-  "text1": "First you need to install Wuki in your React app. This can be done with Npm:",
-  "text2": "or Yarn:",
+  "installation": {
+    "title": "Installation",
+    "text1": "First you need to install Wuki in your React app. This can be done with Npm:",
+    "text2": "or Yarn:"
+  },
   "provider": {
     "title": "Provider",
     "description": {

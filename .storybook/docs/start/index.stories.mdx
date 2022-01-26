@@ -1,12 +1,18 @@
 import { Meta } from '@storybook/addon-docs'
 import { useTranslation } from 'react-i18next'
+import { Text, Code } from '../../../components'
+import { colors } from '../../../components/utils/theme'
 
 <Meta title="Getting Start/Start" />
 
-<h1>{useTranslation('start').t('title')}</h1>
+<Text tag="h1">
+  {useTranslation('start').t('title')}
+</Text>
 
-<p>{useTranslation('start').t('description')}</p>
+<Text variant="body1" style={{color: colors.grey[500]}}>
+  {useTranslation('start').t('description')}
+</Text>
 
-<p>{useTranslation('start').t('text')}</p>
-
-<a href="?path=/docs/getting-start-installation--page">{useTranslation('start').t('button.0')}</a>
+<a href="?path=/docs/getting-start-installation--page">
+  {useTranslation('start').t('button.0')}
+</a>

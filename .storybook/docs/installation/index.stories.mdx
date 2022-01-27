@@ -36,7 +36,7 @@ import { colors } from '../../../theme'
 
 <Code>{`import { WukiProvider } from 'wuki';`}</Code>
 
-<Text variant="body2">{useTranslation('installation').t('provider.text')}</Text>
+<Text variant="body2">{useTranslation('installation').t('provider.text1')}</Text>
 
 <Code>{`ReactDOM.render(
   <WukiProvider>
@@ -45,7 +45,7 @@ import { colors } from '../../../theme'
   document.getElementById('root')
 );`}</Code>
 
-> 🚨 Изначально Провайдер будет использовать стандартную конфигурацию Wuki UI, подробнее о том как изменить и создать свою конфигурацию будет рассказано в документации к WukiProvider.
+<Text variant="small">🚨 {useTranslation('installation').t('provider.text2')}</Text>
 
 <Text tag="h2" variant="h4">{useTranslation('installation').t('components.title')}</Text>
 

@@ -15,7 +15,8 @@
       "link2": "normalize.css",
       "text3": " is also used internally. The provider is required for the correct operation of the UI library."
     },
-    "text": "Declare a Provider in your application globally:"
+    "text1": "Declare a Provider in your application globally:",
+    "text2": "Note: Initially, the Provider will use the standard Wuki UI configuration, more details on how to change and create your own configuration will be described in the WukiProvider documentation."
   },
   "components": {
     "title": "Components",

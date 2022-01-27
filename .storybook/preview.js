@@ -10,6 +10,7 @@ import { I18nextProvider, useTranslation } from 'react-i18next';
 import i18nConfig from './helpers/i18next.js';
 
 import DocsWrapper from './components/docsWrapper';
+import DocsButton from './components/docsButton'
 
 export const decorators = [
   (Story, { args }) => (
@@ -30,8 +31,10 @@ export const parameters = {
       <I18nextProvider i18n={i18nConfig}>
         <WukiProvider cssBaseLine>
           <DocsContainer context={context}>
-            <button><Text variant='body2' onClick={() => i18n.changeLanguage('ru')}>Russia 🇷🇺</Text></button>
-            <button><Text variant='body2' onClick={() => i18n.changeLanguage('en')}>English 🇺🇸</Text></button>
+            <div className='i18n_controller'>
+              <DocsButton onClick={() => i18n.changeLanguage('ru')}>🇷🇺</DocsButton>
+              <DocsButton onClick={() => i18n.changeLanguage('en')}>🇺🇸</DocsButton>
+            </div>
             {context.component
               ? <DocsWrapper context={context}>{children}</DocsWrapper>
               : children
@@ -40,6 +43,11 @@ export const parameters = {
         </WukiProvider>
       </I18nextProvider>
     )},
+  },
+  options: {
+    storySort: {
+      order: ['Getting Start', ['Start', 'Installation', 'Theming'], 'General', 'Layout'],
+    },
   },
   grid: {
     gridOn: false,

@@ -6,6 +6,12 @@ const allComponents = [
   'grid',
   'text',
 ];
+
+const allDocs = [
+  'start',
+  'installation'
+];
+
 const supportedLngs = ['en', 'ru'];
 
 i18n.use(initReactI18next)
@@ -22,6 +28,13 @@ supportedLngs.forEach((lang) => {
       lang,
       component,
       require(`../../components/${component}/docs/locales/${lang}.json`)
+    );
+  });
+  allDocs.forEach((doc) => {
+    i18n.addResourceBundle(
+      lang,
+      doc,
+      require(`../docs/${doc}/locales/${lang}.json`)
     );
   });
 });

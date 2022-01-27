@@ -2,25 +2,17 @@ import { useTranslation } from "react-i18next";
 import { Text, Code } from "../../index";
 import { colors } from "../../../theme";
 
-export const t = (key) => useTranslation("text").t(key);
+export const t = (key) => useTranslation('text').t(key);
 
-<Text
-  tag="h2"
-  variant="h4"
-  style={{ marginBottom: 28, color: colors.grey[900] }}
->
+<Text tag="h2" variant="h4">
   {t("important.title")} ⚠️
 </Text>
 
-<Text variant="body2" style={{ marginBottom: 24, color: colors.grey[500] }}>
+<Text variant="body2" style={{ color: colors.grey[500] }}>
   {t("important.text1")}
 </Text>
 
-<Text
-  tag="h3"
-  variant="h6"
-  style={{ marginBottom: 24, color: colors.grey[900] }}
->
+<Text tag="h3" variant="body1">
   1. Google Fonts
 </Text>
 
@@ -29,20 +21,15 @@ export const t = (key) => useTranslation("text").t(key);
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
 />`}
-  style={{ marginBottom: 24 }}
 />
 
-<Text
-  tag="h3"
-  variant="h6"
-  style={{ marginBottom: 24, color: colors.grey[900] }}
->
+<Text tag="h3" variant="body1">
   2. NPM
 </Text>
 
-<Code code={`npm install @fontsource/manrope`} style={{ marginBottom: 24 }} />
+<Code code={`npm install @fontsource/manrope`} />
 
-<Text variant="body2" style={{ marginBottom: 24, color: colors.grey[500] }}>
+<Text variant="body2" style={{ color: colors.grey[500] }}>
   {t("important.text2")}
 </Text>
 
@@ -54,7 +41,6 @@ import '@fontsource/manrope/500.css';
 import '@fontsource/manrope/600.css';
 import '@fontsource/manrope/700.css';
 import '@fontsource/manrope/800.css';`}
-  style={{ marginBottom: 24 }}
 />
 
 <Text variant="body2">

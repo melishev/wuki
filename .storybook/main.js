@@ -2,6 +2,7 @@ const { colors, type} = require('../theme');
 
 module.exports = {
   stories: [
+    './docs/**/index.stories.mdx',
     '../components/**/*.stories.@(js|jsx|mdx)'
   ],
   addons: [
@@ -18,6 +19,7 @@ module.exports = {
     'storybook-addon-grid/preset',
     'storybook-addon-grid/chromatic',
   ],
+  staticDirs: ['../public'],
   previewHead: (head) => (`
     ${head}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,11 +37,31 @@ module.exports = {
       .sbdocs.sbdocs-wrapper {
         background: ${colors.grey[25]};
       }
+      .i18n_controller {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: fixed;
+        top: calc(4rem + 16px);
+        right: 1rem;
+      }
     </style>
   `),
   managerHead: (head) => (`
     ${head}
+    <!-- Favicon -->
+    <meta name="theme-color" content="${colors.grey[600]}">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="${colors.blue[500]}">
+    <link rel="shortcut icon" href="/wukiFavicon.ico">
+    <link rel="icon" type="image/png" href="/wukiFavicon.png" sizes="192x192">
+    <!-- Connect Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Manrope:wght@200;300;400;500;600;700;800&display=swap">
     <style>
+      body {
+        font-family: ${type.family};
+      }
       div[role="main"] {
         top: 0 !important;
         height: 100% !important;
@@ -55,7 +77,7 @@ module.exports = {
         color: ${colors.grey[900]};
         padding-top: .5rem;
         padding-bottom: .5rem;
-        margin: .5rem 0 .5rem 18px;
+        margin: .5rem 18px;
         border-radius: 6px;
         font-size: 1rem;
         font-weight: 400;

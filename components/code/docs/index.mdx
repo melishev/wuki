@@ -1,28 +1,46 @@
 import { useTranslation } from 'react-i18next'
+import { Text, Code } from "../../index";
+import { colors } from "../../../theme";
 
-<h2>{useTranslation('code').t('important.title')} ⚠️</h2>
+export const t = (key) => useTranslation('code').t(key);
 
-<p>{useTranslation('code').t('important.text1')}</p>
+<Text tag="h2" variant="h4">
+  {t("important.title")} ⚠️
+</Text>
 
-<h4>1. Google Fonts</h4>
+<Text variant="body2" style={{ color: colors.grey[500] }}>
+  {t("important.text1")}
+</Text>
 
-```
-<link
+<Text tag="h3" variant="body1">
+  1. Google Fonts
+</Text>
+
+<Code>
+  {`<link
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
-/>
-```
+/>`}
+</Code>
 
-<h4>2. NPM</h4>
+<Text tag="h3" variant="body1">
+  2. NPM
+</Text>
 
-```
-npm install @fontsource/ibm-plex-mono
-```
+<Code>
+  {`npm install @fontsource/ibm-plex-mono`}
+</Code>
 
-<p>{useTranslation('code').t('important.text2')}</p>
+<Text variant="body2" style={{ color: colors.grey[500] }}>
+  {t("important.text2")}
+</Text>
 
-```
-import '@fontsource/ibm-plex-mono'
-```
+<Code>
+  {`import '@fontsource/ibm-plex-mono'`}
+</Code>
 
-<p>{useTranslation('code').t('important.text3')} <a href="https://fontsource.org/fonts/ibm-plex-mono">Fontsource</a></p>
+<Text variant="body2">
+  {t("important.text3")}
+  {" "}
+  <a href="https://fontsource.org/fonts/ibm-plex-mono">Fontsource</a>
+</Text>

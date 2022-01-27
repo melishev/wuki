@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { colors } from '../../components/utils/theme';
+import { colors } from '../../theme';
 import { Text, Code } from '../../components';
 
 import { DocsStory, ArgsTable } from '@storybook/addon-docs';

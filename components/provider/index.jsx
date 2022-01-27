@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import { ThemeProvider } from 'react-jss';
-import themeDefault from '../utils/theme';
+import themeDefault from '../../theme';
 import style from '../utils/globalStyleSheet';
 import normalize from '../utils/normalize';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { themes } from '@storybook/theming';
 
-import { grid } from '../components/utils/theme';
+import { grid } from '../theme';
 import { WukiProvider, Text } from '../components';
 
 import { DocsContainer } from '@storybook/addon-docs';

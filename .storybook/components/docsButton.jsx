@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Text } from '../../components'
-import { colors } from '../../components/utils/theme'
+import { colors } from '../../theme'
 
 function docsButton({children, ...props}) {
   const btnStyle = {

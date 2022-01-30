@@ -1,50 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { Text, Code } from "../../index";
-import { colors } from "../../../theme";
+import DocsNote from '../../../.storybook/components/docsNote'
 
 export const t = (key) => useTranslation('text').t(key);
 
-<Text tag="h2" variant="h4">
-  {t("important.title")} ⚠️
-</Text>
-
-<Text variant="body2" style={{ color: colors.grey[500] }}>
-  {t("important.text1")}
-</Text>
-
-<Text tag="h3" variant="body1">
-  1. Google Fonts
-</Text>
-
-<Code
-  code={`<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
-/>`}
-/>
-
-<Text tag="h3" variant="body1">
-  2. NPM
-</Text>
-
-<Code code={`npm install @fontsource/manrope`} />
-
-<Text variant="body2" style={{ color: colors.grey[500] }}>
-  {t("important.text2")}
-</Text>
-
-<Code
-  code={`import '@fontsource/manrope/200.css';
-import '@fontsource/manrope/300.css';
-import '@fontsource/manrope/400.css';
-import '@fontsource/manrope/500.css';
-import '@fontsource/manrope/600.css';
-import '@fontsource/manrope/700.css';
-import '@fontsource/manrope/800.css';`}
-/>
-
-<Text variant="body2">
-  {t("important.text3")}
-  {" "}
-  <a href="https://fontsource.org/fonts/manrope">Fontsource</a>
-</Text>
+<DocsNote status={t('note.title')}>{t('note.text')} <a href="#">{t('note.button')}</a>.</DocsNote>

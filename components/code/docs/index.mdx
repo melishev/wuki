@@ -1,46 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { Text, Code } from "../../index";
-import { colors } from "../../../theme";
+import DocsNote from '../../../.storybook/components/docsNote'
 
 export const t = (key) => useTranslation('code').t(key);
 
-<Text tag="h2" variant="h4">
-  {t("important.title")} ⚠️
-</Text>
-
-<Text variant="body2" style={{ color: colors.grey[500] }}>
-  {t("important.text1")}
-</Text>
-
-<Text tag="h3" variant="body1">
-  1. Google Fonts
-</Text>
-
-<Code>
-  {`<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
-/>`}
-</Code>
-
-<Text tag="h3" variant="body1">
-  2. NPM
-</Text>
-
-<Code>
-  {`npm install @fontsource/ibm-plex-mono`}
-</Code>
-
-<Text variant="body2" style={{ color: colors.grey[500] }}>
-  {t("important.text2")}
-</Text>
-
-<Code>
-  {`import '@fontsource/ibm-plex-mono'`}
-</Code>
-
-<Text variant="body2">
-  {t("important.text3")}
-  {" "}
-  <a href="https://fontsource.org/fonts/ibm-plex-mono">Fontsource</a>
-</Text>
+<DocsNote status={t('note.title')}>{t('note.text')} <a href="#">{t('note.button')}</a>.</DocsNote>

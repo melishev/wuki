@@ -6,6 +6,17 @@
     "text1": "First you need to install Wuki in your React app. This can be done with Npm:",
     "text2": "or Yarn:"
   },
+  "fonts": {
+    "title": "Fonts",
+    "description": "Before you start working with the library, you need to import the fonts. By default, Wuki UI uses:",
+    "text1": "Here are some examples of how to install fonts in your project:",
+    "text2": "You can then import it into your entry point.",
+    "text3": "You can find all the basic information on Fontsource:",
+    "note": {
+      "title": "Note",
+      "text": "You are not required to use only the methods described here."
+    }
+  },
   "provider": {
     "title": "Provider",
     "description": {
@@ -16,7 +27,10 @@
       "text3": " is also used internally. The provider is required for the correct operation of the UI library."
     },
     "text1": "Declare a Provider in your application globally:",
-    "text2": "Note: Initially, the Provider will use the standard Wuki UI configuration, more details on how to change and create your own configuration will be described in the WukiProvider documentation."
+    "note": {
+      "title": "Important",
+      "text": "Initially, the Provider will use the standard Wuki UI configuration, more details on how to change and create your own configuration will be described in the WukiProvider documentation."
+    }
   },
   "components": {
     "title": "Components",

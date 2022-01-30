@@ -1,42 +1,96 @@
 import { Meta } from '@storybook/addon-docs'
 import { useTranslation } from 'react-i18next'
+import DocsNote from '../../components/docsNote'
 import { Text, Code } from '../../../components'
 import { colors } from '../../../theme'
+
+export const t = (key) => useTranslation('installation').t(key);
 
 <Meta title="Getting Start/Installation" />
 
 <Text tag="h1">
-  {useTranslation('installation').t('title')}
+{t('title')}
 </Text>
 
-<Text variant="body1" style={{color: colors.grey[500]}}>{useTranslation('installation').t('description')}</Text>
+<Text variant="body1" style={{color: colors.grey[500]}}>{t('description')}</Text>
 
-<Text tag="h2" variant="h4">{useTranslation('installation').t('installation.title')}</Text>
+<!--<ol>
+  <li><a href="#">Установка</a></li>
+  <li><a href="#">Шрифты</a></li>
+  <li><a href="#">Провайдер</a></li>
+  <li><a href="#">Компоненты</a></li>
+</ol>-->
 
-<Text variant="body2">{useTranslation('installation').t('installation.text1')}</Text>
+<Text tag="h2" variant="h4">{t('installation.title')}</Text>
+
+<Text variant="body2">{t('installation.text1')}</Text>
 
 <Code>npm install wuki</Code>
 
-<Text variant="body2">{useTranslation('installation').t('installation.text2')}</Text>
+<Text variant="body2">{t('installation.text2')}</Text>
 
 <Code>yarn add wuki</Code>
 
-<Text tag="h2" variant="h4">{useTranslation('installation').t('provider.title')}</Text>
+<Text tag="h2" variant="h4">{t('fonts.title')}</Text>
+
+<Text variant="body2">{t('fonts.description')}</Text>
+
+  1. [Manrope](https://fonts.google.com/specimen/Manrope)
+  2. [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono?query=ibm+plex+mono)
+
+<Text variant="body2">{t('fonts.text1')}</Text>
+
+<Text tag="h3" variant="body1">
+  1. Google Fonts
+</Text>
+
+<Code>
+  {`<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Manrope:wght@200;300;400;500;600;700;800&display=swap">`}
+</Code>
+
+<Text tag="h3" variant="body1">
+  2. Fontsource
+</Text>
+
+<Code>
+  {`npm install @fontsource/manrope @fontsource/ibm-plex-mono`}
+</Code>
+
+<Text variant="body2">{t('fonts.text2')}</Text>
+
+<Code>
+  {`import '@fontsource/manrope'
+import '@fontsource/ibm-plex-mono'`}
+</Code>
 
 <Text variant="body2">
-  {useTranslation('installation').t('provider.description.text1')}
+  {t('fonts.text3')}
+  {" "}
+  <a href="https://fontsource.org/fonts/manrope" target="_blank">Manrope</a>
+  {", "}
+  <a href="https://fontsource.org/fonts/ibm-plex-mono" target="_blank">IBM Plex Mono</a>.
+</Text>
+
+<DocsNote status={t('fonts.note.title')}>{t('fonts.note.text')}</DocsNote>
+
+<Text tag="h2" variant="h4">{t('provider.title')}</Text>
+
+<Text variant="body2">
+  {t('provider.description.text1')}
   {' '}
-  <a href="?path=/docs/getting-start-theming--page">{useTranslation('installation').t('provider.description.link1')}</a>
+  <a href="?path=/docs/getting-start-theming--page">{t('provider.description.link1')}</a>
   {' '}
-  {useTranslation('installation').t('provider.description.text2')}
+  {t('provider.description.text2')}
   {' '}
-  <a href="https://necolas.github.io/normalize.css/">{useTranslation('installation').t('provider.description.link2')}</a>
-  {useTranslation('installation').t('provider.description.text3')}
+  <a href="https://necolas.github.io/normalize.css/">{t('provider.description.link2')}</a>
+  {t('provider.description.text3')}
 </Text>
 
 <Code>{`import { WukiProvider } from 'wuki';`}</Code>
 
-<Text variant="body2">{useTranslation('installation').t('provider.text1')}</Text>
+<Text variant="body2">{t('provider.text1')}</Text>
 
 <Code>{`ReactDOM.render(
   <WukiProvider>
@@ -45,10 +99,10 @@ import { colors } from '../../../theme'
   document.getElementById('root')
 );`}</Code>
 
-<Text variant="small">🚨 {useTranslation('installation').t('provider.text2')}</Text>
+<DocsNote status={t('provider.note.title')}>{t('provider.note.text')}</DocsNote>
 
-<Text tag="h2" variant="h4">{useTranslation('installation').t('components.title')}</Text>
+<Text tag="h2" variant="h4">{t('components.title')}</Text>
 
-<Text variant="body2">{useTranslation('installation').t('components.description')}</Text>
+<Text variant="body2">{t('components.description')}</Text>
 
 <Code>{`import { Text } from 'wuki'`}</Code>

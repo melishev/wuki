@@ -1,10 +1,9 @@
 {
   "description": "The Code component allows you to display the source code.",
-  "important": {
+  "note": {
     "title": "Important",
-    "text1": "Make sure to import the monospace font into your project before using the component. By default, Wuki UI uses IBM Plex Mono, here are some examples of how to integrate it into your project:",
-    "text2": "Then you can import it to your entry point.",
-    "text3": "You can find all the basic information at"
+    "text": "Before using this component, make sure you have imported the fonts into the project. You can learn more about importing fonts into a project",
+    "button": "here"
   },
   "examples": {
     "title": "Examples",

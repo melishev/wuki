@@ -1,32 +1,71 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "jest": true
-  },
-  "extends": ["plugin:react/recommended", "airbnb"],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
-  },
   "plugins": ["react"],
-  "rules": {
-    "object-curly-newline": "off",
-    "max-len": ["error", 140, 2],
-    "indent": ["error", 2],
-    "react/jsx-props-no-spreading": ["error",
-      {
-        "exceptions": ["Tag"],
-        "html": "ignore"
+  "overrides": [
+    {
+      "files": ["*.{js,jsx}"],
+      "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+      },
+      "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+      ],
+      "parserOptions": {
+        "ecmaFeatures": {
+          "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+      },
+      "rules": {
+        "object-curly-newline": "off",
+        "max-len": ["error", 140, 2],
+        "indent": ["error", 2],
+        "react/jsx-props-no-spreading": ["error",
+          {
+            "exceptions": ["Tag"],
+            "html": "ignore"
+          }
+        ],
+        "react/function-component-definition": [2,
+          {
+            "namedComponents": "arrow-function"
+          }
+        ]
       }
-    ],
-    "react/function-component-definition": [ 2,
-      {
-        "namedComponents": "arrow-function"
+    },
+    {
+      "files": ["*.{md,mdx}"],
+      "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+      },
+      "extends": [
+        "plugin:mdx/recommended",
+        "airbnb"
+      ],
+      "parserOptions": {
+        "ecmaFeatures": {
+          "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+      },
+      "settings": {
+        "mdx/code-blocks": true,
+        "mdx/language-mapper": {}
+      },
+      "rules": {
+        "max-len": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".mdx"] } ],
+        "import/no-extraneous-dependencies": "off",
+        "import/prefer-default-export": "off",
+        "react/jsx-indent": "off",
+        "semi": "off"
       }
-    ]
-  }
+    }
+  ]
 }

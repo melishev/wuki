@@ -12,6 +12,10 @@ const allDocs = [
   'installation'
 ];
 
+const allDocsComponents = [
+  'docsWrapper',
+];
+
 const supportedLngs = ['en', 'ru'];
 
 i18n.use(initReactI18next)
@@ -35,6 +39,13 @@ supportedLngs.forEach((lang) => {
       lang,
       doc,
       require(`../docs/${doc}/locales/${lang}.json`)
+    );
+  });
+  allDocsComponents.forEach((docComp) => {
+    i18n.addResourceBundle(
+      lang,
+      docComp,
+      require(`../components/${docComp}/locales/${lang}.json`)
     );
   });
 });

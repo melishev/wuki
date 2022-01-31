@@ -1,0 +1,9 @@
+{
+  "examples": {
+    "description": "The examples below demonstrate and talk about the best practices for using components in various situations. By looking at them, you can understand how best to use the component in your project or in a particular situation."
+  },
+  "api": {
+    "title": "Component API (props)",
+    "description": "With a simple API(props) you can customize the component to suit your needs. Most often this will not be necessary, but for the best effect they exist."
+  }
+}

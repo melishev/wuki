@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { colors } from '../../theme';
-import { Text, Code } from '../../components';
+import { colors } from '../../../theme';
+import { Text, Code } from '../../../components';
 
 import { DocsStory, ArgsTable } from '@storybook/addon-docs';
 
@@ -9,6 +9,7 @@ import { Trans, useTranslation } from 'react-i18next';
 
 function docsWrapper({context, children}) {
   const { name } = context.component
+  const compT = (key) => useTranslation('docsWrapper').t(key)
   const { t } = useTranslation(name.toLowerCase())
 
   return (
@@ -28,6 +29,9 @@ function docsWrapper({context, children}) {
       <Text tag="h2" variant="h3">
         {t('examples.title')}
       </Text>
+      <Text variant="body2">
+        {compT('examples.description')}
+      </Text>
       {context.componentStories().map((story) => (
         <React.Fragment key={story.id}>
           <Text tag="h3" variant="h6">
@@ -41,8 +45,8 @@ function docsWrapper({context, children}) {
           <DocsStory id={story.id} />
         </React.Fragment>
       ))}
-      <Text tag="h2" variant="h3">Component API (props)</Text>
-      <Text variant="body2">Благодаря простому API(props) вы можете настроить компонент под ваши нужды. Чаще всего в этом не будет нужды, но для лучшего эффекта они и существуют</Text>
+      <Text tag="h2" variant="h3">{compT('api.title')}</Text>
+      <Text variant="body2">{compT('api.description')}</Text>
       <ArgsTable />
     </>
   )

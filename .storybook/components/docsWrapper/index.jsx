@@ -27,7 +27,7 @@ function docsWrapper({context, children}) {
       />
       {children}
       <Text tag="h2" variant="h3">
-        {t('examples.title')}
+        {compT('examples.title')}
       </Text>
       <Text variant="body2">
         {compT('examples.description')}

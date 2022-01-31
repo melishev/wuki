@@ -6,7 +6,6 @@
     "button": "here"
   },
   "examples": {
-    "title": "Examples",
     "default": {
       "title": "Default",
       "description": "By default, you don't need to pass any props other than <code>code</code> to this component. It is beautiful and convenient out of the box. Code will automatically adjust to the transmitted data."

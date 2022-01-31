@@ -6,7 +6,6 @@
   "text3": "Element - is a column in a Grid system.",
   "text4": "In standard situations, you should stick to as few `<Grid container>` as possible. One container is enough to create standard page layout and cover all needs.",
   "examples": {
-    "title": "Examples",
     "default": {
       "title": "Default",
       "description": ""

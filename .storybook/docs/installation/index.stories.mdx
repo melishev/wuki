@@ -8,7 +8,7 @@ export const t = (key) => useTranslation('installation').t(key);
 
 <Meta title="Getting Start/Installation" />
 
-<Text tag="h1">
+<Text tag="h1" style={{ margin: '0 0 20px'}}>
 {t('title')}
 </Text>
 
@@ -21,26 +21,28 @@ export const t = (key) => useTranslation('installation').t(key);
   <li><a href="#">Компоненты</a></li>
 </ol>-->
 
-<Text tag="h2" variant="h4">{t('installation.title')}</Text>
+<Text tag="h2" variant="h4" style={{ margin: '40px 0 16px'}}>{t('installation.title')}</Text>
 
-<Text variant="body2">{t('installation.text1')}</Text>
+<Text variant="body2" style={{ margin: '16px 0'}}>{t('installation.text1')}</Text>
 
 <Code>npm install wuki</Code>
 
-<Text variant="body2">{t('installation.text2')}</Text>
+<Text variant="body2" style={{ margin: '12px 0'}}>{t('installation.text2')}</Text>
 
 <Code>yarn add wuki</Code>
 
-<Text tag="h2" variant="h4">{t('fonts.title')}</Text>
+<Text tag="h2" variant="h4" style={{ margin: '40px 0 16px'}}>{t('fonts.title')}</Text>
 
 <Text variant="body2">{t('fonts.description')}</Text>
 
-  1. [Manrope](https://fonts.google.com/specimen/Manrope)
-  2. [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono?query=ibm+plex+mono)
+<ol style={{ margin: '16px 0' }}>
+  <li><a href="https://fonts.google.com/specimen/Manrope" target="_blank">Manrope</a></li>
+  <li><a href="https://fonts.google.com/specimen/IBM+Plex+Mono?query=ibm+plex+mono" target="_blank">IBM Plex Mono</a></li>
+</ol>
 
 <Text variant="body2">{t('fonts.text1')}</Text>
 
-<Text tag="h3" variant="body1">
+<Text tag="h3" variant="body1" style={{ margin: '24px 0 16px' }}>
   1. Google Fonts
 </Text>
 
@@ -50,7 +52,7 @@ export const t = (key) => useTranslation('installation').t(key);
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Manrope:wght@200;300;400;500;600;700;800&display=swap">`}
 </Code>
 
-<Text tag="h3" variant="body1">
+<Text tag="h3" variant="body1" style={{ margin: '24px 0 16px' }}>
   2. Fontsource
 </Text>
 
@@ -58,14 +60,14 @@ export const t = (key) => useTranslation('installation').t(key);
   {`npm install @fontsource/manrope @fontsource/ibm-plex-mono`}
 </Code>
 
-<Text variant="body2">{t('fonts.text2')}</Text>
+<Text variant="body2" style={{ margin: '12px 0' }}>{t('fonts.text2')}</Text>
 
 <Code>
   {`import '@fontsource/manrope'
 import '@fontsource/ibm-plex-mono'`}
 </Code>
 
-<Text variant="body2">
+<Text variant="body2" style={{ margin: '12px 0 28px' }}>
   {t('fonts.text3')}
   {" "}
   <a href="https://fontsource.org/fonts/manrope" target="_blank">Manrope</a>
@@ -75,9 +77,9 @@ import '@fontsource/ibm-plex-mono'`}
 
 <DocsNote status={t('fonts.note.title')}>{t('fonts.note.text')}</DocsNote>
 
-<Text tag="h2" variant="h4">{t('provider.title')}</Text>
+<Text tag="h2" variant="h4" style={{ margin: '40px 0 16px'}}>{t('provider.title')}</Text>
 
-<Text variant="body2">
+<Text variant="body2" style={{ margin: '16px 0'}}>
   {t('provider.description.text1')}
   {' '}
   <a href="?path=/docs/getting-start-theming--page">{t('provider.description.link1')}</a>
@@ -90,9 +92,9 @@ import '@fontsource/ibm-plex-mono'`}
 
 <Code>{`import { WukiProvider } from 'wuki';`}</Code>
 
-<Text variant="body2">{t('provider.text1')}</Text>
+<Text variant="body2" style={{ margin: '12px 0'}}>{t('provider.text1')}</Text>
 
-<Code>{`ReactDOM.render(
+<Code style={{ margin: '0 0 28px'}}>{`ReactDOM.render(
   <WukiProvider>
     <App />
   </WukiProvider>,
@@ -101,8 +103,8 @@ import '@fontsource/ibm-plex-mono'`}
 
 <DocsNote status={t('provider.note.title')}>{t('provider.note.text')}</DocsNote>
 
-<Text tag="h2" variant="h4">{t('components.title')}</Text>
+<Text tag="h2" variant="h4" style={{ margin: '40px 0 16px'}}>{t('components.title')}</Text>
 
-<Text variant="body2">{t('components.description')}</Text>
+<Text variant="body2" style={{ margin: '16px 0'}}>{t('components.description')}</Text>
 
 <Code>{`import { Text } from 'wuki'`}</Code>

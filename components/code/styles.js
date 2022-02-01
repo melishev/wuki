@@ -8,6 +8,7 @@ const useStyles = createUseStyles(
       border: `1px solid ${colors.grey[50]}`,
       font: '400 .9rem IBM Plex Mono',
       color: colors.grey[900],
+      margin: 0,
     };
     return {
       codeInline: {

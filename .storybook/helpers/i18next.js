@@ -6,22 +6,46 @@ const allComponents = [
   'grid',
   'text',
 ];
+
+const allDocs = [
+  'start',
+  'installation',
+];
+
+const allDocsComponents = [
+  'docsWrapper',
+];
+
 const supportedLngs = ['en', 'ru'];
 
 i18n.use(initReactI18next)
-    .init({
-      lng: 'en',
-      fallbackLng: false,
-      supportedLngs,
-      resources: {}
-    });
+  .init({
+    lng: 'en',
+    fallbackLng: false,
+    supportedLngs,
+    resources: {},
+  });
 
 supportedLngs.forEach((lang) => {
-  allComponents.forEach((component) => {
+  allComponents.forEach(async (component) => {
     i18n.addResourceBundle(
       lang,
       component,
-      require(`../../components/${component}/docs/locales/${lang}.json`)
+      await import(`../../components/${component}/docs/locales/${lang}.json`),
+    );
+  });
+  allDocs.forEach(async (doc) => {
+    i18n.addResourceBundle(
+      lang,
+      doc,
+      await import(`../docs/${doc}/locales/${lang}.json`),
+    );
+  });
+  allDocsComponents.forEach(async (docComp) => {
+    i18n.addResourceBundle(
+      lang,
+      docComp,
+      await import(`../components/${docComp}/locales/${lang}.json`),
     );
   });
 });

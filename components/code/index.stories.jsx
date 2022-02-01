@@ -13,6 +13,25 @@ export default {
   },
 };
 
+export const Default = () => (
+  <Grid container>
+    <Grid col={8}>
+      <Code>npm install wuki</Code>
+    </Grid>
+  </Grid>
+);
+
+export const MultiLine = () => (
+  <Grid container>
+    <Grid col={8}>
+      <Code code={`<div>
+  <p>Hello, world!</p>
+</div>`}
+      />
+    </Grid>
+  </Grid>
+);
+
 export const Inline = () => (
   <Grid container>
     <Grid col={8}>
@@ -26,25 +45,6 @@ export const Inline = () => (
         quia quisquam expedita unde beatae officia aspernatur, quae,
         dignissimos nobis culpa accusamus quo!
       </Text>
-    </Grid>
-  </Grid>
-);
-
-export const SingleLine = () => (
-  <Grid container>
-    <Grid col={8}>
-      <Code code="npm install wuki" />
-    </Grid>
-  </Grid>
-);
-
-export const MultiLine = () => (
-  <Grid container>
-    <Grid col={8}>
-      <Code code={`<div>
-  <p>Hello, world!</p>
-</div>`}
-      />
     </Grid>
   </Grid>
 );

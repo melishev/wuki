@@ -1,22 +1,22 @@
 {
-  "description": "The <Code /> component allows you to display the source code.",
-  "important": {
-    "title": "Important ⚡️",
-    "text1": "Make sure to import the monospace font into your project before using the component. By default, Wuki UI uses IBM Plex Mono, here are some examples of how to integrate it into your project:",
-    "text2": "Then you can import it to your entry point.",
-    "text3": "You can find all the basic information at"
+  "description": "The Code component allows you to display the source code.",
+  "note": {
+    "title": "Important",
+    "text": "Before using this component, make sure you have imported the fonts into the project. You can learn more about importing fonts into a project",
+    "button": "here"
   },
-  "subTitle2": "Examples",
-  "examples": [
-    {
+  "examples": {
+    "default": {
       "title": "Default",
-      "description": "By default, you don't need to pass any props other than `code` to this component. It is beautiful and convenient out of the box. <Code /> will automatically adjust to the transmitted data.",
-      "text1": "In one line:",
-      "text2": "In multi lines:"
+      "description": "By default, you don't need to pass any props other than <code>code</code> to this component. It is beautiful and convenient out of the box. Code will automatically adjust to the transmitted data."
     },
-    {
+    "multi line": {
+      "title": "Multi Line",
+      "description": ""
+    },
+    "inline": {
       "title": "Inline",
-      "description": "The `Code` component can be used as an insert into the text, for this you need to pass the props `inline` component"
+      "description": "The Code component can be used as an insert into the text, for this you need to pass the props <code>inline</code> component"
     }
-  ]
+  }
 }

@@ -1,4 +1,4 @@
-name: Check Pull Request
+name: Check PR
 
 on: [pull_request]
 
@@ -93,7 +93,7 @@ jobs:
 
   chromatic:
     name: Publish to Chromatic
-    needs: [lint, tests, build, title]
+    needs: [lint, tests, build]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

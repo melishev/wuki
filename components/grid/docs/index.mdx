@@ -1,86 +1,38 @@
-import {
-  Title,
-  Description,
-  Primary,
-  Source,
-  Story,
-  Stories,
-  DocsStory,
-  ArgsTable
-} from '@storybook/addon-docs';
+import { useTranslation } from 'react-i18next';
+import { Text, Code } from '../../index';
 
-import { Text } from '../../index';
+export const t = (key) => useTranslation('grid').t(key);
 
-import { useTranslation } from 'react-i18next'
+<Text tag="h2" variant="h4" style={{ margin: '40px 0 16px' }}>
+  {t('subTitle1')}
+</Text>
 
-![image](https://paradigm.mail.ru/notionStatic/938bf97d-d8f9-48cb-ba4d-9fe4c6c027de.png)
+<Text variant="body1">
+  {t('text1')}
+</Text>
 
-<br />
+<Text variant="body2" style={{ margin: '12px 0' }}>
+  1.
+  {' '}
+  {t('text2')}
+</Text>
 
-<Title />
+<Code>
+  {`<Grid container>
+</Grid>`}
+</Code>
 
-<p>{useTranslation('grid').t('description')}</p>
+<Text variant="body2" style={{ margin: '12px 0' }}>
+  2.
+  {' '}
+  {t('text3')}
+</Text>
 
-```
-import { Grid } from 'wuki';
-```
+<Code>
+  {`<Grid col={12}>
+</Grid>`}
+</Code>
 
-<h2>{useTranslation('grid').t('subTitle1')}</h2>
-<p>{useTranslation('grid').t('text1')}</p>
-<ol>
-  <li>{useTranslation('grid').t('text2')}</li>
-
-</ol>
-
-```
-<Grid container>
-</Grid>
-```
-
-<ol>
-  <li>{useTranslation('grid').t('text3')}</li>
-
-</ol>
-
-```
-<Grid col={12}>
-</Grid>
-```
-
-<p>{useTranslation('grid').t('text4')}</p>
-
-## Адаптивность
-
-<br/>
-<br/>
-<br/>
-<br/>
-
-<h2>{useTranslation('grid').t('subTitle2')}</h2>
-<br/>
-
-<h3>{useTranslation('grid').t('examples.0.title')}</h3>
-<p>{useTranslation('grid').t('examples.0.description')}</p>
-<DocsStory id="layout-grid--offset" />
-
-<h3>{useTranslation('grid').t('examples.1.title')}</h3>
-<p>{useTranslation('grid').t('examples.1.description')}</p>
-<DocsStory id="layout-grid--responsive" />
-
-<h3>{useTranslation('grid').t('examples.2.title')}</h3>
-<small>{useTranslation('grid').t('examples.2.subTitle')}</small>
-<p>{useTranslation('grid').t('examples.2.description')}</p>
-<DocsStory id="layout-grid--tag" />
-
-<h3>{useTranslation('grid').t('examples.3.title')}</h3>
-<small>{useTranslation('grid').t('examples.3.subTitle')}</small>
-<p>{useTranslation('grid').t('examples.3.description')}</p>
-<DocsStory id="layout-grid--style" />
-
-## Component API (props)
-
-<!-- Благодаря простому API(props) вы можете настроить компонент под ваши нужды. Чаще всего в этом не будет нужды, но для лучшего эффекта они и существуют -->
-
-<!-- Divide the table into two parts, the first will contain the props of the component itself, the second will contain global -->
-
-<ArgsTable />
+<Text variant="body2" style={{ margin: '16px 0' }}>
+  {t('text4')}
+</Text>

@@ -5,9 +5,10 @@ const useStyles = createUseStyles(
   ({ colors }) => {
     const globalCSS = {
       background: 'white',
-      border: `1px solid ${colors.grey[200]}`,
+      border: `1px solid ${colors.grey[50]}`,
       font: '400 .9rem IBM Plex Mono',
       color: colors.grey[900],
+      margin: 0,
     };
     return {
       codeInline: {
@@ -17,10 +18,10 @@ const useStyles = createUseStyles(
         borderRadius: 6,
         cursor: 'copy',
         '&:hover': {
-          borderColor: colors.grey[500],
+          borderColor: colors.grey[200],
         },
         '&.active': {
-          borderColor: colors.orange[500],
+          borderColor: colors.other.green,
         },
       },
       code: {
@@ -30,27 +31,27 @@ const useStyles = createUseStyles(
         overflow: 'auto',
         '&.active': {
           '& button': {
-            borderColor: colors.orange[500],
-            stroke: colors.orange[500],
+            borderColor: colors.other.green,
+            stroke: colors.other.green,
           },
         },
         '& button': {
           display: 'flex',
           background: 'white',
-          border: `1px solid ${colors.grey[200]}`,
+          border: `1px solid ${colors.grey[50]}`,
           borderRadius: 6,
           padding: 'calc(1rem - 10px - 1px)',
           position: 'sticky',
           float: 'right',
           left: 'calc(100% - 2rem)',
-          stroke: colors.grey[200],
+          stroke: colors.grey[50],
           cursor: 'pointer',
           '& svg': {
             stroke: 'inherit',
           },
           '&:hover': {
-            borderColor: colors.grey[500],
-            stroke: colors.grey[500],
+            borderColor: colors.grey[200],
+            stroke: colors.grey[200],
           },
         },
         '& code': {

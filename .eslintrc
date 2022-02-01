@@ -4,7 +4,9 @@
     "es2021": true,
     "jest": true
   },
-  "extends": ["plugin:react/recommended", "airbnb"],
+  "extends": [
+    "airbnb"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -14,14 +16,52 @@
   },
   "plugins": ["react"],
   "rules": {
-    "object-curly-newline": "off",
-    "max-len": ["error", 140, 2],
-    "indent": ["error", 2],
-    "react/jsx-props-no-spreading": ["error",
-      {
-        "exceptions": ["Tag"],
-        "html": "ignore"
+    "import/no-extraneous-dependencies": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.{js,jsx}"],
+      "extends": [
+        "plugin:react/recommended"
+      ],
+      "rules": {
+        "object-curly-newline": "off",
+        "max-len": ["error", 180, 2],
+        "react/jsx-props-no-spreading": ["error",
+          {
+            "exceptions": ["Tag"],
+            "html": "ignore"
+          }
+        ],
+        "react/function-component-definition": [2,
+          {
+            "namedComponents": "arrow-function"
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "files": ["*.{md,mdx}"],
+      "extends": [
+        "plugin:mdx/recommended"
+      ],
+      "settings": {
+        "mdx/code-blocks": true,
+        "mdx/language-mapper": {}
+      },
+      "rules": {
+        "max-len": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".mdx"] } ],
+        "import/prefer-default-export": "off",
+        "react/jsx-indent": "off",
+        "semi": "off"
+      }
+    },
+    {
+      "files": [".storybook/**"],
+      "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".mdx"] }]
+      }
+    }
+  ]
 }

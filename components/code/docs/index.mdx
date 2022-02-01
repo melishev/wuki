@@ -1,67 +1,15 @@
-import {
-  Title,
-  Source,
-  Story,
-  Stories,
-  DocsStory,
-  ArgsTable
-} from '@storybook/addon-docs';
+import { useTranslation } from 'react-i18next';
+import DocsNote from '../../../.storybook/components/docsNote';
+import { Text } from '../../index'
+import { colors } from '../../../theme'
 
-import { Code } from '../../index';
+export const t = (key) => useTranslation('code').t(key);
 
-import { useTranslation } from 'react-i18next'
-
-![image](https://paradigm.mail.ru/notionStatic/938bf97d-d8f9-48cb-ba4d-9fe4c6c027de.png)
-
-<br />
-
-<Title />
-
-<p>{useTranslation('code').t('description')}</p>
-
-<Code code="import { Code } from 'wuki';" />
-
-<h2>{useTranslation('code').t('important.title')}</h2>
-
-<p>{useTranslation('code').t('important.text1')}</p>
-
-<h4>1. Google Fonts</h4>
-
-<Code code={`<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
-/>`} />
-
-<h4>2. NPM</h4>
-
-<Code code="npm install @fontsource/ibm-plex-mono" />
-
-<p>{useTranslation('code').t('important.text2')}</p>
-
-<Code code="import '@fontsource/ibm-plex-mono'" />
-
-<p>{useTranslation('code').t('important.text3')} <a href="https://fontsource.org/fonts/ibm-plex-mono">Fontsource</a></p>
-
-<h2>{useTranslation('code').t('subTitle2')}</h2>
-<br/>
-
-<h3>{useTranslation('code').t('examples.0.title')}</h3>
-<p>{useTranslation('code').t('examples.0.description')}</p>
-<ol>
-  <li>
-    <p>{useTranslation('code').t('examples.0.text1')}</p>
-  </li>
-  <DocsStory id="components-code--single-line" />
-  <li>
-    <p>{useTranslation('code').t('examples.0.text2')}</p>
-  </li>
-  <DocsStory id="components-code--multi-line" />
-</ol>
-
-<h3>{useTranslation('code').t('examples.1.title')}</h3>
-<p>{useTranslation('code').t('examples.1.description')}</p>
-<DocsStory id="components-code--inline" />
-
-## Component API (props)
-
-<ArgsTable />
+<DocsNote status={t('note.title')}>
+  {t('note.text')}
+  {' '}
+  <Text tag="a" variant="body2" href="#test" style={{ color: colors.blue[400] }}>
+    {t('note.button')}
+  </Text>
+.
+</DocsNote>

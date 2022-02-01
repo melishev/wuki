@@ -1,29 +1,30 @@
 {
-  "description": "This is the foundation of the entire application. The grid allows you to correctly position all elements on the screen of any device.",
+  "description": "This is the foundation of the entire application. The Grid component allows you to correctly position all elements on the screen of any device.",
   "subTitle1": "Entities",
   "text1": "Grid contains two entities:",
   "text2": "Container - defines a columnar system built on CSS Grid, which is many times more convenient and easier to use than CSS FlexBox.",
   "text3": "Element - is a column in a Grid system.",
   "text4": "In standard situations, you should stick to as few `<Grid container>` as possible. One container is enough to create standard page layout and cover all needs.",
-  "subTitle2": "Examples",
-  "examples": [
-    {
+  "examples": {
+    "default": {
+      "title": "Default",
+      "description": ""
+    },
+    "offset": {
       "title": "Offset",
       "description": "Offset - allows you to set offsets to elements in the grid. The margins are calculated from the first column of the left side. In case of collision of elements, the latter will be moved to a new line."
     },
-    {
+    "responsive": {
       "title": "Responsive",
       "description": "Props `col` can be extended for better adaptability. To do this, you need to pass an object containing the name of the breakpoint from the theme and the desired number of columns occupied by the element. For instance::  xs: 24, xl: 12, xxl: 16"
     },
-    {
+    "tag": {
       "title": "Tag",
-      "subTitle": "global",
       "description": "Often, for better semantics, you need to use semantic HTML tags. Added props `Tag` specifically for this. This allows you, as a developer, to override the root tag of a component with whatever you think is best for you."
     },
-    {
+    "style": {
       "title": "Style",
-      "subTitle": "global",
       "description": "Props `style` will work the same as in standard use, but it will convert all passed styles into a separate unique class. This is done to keep the code clean."
     }
-  ]
+  }
 }

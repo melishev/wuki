@@ -1,16 +1,16 @@
 import { create } from '@storybook/theming';
-import { type, colors } from '../components/utils/theme';
+import { type, colors } from '../theme';
 
 export default create({
   base: 'light',
 
   // colorPrimary: 'hotpink',
-  colorSecondary: colors.orange[500],
+  colorSecondary: colors.blue[500],
 
   // UI
-  appBg: colors.grey[100],
-  appContentBg: colors.grey[100],
-  appBorderColor: colors.grey[200],
+  appBg: colors.grey[25],
+  appContentBg: colors.grey[25],
+  appBorderColor: colors.grey[50],
   appBorderRadius: 0,
 
   // Typography
@@ -24,7 +24,7 @@ export default create({
   // // Toolbar default and active colors
   // barTextColor: 'silver',
   // barSelectedColor: 'black',
-  barBg: colors.grey[100],
+  barBg: colors.grey[25],
 
   // // Form colors
   // inputBg: 'white',

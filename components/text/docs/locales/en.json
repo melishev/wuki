@@ -1,7 +1,22 @@
 {
   "description": "Use typography to present your design and content as clearly and efficiently as possible.",
-  "subTitle": "Important ⚡️",
-  "test": "Before using the component, make sure to import the font into the project. By default, Wuki UI uses Manrope font, here are a couple of examples of how to integrate it into your project:",
-  "test2": "Then, you can import it in your entry-point.",
-  "test3": "You can find all the basic information at"
+  "note": {
+    "title": "Important",
+    "text": "Before using this component, make sure you have imported the fonts into the project. You can learn more about importing fonts into a project",
+    "button": "here"
+  },
+  "examples": {
+    "default": {
+      "title": "Default",
+      "description": ""
+    },
+    "variant": {
+      "title": "Variations",
+      "description": "If you just use a component without any props, then it will not use any styles from the UI. To assign a variation from a theme, pass the `Variant` prop with the name of the variation."
+    },
+    "tag": {
+      "title": "Tag",
+      "description": "Often, for better semantics, you need to use semantic HTML tags. The `Tag` prop has been added specifically for this. This allows you, as a developer, to override the root tag of a component with whatever you think is best for you. Also, if your variation name coincides with a tag (ex: h1, small, p), then it will be connected automatically when using the tag."
+    }
+  }
 }

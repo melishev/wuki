@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import useStyles from './styles';
 import { convertStylesToCss, unionClassNames } from '../utils/helpers';
 
-const Text = ({ children, tag: Tag, variant, style, ...props }) => {
+const Text = ({ children, style, tag: Tag, variant, ...props }) => {
   const jssCSS = useStyles();
   const inlineCSS = convertStylesToCss(style);
 

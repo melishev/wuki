@@ -5,14 +5,14 @@ import { Copy, Check } from 'react-feather';
 import useStyles from './styles';
 import { convertStylesToCss, unionClassNames } from '../utils/helpers';
 
-const Code = ({ style, code, inline, ...props }) => {
+const Code = ({ children, style, code, inline, ...props }) => {
   const jssCSS = useStyles();
   const inlineCSS = convertStylesToCss(style);
 
   const [status, setStatus] = useState('');
 
   function copyCode() {
-    navigator.clipboard.writeText(code)
+    navigator.clipboard.writeText(code || children)
       .then(() => {
         setStatus('active');
         setTimeout(() => setStatus(''), 1000);
@@ -26,7 +26,7 @@ const Code = ({ style, code, inline, ...props }) => {
           ? <Copy size={20} strokeWidth={1} />
           : <Check size={20} strokeWidth={1} /> }
       </button>
-      <code>{code}</code>
+      <code>{code || children}</code>
     </pre>
   );
 
@@ -39,7 +39,7 @@ const Code = ({ style, code, inline, ...props }) => {
       tabIndex={0}
       {...props}
     >
-      {code}
+      {code || children}
     </code>
   );
 
@@ -49,15 +49,17 @@ const Code = ({ style, code, inline, ...props }) => {
 };
 
 Code.propTypes = {
-  style: propTypes.oneOfType([
-    propTypes.string,
-    propTypes.number,
-  ]),
+  children: propTypes.string,
+  /** Inline Styles assigned to the component will be converted to CSS class */
+  style: propTypes.oneOfType([propTypes.object]),
+  /** Submits the source code to be displayed */
   code: propTypes.string,
+  /** Should the source code be mapped to a string */
   inline: propTypes.bool,
 };
 
 Code.defaultProps = {
+  children: '',
   style: null,
   code: '',
   inline: false,

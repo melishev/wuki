@@ -6,10 +6,10 @@ addons.setConfig({
   theme: themeCustom,
   initialActive: 'sidebar',
   toolbar: {
-    title: { hidden: false, },
-    zoom: { hidden: true, },
-    eject: { hidden: false, },
-    copy: { hidden: true, },
-    fullscreen: { hidden: true, },
+    title: { hidden: false },
+    zoom: { hidden: true },
+    eject: { hidden: false },
+    copy: { hidden: true },
+    fullscreen: { hidden: true },
   },
 });

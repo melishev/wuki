@@ -1,19 +1,18 @@
 import React from 'react';
 import { themes } from '@storybook/theming';
 
-import { grid } from '../theme';
-import { WukiProvider, Text } from '../components';
-
 import { DocsContainer } from '@storybook/addon-docs';
-
 import { I18nextProvider, useTranslation } from 'react-i18next';
-import i18nConfig from './helpers/i18next.js';
+import { grid } from '../theme';
+import { WukiProvider } from '../components';
+
+import i18nConfig from './helpers/i18next';
 
 import DocsWrapper from './components/docsWrapper';
-import DocsButton from './components/docsButton'
+import DocsButton from './components/docsButton';
 
 export const decorators = [
-  (Story, { args }) => (
+  (Story) => (
     <WukiProvider cssBaseLine>
       <Story />
     </WukiProvider>
@@ -21,28 +20,28 @@ export const decorators = [
 ];
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[a-z].*" },
+  actions: { argTypesRegex: '^on[a-z].*' },
   docs: {
     theme: themes.light,
     container: ({ children, context }) => {
-      const { t, i18n } = useTranslation()
+      const { i18n } = useTranslation();
 
       return (
-      <I18nextProvider i18n={i18nConfig}>
-        <WukiProvider cssBaseLine>
-          <DocsContainer context={context}>
-            <div className='i18n_controller'>
-              <DocsButton onClick={() => i18n.changeLanguage('ru')}>🇷🇺</DocsButton>
-              <DocsButton onClick={() => i18n.changeLanguage('en')}>🇺🇸</DocsButton>
-            </div>
-            {context.component
-              ? <DocsWrapper context={context}>{children}</DocsWrapper>
-              : children
-            }
-          </DocsContainer>
-        </WukiProvider>
-      </I18nextProvider>
-    )},
+        <I18nextProvider i18n={i18nConfig}>
+          <WukiProvider cssBaseLine>
+            <DocsContainer context={context}>
+              <div className="i18n_controller">
+                <DocsButton onClick={() => i18n.changeLanguage('ru')}>🇷🇺</DocsButton>
+                <DocsButton onClick={() => i18n.changeLanguage('en')}>🇺🇸</DocsButton>
+              </div>
+              {context.component
+                ? <DocsWrapper context={context}>{children}</DocsWrapper>
+                : children}
+            </DocsContainer>
+          </WukiProvider>
+        </I18nextProvider>
+      );
+    },
   },
   options: {
     storySort: {
@@ -95,4 +94,4 @@ export const parameters = {
       },
     },
   },
-}
+};

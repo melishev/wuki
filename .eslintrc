@@ -1,28 +1,32 @@
 {
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
   "plugins": ["react"],
+  "rules": {
+    "import/no-extraneous-dependencies": "off"
+  },
   "overrides": [
     {
       "files": ["*.{js,jsx}"],
-      "env": {
-        "browser": true,
-        "es2021": true,
-        "jest": true
-      },
       "extends": [
-        "plugin:react/recommended",
-        "airbnb"
+        "plugin:react/recommended"
       ],
-      "parserOptions": {
-        "ecmaFeatures": {
-          "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module"
-      },
       "rules": {
         "object-curly-newline": "off",
-        "max-len": ["error", 140, 2],
-        "indent": ["error", 2],
+        "max-len": ["error", 180, 2],
         "react/jsx-props-no-spreading": ["error",
           {
             "exceptions": ["Tag"],
@@ -38,22 +42,9 @@
     },
     {
       "files": ["*.{md,mdx}"],
-      "env": {
-        "browser": true,
-        "es2021": true,
-        "jest": true
-      },
       "extends": [
-        "plugin:mdx/recommended",
-        "airbnb"
+        "plugin:mdx/recommended"
       ],
-      "parserOptions": {
-        "ecmaFeatures": {
-          "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module"
-      },
       "settings": {
         "mdx/code-blocks": true,
         "mdx/language-mapper": {}
@@ -61,10 +52,15 @@
       "rules": {
         "max-len": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".mdx"] } ],
-        "import/no-extraneous-dependencies": "off",
         "import/prefer-default-export": "off",
         "react/jsx-indent": "off",
         "semi": "off"
+      }
+    },
+    {
+      "files": [".storybook/**"],
+      "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".mdx"] }]
       }
     }
   ]

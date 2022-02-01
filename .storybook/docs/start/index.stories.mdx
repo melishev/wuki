@@ -7,14 +7,14 @@ export const t = (key) => useTranslation('start').t(key);
 
 <Meta title="Getting Start/Start" />
 
-<Text tag="h1">
+<Text tag="h1" style={{ margin: '0 0 20px' }}>
   {t('title')}
 </Text>
 
-<Text variant="body1" style={{color: colors.grey[500]}}>
+<Text variant="body1" style={{ margin: '16px 0', color: colors.grey[500] }}>
   {t('description')}
 </Text>
 
-<a href="?path=/docs/getting-start-installation--page">
+<Text tag="a" variant="body2" href="?path=/docs/getting-start-installation--page" style={{ color: colors.blue[400] }}>
   {t('button.0')}
-</a>
+</Text>

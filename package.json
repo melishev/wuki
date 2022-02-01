@@ -13,7 +13,7 @@
     "dev:docs": "start-storybook --docs --no-manager-cache",
     "build": "rollup -c",
     "build:sb": "build-storybook --docs",
-    "lint": "eslint .storybook/**",
+    "lint": "eslint components/** .storybook",
     "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN",
     "test": "jest",
     "prepare": "husky install"

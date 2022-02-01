@@ -17,4 +17,12 @@
     "javascript",
     "javascriptreact"
   ],
+  "eslint.workingDirectories": [
+		{
+      "directory": "components"
+    },
+    {
+      "directory": ".storybook"
+    }
+	]
 }

@@ -1,9 +1,9 @@
-const { colors, type} = require('../theme');
+const { colors, type } = require('../theme');
 
 module.exports = {
   stories: [
     './docs/**/index.stories.mdx',
-    '../components/**/*.stories.@(js|jsx|mdx)'
+    '../components/**/*.stories.@(js|jsx|mdx)',
   ],
   addons: [
     '@storybook/addon-a11y',
@@ -14,7 +14,7 @@ module.exports = {
         measure: false,
         outline: false,
         backgrounds: false,
-      }
+      },
     },
     'storybook-addon-grid/preset',
     'storybook-addon-grid/chromatic',
@@ -36,6 +36,9 @@ module.exports = {
       }
       .sbdocs.sbdocs-wrapper {
         background: ${colors.grey[25]};
+      }
+      .sbdocs-preview {
+        margin: 20px 0 28px !important;
       }
       .i18n_controller {
         display: flex;
@@ -97,5 +100,5 @@ module.exports = {
         display: none;
       }
     </style>
-  `)
-}
+  `),
+};

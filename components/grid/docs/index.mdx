@@ -1,25 +1,38 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next';
+import { Text, Code } from '../../index';
 
-<h2>{useTranslation('grid').t('subTitle1')}</h2>
-<p>{useTranslation('grid').t('text1')}</p>
-<ol>
-  <li>{useTranslation('grid').t('text2')}</li>
+export const t = (key) => useTranslation('grid').t(key);
 
-</ol>
+<Text tag="h2" variant="h4" style={{ margin: '40px 0 16px' }}>
+  {t('subTitle1')}
+</Text>
 
-```
-<Grid container>
-</Grid>
-```
+<Text variant="body1">
+  {t('text1')}
+</Text>
 
-<ol>
-  <li>{useTranslation('grid').t('text3')}</li>
+<Text variant="body2" style={{ margin: '12px 0' }}>
+  1.
+  {' '}
+  {t('text2')}
+</Text>
 
-</ol>
+<Code>
+  {`<Grid container>
+</Grid>`}
+</Code>
 
-```
-<Grid col={12}>
-</Grid>
-```
+<Text variant="body2" style={{ margin: '12px 0' }}>
+  2.
+  {' '}
+  {t('text3')}
+</Text>
 
-<p>{useTranslation('grid').t('text4')}</p>
+<Code>
+  {`<Grid col={12}>
+</Grid>`}
+</Code>
+
+<Text variant="body2" style={{ margin: '16px 0' }}>
+  {t('text4')}
+</Text>

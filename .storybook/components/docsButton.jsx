@@ -1,21 +1,22 @@
-import React from 'react'
+import React from 'react';
 
-import { Text } from '../../components'
-import { colors } from '../../theme'
+import { Text } from '../../components';
+import { colors } from '../../theme';
 
-function docsButton({children, ...props}) {
+function docsButton({ children, ...props }) {
   const btnStyle = {
     background: 'white',
     border: `1px solid ${colors.grey[200]}`,
     borderRadius: 8,
     cursor: 'pointer',
     padding: '8px 24px',
-  }
+  };
+
   return (
-    <button style={btnStyle} {...props}>
-      <Text variant='body2' style={{color: colors.grey[900]}}>{children}</Text>
+    <button type="button" style={btnStyle} {...props}>
+      <Text variant="body2" style={{ color: colors.grey[900] }}>{children}</Text>
     </button>
-  )
+  );
 }
 
-export default docsButton
+export default docsButton;

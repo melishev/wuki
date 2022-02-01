@@ -1,6 +1,15 @@
-import { useTranslation } from 'react-i18next'
-import DocsNote from '../../../.storybook/components/docsNote'
+import { useTranslation } from 'react-i18next';
+import DocsNote from '../../../.storybook/components/docsNote';
+import { Text } from '../../index'
+import { colors } from '../../../theme'
 
 export const t = (key) => useTranslation('code').t(key);
 
-<DocsNote status={t('note.title')}>{t('note.text')} <a href="#">{t('note.button')}</a>.</DocsNote>
+<DocsNote status={t('note.title')}>
+  {t('note.text')}
+  {' '}
+  <Text tag="a" variant="body2" href="#test" style={{ color: colors.blue[400] }}>
+    {t('note.button')}
+  </Text>
+.
+</DocsNote>

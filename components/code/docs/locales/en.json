@@ -1,8 +1,11 @@
 {
   "description": "The Code component allows you to display the source code.",
-  "note": {
-    "title": "Important",
+  "note1": {
     "text": "Before using this component, make sure you have imported the fonts into the project. You can learn more about importing fonts into a project",
+    "button": "here"
+  },
+  "note2": {
+    "text": "Before using this component, make sure you have installed the icon library in your project. You can learn more about installing icons in a project",
     "button": "here"
   },
   "examples": {

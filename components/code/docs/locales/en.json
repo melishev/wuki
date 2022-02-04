@@ -23,7 +23,7 @@
     },
     "change icons": {
       "title": "Change Icons",
-      "description": "You can change the default icons in a component. To do this, you need to specify the <code>beforeIcon</code> or <code>afterIcon</code> parameter and pass the necessary icon inside."
+      "description": "You can change the default icons in a component. To do this, you need to pass inside the <code>beforeIcon</code> or <code>afterIcon</code> prop the icon component you need."
     }
   }
 }

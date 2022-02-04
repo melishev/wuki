@@ -60,9 +60,8 @@ module.exports = {
     ${head}
     <!-- Favicon -->
     <meta name="theme-color" content="${colors.grey[600]}">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="${colors.blue[500]}">
-    <link rel="shortcut icon" href="/wukiFavicon.ico">
-    <link rel="icon" type="image/png" href="/wukiFavicon.png" sizes="192x192">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="${colors.grey[400]}">
+    <link rel="icon" href="/wukiFavicon.svg">
     <!-- Connect Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

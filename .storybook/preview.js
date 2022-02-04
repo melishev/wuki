@@ -9,7 +9,6 @@ import { WukiProvider } from '../components';
 import i18nConfig from './helpers/i18next';
 
 import DocsWrapper from './components/docsWrapper';
-import DocsButton from './components/docsButton';
 
 export const decorators = [
   (Story) => (
@@ -31,8 +30,10 @@ export const parameters = {
           <WukiProvider cssBaseLine>
             <DocsContainer context={context}>
               <div className="i18n_controller">
-                <DocsButton onClick={() => i18n.changeLanguage('ru')}>🇷🇺</DocsButton>
-                <DocsButton onClick={() => i18n.changeLanguage('en')}>🇺🇸</DocsButton>
+                <select value={i18n.language} onChange={(e) => i18n.changeLanguage(e.target.value)}>
+                  <option value="en">🇺🇸 English</option>
+                  <option value="ru">🇷🇺 Russian</option>
+                </select>
               </div>
               {context.component
                 ? <DocsWrapper context={context}>{children}</DocsWrapper>

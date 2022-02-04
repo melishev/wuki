@@ -53,7 +53,7 @@ export const Inline = () => (
 export const ChangeIcons = () => (
   <Grid container>
     <Grid col={8}>
-      <Code beforeIcon={Clipboard} afterIcon={ThumbsUp}>
+      <Code beforeIcon={<Clipboard size={20} strokeWidth={1} />} afterIcon={<ThumbsUp size={20} strokeWidth={1} />}>
         {`<div>
   <p>Hello, world!</p>
 </div>`}

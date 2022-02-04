@@ -4,7 +4,7 @@ import { Copy, Check } from 'react-feather';
 import useStyles from './styles';
 import { convertStylesToCss, unionClassNames } from '../utils/helpers';
 
-const Code = ({ children, style, code, inline, beforeIcon: BeforeIcon, afterIcon: AfterIcon, ...props }) => {
+const Code = ({ children, style, code, inline, beforeIcon, afterIcon, ...props }) => {
   const jssCSS = useStyles();
   const inlineCSS = convertStylesToCss(style);
 
@@ -22,8 +22,8 @@ const Code = ({ children, style, code, inline, beforeIcon: BeforeIcon, afterIcon
     <pre className={unionClassNames(jssCSS.code, inlineCSS, status)} {...props}>
       <button type="button" aria-label="Copy" onClick={copyCode}>
         {!status
-          ? <BeforeIcon size={20} strokeWidth={1} />
-          : <AfterIcon size={20} strokeWidth={1} /> }
+          ? beforeIcon
+          : afterIcon }
       </button>
       <code>{code || children}</code>
     </pre>
@@ -66,8 +66,8 @@ Code.defaultProps = {
   style: null,
   code: '',
   inline: false,
-  beforeIcon: Copy,
-  afterIcon: Check,
+  beforeIcon: <Copy size={20} strokeWidth={1} />,
+  afterIcon: <Check size={20} strokeWidth={1} />,
 };
 
 export default Code;

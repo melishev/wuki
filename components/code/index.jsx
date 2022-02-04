@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import propTypes from 'prop-types';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { Copy, Check } from 'react-feather';
 import useStyles from './styles';
 import { convertStylesToCss, unionClassNames } from '../utils/helpers';
 
-const Code = ({ children, style, code, inline, ...props }) => {
+const Code = ({ children, style, code, inline, beforeIcon: BeforeIcon, afterIcon: AfterIcon, ...props }) => {
   const jssCSS = useStyles();
   const inlineCSS = convertStylesToCss(style);
 
@@ -23,8 +22,8 @@ const Code = ({ children, style, code, inline, ...props }) => {
     <pre className={unionClassNames(jssCSS.code, inlineCSS, status)} {...props}>
       <button type="button" aria-label="Copy" onClick={copyCode}>
         {!status
-          ? <Copy size={20} strokeWidth={1} />
-          : <Check size={20} strokeWidth={1} /> }
+          ? <BeforeIcon size={20} strokeWidth={1} />
+          : <AfterIcon size={20} strokeWidth={1} /> }
       </button>
       <code>{code || children}</code>
     </pre>
@@ -56,6 +55,10 @@ Code.propTypes = {
   code: propTypes.string,
   /** Should the source code be mapped to a string */
   inline: propTypes.bool,
+  /** Changes the icon until the button is clicked */
+  beforeIcon: propTypes.node,
+  /** Changes the icon after clicking on the button */
+  afterIcon: propTypes.node,
 };
 
 Code.defaultProps = {
@@ -63,6 +66,8 @@ Code.defaultProps = {
   style: null,
   code: '',
   inline: false,
+  beforeIcon: Copy,
+  afterIcon: Check,
 };
 
 export default Code;

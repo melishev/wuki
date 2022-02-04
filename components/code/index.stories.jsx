@@ -1,4 +1,5 @@
 import React from 'react';
+import { Clipboard, ThumbsUp } from 'react-feather';
 import Documentation from './docs/index.mdx';
 
 import { Grid, Text, Code } from '../index';
@@ -45,6 +46,18 @@ export const Inline = () => (
         quia quisquam expedita unde beatae officia aspernatur, quae,
         dignissimos nobis culpa accusamus quo!
       </Text>
+    </Grid>
+  </Grid>
+);
+
+export const ChangeIcons = () => (
+  <Grid container>
+    <Grid col={8}>
+      <Code beforeIcon={Clipboard} afterIcon={ThumbsUp}>
+        {`<div>
+  <p>Hello, world!</p>
+</div>`}
+      </Code>
     </Grid>
   </Grid>
 );

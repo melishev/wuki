@@ -82,6 +82,9 @@ module.exports = {
         margin-right: unset;
       }
       a.sidebar-item, button.sidebar-item {
+        width: -webkit-fill-available;
+        width: -moz-available;
+        width: fill-available;
         color: ${colors.grey[900]};
         padding-top: .5rem;
         padding-bottom: .5rem;
@@ -95,6 +98,9 @@ module.exports = {
       }
       a.sidebar-item:hover, button.sidebar-item:hover {
         background: ${colors.grey[50]};
+      }
+      a.sidebar-item[data-nodetype="story"] {
+        font-size: .85rem;
       }
       a.sidebar-item[data-selected="true"] {
         background: ${colors.blue[500]};

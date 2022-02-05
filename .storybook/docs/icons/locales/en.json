@@ -1,0 +1,13 @@
+{
+  "title": "Icons",
+  "description": "Wuki UI uses a set of commonly used UI icons that you can use in your project. By default Wuki UI uses",
+  "text": "For more information on how to use icons, see the",
+  "button": "official React Feather Icon documentation",
+  "note": {
+    "text": "You can also install any other icon library and replace the icons in the components with the ones you need. More about this is described in the components themselves. For example:",
+    "button": "how to replace icons in the Code component"
+  },
+  "gallery": {
+    "title": "Icon Gallery"
+  }
+}

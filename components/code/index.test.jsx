@@ -5,7 +5,7 @@ import { Code } from '../index';
 describe('Code', () => {
   it('just render', () => {
     render(
-      <Code code="npm install wuki@latest" />,
+      <Code>npm install wuki@latest</Code>,
     );
     expect(screen.getByText('npm install wuki@latest')).toBeInTheDocument();
   });

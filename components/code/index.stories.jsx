@@ -25,10 +25,11 @@ export const Default = () => (
 export const MultiLine = () => (
   <Grid container>
     <Grid col={8}>
-      <Code code={`<div>
+      <Code>
+        {`<div>
   <p>Hello, world!</p>
 </div>`}
-      />
+      </Code>
     </Grid>
   </Grid>
 );
@@ -41,7 +42,7 @@ export const Inline = () => (
         Ullam maxime inventore,
         odio itaque minima quasi cum facere
         {' '}
-        <Code code="npm install wuki@latest" inline />
+        <Code inline>npm install wuki@latest</Code>
         {' '}
         quia quisquam expedita unde beatae officia aspernatur, quae,
         dignissimos nobis culpa accusamus quo!

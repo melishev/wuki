@@ -1,4 +1,5 @@
 import React from 'react';
+import { Clipboard, ThumbsUp } from 'react-feather';
 import Documentation from './docs/index.mdx';
 
 import { Grid, Text, Code } from '../index';
@@ -24,10 +25,11 @@ export const Default = () => (
 export const MultiLine = () => (
   <Grid container>
     <Grid col={8}>
-      <Code code={`<div>
+      <Code>
+        {`<div>
   <p>Hello, world!</p>
 </div>`}
-      />
+      </Code>
     </Grid>
   </Grid>
 );
@@ -40,11 +42,23 @@ export const Inline = () => (
         Ullam maxime inventore,
         odio itaque minima quasi cum facere
         {' '}
-        <Code code="npm install wuki@latest" inline />
+        <Code inline>npm install wuki@latest</Code>
         {' '}
         quia quisquam expedita unde beatae officia aspernatur, quae,
         dignissimos nobis culpa accusamus quo!
       </Text>
+    </Grid>
+  </Grid>
+);
+
+export const ChangeIcons = () => (
+  <Grid container>
+    <Grid col={8}>
+      <Code beforeIcon={<Clipboard size={20} strokeWidth={1} />} afterIcon={<ThumbsUp size={20} strokeWidth={1} />}>
+        {`<div>
+  <p>Hello, world!</p>
+</div>`}
+      </Code>
     </Grid>
   </Grid>
 );

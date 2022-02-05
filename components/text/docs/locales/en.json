@@ -1,7 +1,6 @@
 {
   "description": "Use typography to present your design and content as clearly and efficiently as possible.",
   "note": {
-    "title": "Important",
     "text": "Before using this component, make sure you have imported the fonts into the project. You can learn more about importing fonts into a project",
     "button": "here"
   },

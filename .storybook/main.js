@@ -26,10 +26,16 @@ module.exports = {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Manrope:wght@200;300;400;500;600;700;800&display=swap">
     <style>
+      html {
+        scrollbar-width: none;
+      }
       body {
         padding-left: 0 !important;
         padding-right: 0 !important;
         background: ${colors.grey[25]};
+      }
+      body::-webkit-scrollbar {
+        width: 0;
       }
       h1, h2, h3, h4, h5, h6, p, li {
         font-family: ${type.family} !important;
@@ -54,9 +60,8 @@ module.exports = {
     ${head}
     <!-- Favicon -->
     <meta name="theme-color" content="${colors.grey[600]}">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="${colors.blue[500]}">
-    <link rel="shortcut icon" href="/wukiFavicon.ico">
-    <link rel="icon" type="image/png" href="/wukiFavicon.png" sizes="192x192">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="${colors.grey[400]}">
+    <link rel="icon" href="/wukiFavicon.svg">
     <!-- Connect Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,6 +82,9 @@ module.exports = {
         margin-right: unset;
       }
       a.sidebar-item, button.sidebar-item {
+        width: -webkit-fill-available;
+        width: -moz-available;
+        width: fill-available;
         color: ${colors.grey[900]};
         padding-top: .5rem;
         padding-bottom: .5rem;
@@ -90,6 +98,9 @@ module.exports = {
       }
       a.sidebar-item:hover, button.sidebar-item:hover {
         background: ${colors.grey[50]};
+      }
+      a.sidebar-item[data-nodetype="story"] {
+        font-size: .85rem;
       }
       a.sidebar-item[data-selected="true"] {
         background: ${colors.blue[500]};

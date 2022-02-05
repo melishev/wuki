@@ -10,6 +10,7 @@ const allComponents = [
 const allDocs = [
   'start',
   'installation',
+  'icons',
 ];
 
 const allDocsComponents = [

@@ -5,11 +5,20 @@ import { colors } from '../../../theme'
 
 export const t = (key) => useTranslation('code').t(key);
 
-<DocsNote status={t('note.title')}>
-  {t('note.text')}
+<DocsNote type="important">
+  {t('note1.text')}
   {' '}
   <Text tag="a" variant="body2" href="#test" style={{ color: colors.blue[400] }}>
-    {t('note.button')}
+    {t('note1.button')}
+  </Text>
+.
+</DocsNote>
+
+<DocsNote type="important" style={{ margin: '20px 0' }}>
+  {t('note2.text')}
+  {' '}
+  <Text tag="a" variant="body2" href="#test" style={{ color: colors.blue[400] }}>
+    {t('note2.button')}
   </Text>
 .
 </DocsNote>

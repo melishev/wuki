@@ -26,9 +26,6 @@ module.exports = {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Manrope:wght@200;300;400;500;600;700;800&display=swap">
     <style>
-      ::-webkit-scrollbar {
-        width: 0;
-      }
       html {
         scrollbar-width: none;
       }
@@ -36,6 +33,9 @@ module.exports = {
         padding-left: 0 !important;
         padding-right: 0 !important;
         background: ${colors.grey[25]};
+      }
+      body::-webkit-scrollbar {
+        width: 0;
       }
       h1, h2, h3, h4, h5, h6, p, li {
         font-family: ${type.family} !important;

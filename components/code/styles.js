@@ -55,6 +55,7 @@ const useStyles = createUseStyles(
           },
         },
         '& code': {
+          font: 'inherit',
           marginRight: '3rem',
         },
       },

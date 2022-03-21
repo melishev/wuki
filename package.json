@@ -7,6 +7,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@vue/babel-plugin-jsx": "^1.1.1",
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "vite": "^2.8.6"
   }
 }

@@ -9,7 +9,7 @@
   },
   "homepage": "https://wuki.melishev.com",
   "license": "MIT",
-  "main": "src/utils.js",
+  "main": "src/index.js",
   "directories": {
     "src": "src"
   },

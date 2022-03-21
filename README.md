@@ -28,5 +28,3 @@ Create a UI system for comfortable use in modern projects that does not store ol
 > Important: Browsers like IE are likely to have poor support, but don't care.
 
 **Status:** In developing 👨🏻‍💻
-
-🙏🏼 **Thanks in advance to everyone who contributed**

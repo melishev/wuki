@@ -1,0 +1,17 @@
+{
+  "name": "@wuki-ui/utils",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "pack": "rollup -c"
+  },
+  "dependencies": {
+    "jss": "^10.9.0",
+    "jss-preset-default": "^10.9.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  }
+}

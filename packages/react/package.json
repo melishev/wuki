@@ -1,0 +1,28 @@
+{
+  "name": "@wuki-ui/react",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "pack": "rollup -c",
+    "test": "jest -c ../../tests/jest.config.js --rootDir ../../ --coverageDirectory ./packages/react/coverage"
+  },
+  "dependencies": {
+    "@wuki-ui/css": "*",
+    "@wuki-ui/theme": "*",
+    "@wuki-ui/utils": "*"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0"
+  },
+  "peerDependencies": {
+    "prop-types": "15.7.2",
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0",
+    "lucide-react": "latest"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"]
+    },
+    "dev": {
+      "cache": false
+    },
+    "sb": {
+      "cache": false
+    },
+    "build:sb": {
+      "dependsOn": [
+        "^build:sb"
+      ],
+      "outputs": ["storybook-static/**"]
+    },
+    "pack": {
+      "cache": false
+    },
+    "test": {
+      "cache": false,
+      "outputs": ["coverage/**"]
+    }
+  }
+}

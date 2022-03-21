@@ -10,7 +10,8 @@
     "build": "lerna run build",
     "build:sb": "lerna run build:sb",
     "pack": "lerna run pack",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "prepublish": "lerna run pack"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",

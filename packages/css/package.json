@@ -1,0 +1,39 @@
+{
+  "name": "@wuki-ui/css",
+  "version": "0.0.0",
+  "description": "",
+  "author": {
+    "name": "Matvey Melishev",
+    "email": "matvey@melishev.ru",
+    "url": "https://melishev.com"
+  },
+  "homepage": "https://wuki.melishev.com",
+  "license": "MIT",
+  "main": "src/index.js",
+  "directories": {
+    "src": "src"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melishev/wuki.git"
+  },
+  "scripts": {
+    "pack": "rollup -c"
+  },
+  "dependencies": {
+    "@wuki-ui/utils": "*"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  },
+  "bugs": {
+    "url": "https://github.com/melishev/wuki/issues"
+  }
+}

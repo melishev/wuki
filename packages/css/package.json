@@ -1,6 +1,6 @@
 {
   "name": "@wuki-ui/css",
-  "version": "3.0.0-alpha.0",
+  "version": "3.0.0-alpha.1",
   "description": "",
   "author": {
     "name": "Matvey Melishev",
@@ -27,7 +27,7 @@
     "pack": "rollup -c"
   },
   "dependencies": {
-    "@wuki-ui/utils": "^3.0.0-alpha.0"
+    "@wuki-ui/utils": "^3.0.0-alpha.1"
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^15.0.0",

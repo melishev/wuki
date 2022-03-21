@@ -1,6 +1,6 @@
 {
   "name": "wuki",
-  "version": "1.5.1",
+  "version": "0.0.0",
   "scripts": {},
   "devDependencies": {
     "@babel/core": "^7.17.8",

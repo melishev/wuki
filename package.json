@@ -31,6 +31,7 @@
     "@vue/babel-plugin-jsx": "^1.1.1",
     "auto": "^10.36.5",
     "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
     "lerna": "^4.0.0",
     "lucide-react": "^0.17.13",
     "lucide-vue-next": "^0.17.13",
@@ -57,5 +58,10 @@
   "bugs": {
     "url": "https://github.com/melishev/wuki/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

@@ -13,9 +13,7 @@
     "test": "turbo run test"
   },
   "devDependencies": {
-    "@auto-it/all-contributors": "^10.36.5",
     "@auto-it/conventional-commits": "^10.36.5",
-    "@auto-it/first-time-contributor": "^10.36.5",
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
@@ -62,5 +60,11 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "auto": {
+    "plugins": [
+      "npm",
+      "conventional-commits"
+    ]
   }
 }

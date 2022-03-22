@@ -20,6 +20,7 @@ function WukiProvider({ children, theme, cssBaseLine }) {
 }
 
 export const useContextWuki = () => useContext(context);
+
 WukiProvider.propTypes = {
   children: propTypes.node.isRequired,
   theme: propTypes.oneOfType([propTypes.object]),

@@ -10,10 +10,9 @@
     "build": "lerna run build",
     "build:sb": "lerna run build:sb",
     "pack": "lerna run pack",
-    "test": "turbo run test"
+    "test": "lerna run test"
   },
   "devDependencies": {
-    "@auto-it/conventional-commits": "^10.36.5",
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
@@ -26,7 +25,6 @@
     "@storybook/react": "^6.4.19",
     "@storybook/vue3": "^6.4.19",
     "@vue/babel-plugin-jsx": "^1.1.1",
-    "auto": "^10.36.5",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "lerna": "^4.0.0",
@@ -60,11 +58,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "auto": {
-    "plugins": [
-      "npm",
-      "conventional-commits"
-    ]
   }
 }

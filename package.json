@@ -10,8 +10,7 @@
     "build": "lerna run build",
     "build:sb": "lerna run build:sb",
     "pack": "lerna run pack",
-    "test": "turbo run test",
-    "prepublish": "lerna run pack"
+    "test": "turbo run test"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "^10.36.5",

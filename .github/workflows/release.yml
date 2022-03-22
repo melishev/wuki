@@ -23,8 +23,7 @@ jobs:
           node-version: 'lts/*'
 
       - name: Install dependencies
-        run: npm ci
-        run: npm run setup
+        run: npm ci && npm run setup
 
       - name: Setup Build 🚀
         run: npm run pack

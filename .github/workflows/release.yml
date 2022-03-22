@@ -30,6 +30,6 @@ jobs:
 
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.USER_GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.USER_GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx lerna publish --conventional-commits --yes

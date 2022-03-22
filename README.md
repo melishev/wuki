@@ -5,7 +5,6 @@
 [![](https://img.shields.io/badge/Figma-2c2c2c?style=flat&logo=figma&logoColor=white)](https://www.figma.com/file/Nqauu6UOyhf5YUG8FZdBU8/wuki-%F0%9F%A7%B8?node-id=10%3A15)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Made With Love](https://img.shields.io/badge/Made%20With-Love-orange.svg)](https://github.com/melishev/wuki)
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
 
 [🇷🇺 Русский](https://github.com/melishev/wuki/tree/master/.github/readme/ru.md) | [🇬🇧 English](https://github.com/melishev/wuki)
 
@@ -33,6 +32,7 @@ Create a UI system for comfortable use in modern projects that does not store ol
 **Status:** In developing 👨🏻‍💻
 
 🙏🏼 **Thanks in advance to everyone who contributed**
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):

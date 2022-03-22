@@ -34,5 +34,5 @@ jobs:
         run: |
           yarn install --frozen-lockfile
           yarn setup
-          yarn pack
+          yarn run pack
           npx auto shipit

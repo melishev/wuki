@@ -9,7 +9,7 @@ import copy from 'rollup-plugin-copy'
 // https://github.com/vladshcherbin/rollup-plugin-generate-package-json
 import generatePackageJson from 'rollup-plugin-generate-package-json';
 
-import { description, keywords, bugs, license } from './package.json'
+import { description, keywords, author, repository, bugs, license } from './package.json'
 
 export const input = 'src/index.js'
 
@@ -36,6 +36,8 @@ export const plugins = [
       keywords,
       main: pkg.main,
       homepage: '',
+      author,
+      repository,
       bugs,
       license,
     }),

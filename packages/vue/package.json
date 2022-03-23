@@ -1,6 +1,6 @@
 {
   "name": "@wuki-ui/vue",
-  "version": "3.0.0-alpha.8",
+  "version": "3.0.0-alpha.9",
   "description": "",
   "author": {
     "name": "Matvey Melishev",
@@ -28,9 +28,9 @@
     "test": "jest -c ../../tests/jest.config.js --rootDir ../../ --coverageDirectory ./packages/vue/coverage"
   },
   "dependencies": {
-    "@wuki-ui/css": "^3.0.0-alpha.8",
-    "@wuki-ui/theme": "^3.0.0-alpha.8",
-    "@wuki-ui/utils": "^3.0.0-alpha.8"
+    "@wuki-ui/css": "^3.0.0-alpha.9",
+    "@wuki-ui/theme": "^3.0.0-alpha.9",
+    "@wuki-ui/utils": "^3.0.0-alpha.9"
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^15.0.0",

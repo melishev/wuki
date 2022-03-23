@@ -41,6 +41,9 @@ export const plugins = [
       repository,
       bugs,
       license,
+      publishConfig: {
+        access: 'public',
+      }
     }),
   }),
 ]

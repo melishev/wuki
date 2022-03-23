@@ -1,7 +1,7 @@
 {
   "name": "wuki-vue-app",
   "private": true,
-  "version": "3.0.0-alpha.4",
+  "version": "3.0.0-alpha.5",
   "scripts": {
     "dev": "vite --open --port 3001",
     "build": "vite build",

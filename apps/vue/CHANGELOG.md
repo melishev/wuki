@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-alpha.5](https://github.com/melishev/wuki/compare/v3.0.0-alpha.4...v3.0.0-alpha.5) (2022-03-23)
+
+
+### Bug Fixes
+
+* **test:** add test text ([bd2d653](https://github.com/melishev/wuki/commit/bd2d653b4154e82e2574dfa58d30efb0fe5b0346))
+
+
+
+
+
 # [3.0.0-alpha.4](https://github.com/melishev/wuki/compare/v3.0.0-alpha.3...v3.0.0-alpha.4) (2022-03-23)
 
 **Note:** Version bump only for package wuki-vue-app

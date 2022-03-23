@@ -1,6 +1,6 @@
 {
   "name": "@wuki-ui/react",
-  "version": "3.0.0-alpha.9",
+  "version": "3.0.0-alpha.10",
   "description": "",
   "author": {
     "name": "Matvey Melishev",
@@ -28,7 +28,7 @@
     "test": "jest -c ../../tests/jest.config.js --rootDir ../../ --coverageDirectory ./packages/react/coverage"
   },
   "dependencies": {
-    "@wuki-ui/css": "^3.0.0-alpha.9",
+    "@wuki-ui/css": "^3.0.0-alpha.10",
     "@wuki-ui/theme": "^3.0.0-alpha.9",
     "@wuki-ui/utils": "^3.0.0-alpha.9"
   },

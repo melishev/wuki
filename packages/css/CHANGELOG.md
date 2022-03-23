@@ -5,12 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [3.0.0-alpha.10](https://github.com/melishev/wuki/compare/v3.0.0-alpha.9...v3.0.0-alpha.10) (2022-03-23)
 
-**Note:** Version bump only for package @wuki-ui/vue
 
+### Bug Fixes
 
-
-
-
-# [3.0.0-alpha.9](https://github.com/melishev/wuki/compare/v3.0.0-alpha.8...v3.0.0-alpha.9) (2022-03-23)
-
-**Note:** Version bump only for package @wuki-ui/vue
+* test ([8a4c862](https://github.com/melishev/wuki/commit/8a4c8625de7157926b495087a6ccfef9396e3c37))

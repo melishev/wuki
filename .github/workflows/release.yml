@@ -27,9 +27,6 @@ jobs:
           npm ci
           npm run setup
 
-      - name: Setup Build 🚀
-        run: npm run pack
-
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.USER_GITHUB_TOKEN }}

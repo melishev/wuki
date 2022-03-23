@@ -12,8 +12,8 @@
     "sb": "lerna run sb --parallel",
     "build": "lerna run build",
     "build:sb": "lerna run build:sb",
-    "pack": "lerna run pack",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "prepare": "lerna run pack"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",

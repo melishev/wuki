@@ -1,7 +1,7 @@
 {
   "name": "wuki-vue-app",
   "private": true,
-  "version": "3.0.0-alpha.2",
+  "version": "3.0.0-alpha.3",
   "scripts": {
     "dev": "vite --open --port 3001",
     "build": "vite build",
@@ -10,7 +10,7 @@
     "build:sb": "cross-env framework_for_storybook=vue ../../node_modules/@storybook/vue3/bin/build.js -c ../.storybook"
   },
   "dependencies": {
-    "@wuki-ui/vue": "^3.0.0-alpha.2",
+    "@wuki-ui/vue": "^3.0.0-alpha.3",
     "vue": "^3.2.25"
   },
   "devDependencies": {

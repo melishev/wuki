@@ -5,7 +5,7 @@ import { babel } from '@rollup/plugin-babel';
 // eslint-disable-next-line import/no-relative-packages
 import { input, output, plugins } from '../../rollup.config';
 
-const extensions = ['.js']
+const extensions = ['.js'];
 
 export default [
   {

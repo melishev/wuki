@@ -6,6 +6,7 @@ export default defineComponent({
     return () => (
       <WukiProvider>
         <Text tag='h1'>Hello, Vue!</Text>
+        <Text tag='small'>Test</Text>
       </WukiProvider>
     )
   }

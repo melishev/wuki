@@ -1,12 +1,14 @@
 {
   "version": "3.0.0-alpha.11",
-  "packages": [
-    "apps/*",
-    "packages/*"
-  ],
+  "useWorkspaces": true,
   "command": {
     "run": {
       "npmClient": "npm"
+    },
+    "version": {
+      "conventionalCommits": true,
+      "allowBranch": ["master"],
+      "createRelease": "github"
     }
   }
 }

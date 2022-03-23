@@ -3,6 +3,12 @@
   "version": "0.0.0",
   "description": "🧸 Wuki is a UI Kit developed for React.js that brings together the best practices of the most popular UI libraries such as Ant Design, Bootstrap, Element, and many others.",
   "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ]
+  },
   "files": [
     "dist"
   ],

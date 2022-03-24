@@ -39,7 +39,7 @@
   },
   "peerDependencies": {
     "lucide-vue-next": "latest",
-    "vue": ">=3.2.30"
+    "vue": "^3.0.0"
   },
   "bugs": {
     "url": "https://github.com/melishev/wuki/issues"

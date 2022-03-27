@@ -1,0 +1,26 @@
+aside {
+    ul {
+        padding: 0;
+        list-style: none;
+        & > small {
+            margin: 1rem 0 .2rem !important;
+        }
+        li {
+            a {
+                display: block;
+                margin: .5rem 0;
+                padding: .5rem 18px;
+                border-radius: 6px;
+                &:hover {
+                    background: #E9E9E9;
+                }
+                &.active {
+                    background: #0071E3; // change
+                    p {
+                        color: white !important; // change
+                    }
+                }
+            }
+        }
+    }
+}

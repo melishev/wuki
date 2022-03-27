@@ -1,63 +1,49 @@
-import copy from 'rollup-plugin-copy';
-import { babel } from '@rollup/plugin-babel';
-import cleaner from 'rollup-plugin-cleaner';
-import analyze from 'rollup-plugin-analyzer';
+// https://github.com/TrySound/rollup-plugin-terser
 import { terser } from 'rollup-plugin-terser';
-import commonjs from '@rollup/plugin-commonjs';
-import nodeResolve from '@rollup/plugin-node-resolve';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+// https://github.com/yingye/rollup-plugin-banner
+import banner from 'rollup-plugin-banner';
+// https://github.com/ritz078/rollup-plugin-filesize
+import filesize from 'rollup-plugin-filesize';
+// https://github.com/vladshcherbin/rollup-plugin-copy
+import copy from 'rollup-plugin-copy'
+// https://github.com/vladshcherbin/rollup-plugin-generate-package-json
+import generatePackageJson from 'rollup-plugin-generate-package-json';
 
-import multiInput from 'rollup-plugin-multi-input';
+import { description, keywords, files, author, repository, bugs, license } from './package.json'
 
-const extensions = ['.js', '.jsx'];
+export const input = 'src/index.js'
 
-const plugins = [
-  commonjs(),
-  babel({
-    exclude: 'node_modules/**',
-    extensions,
-    presets: ['@babel/preset-env', '@babel/preset-react'],
-  }),
-  nodeResolve({
-    extensions,
-  }),
-  peerDepsExternal(),
+export const output = {
+  file: 'dist/src/index.js',
+  exports: 'named',
+}
+  
+export const plugins = [
   terser(),
-  analyze({
-    summaryOnly: true,
+  banner('<%= pkg.name %>\nv<%= pkg.version %>'),
+  filesize(),
+  copy({
+    targets: [
+      { src: '../../LICENSE', dest: 'dist' },
+    ],
   }),
-];
-
-export default [
-  {
-    input: ['components/**/index.jsx'],
-    output: [
-      {
-        format: 'cjs',
-        exports: 'named',
-        dir: 'dist/cjs',
-      },
-    ],
-    plugins: [
-      ...plugins,
-      multiInput({ relative: 'components/' }),
-      cleaner({ targets: ['./dist/'] }),
-      copy({
-        targets: [{ src: 'components/index.js', dest: 'dist/cjs' }],
-        verbose: true,
-        copyOnce: true,
-      }),
-    ],
-  },
-  {
-    input: ['components/index.js'],
-    output: [
-      {
-        format: 'esm',
-        exports: 'named',
-        dir: 'dist/esm',
-      },
-    ],
-    plugins,
-  },
-];
+  generatePackageJson({
+    outputFolder: 'dist',
+    baseContents: (pkg) => ({
+      name: pkg.name,
+      version: pkg.version,
+      description,
+      keywords,
+      main: pkg.main,
+      files,
+      homepage: '',
+      author,
+      repository,
+      bugs,
+      license,
+      publishConfig: {
+        access: 'public',
+      }
+    }),
+  }),
+]

@@ -18,6 +18,19 @@ module.exports = {
         backgrounds: false,
       },
     },
+    // {
+    //   name: '@storybook/addon-docs',
+    //   options: {
+    //     configureJSX: true,
+    //     babelOptions: {
+    //       plugins: [
+    //         '@vue/babel-plugin-jsx',
+    //       ],
+    //     },
+    //     sourceLoaderOptions: null,
+    //     transcludeMarkdown: true,
+    //   },
+    // },
     'storybook-addon-grid/preset',
     // 'storybook-addon-grid/chromatic',
   ],
@@ -125,8 +138,5 @@ module.exports = {
   //       display: none;
   //     }
   //   </style>
-  // `),
-  core: {
-    builder: "webpack5",
-  },
+  // `)
 };

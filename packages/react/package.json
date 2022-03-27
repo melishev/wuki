@@ -1,0 +1,51 @@
+{
+  "name": "@wuki-ui/react",
+  "version": "3.0.0-alpha.11",
+  "description": "",
+  "author": {
+    "name": "Matvey Melishev",
+    "email": "matvey@melishev.ru",
+    "url": "https://melishev.com"
+  },
+  "homepage": "https://wuki.melishev.com",
+  "license": "MIT",
+  "main": "src/index.js",
+  "directories": {
+    "src": "src"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melishev/wuki.git"
+  },
+  "scripts": {
+    "pack": "rollup -c",
+    "test": "jest -c ../../tests/jest.config.js --rootDir ../../ --coverageDirectory ./packages/react/coverage"
+  },
+  "dependencies": {
+    "@wuki-ui/css": "^3.0.0-alpha.11",
+    "@wuki-ui/theme": "^3.0.0-alpha.11",
+    "@wuki-ui/utils": "^3.0.0-alpha.11"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0"
+  },
+  "peerDependencies": {
+    "lucide-react": "latest",
+    "prop-types": "15.7.2",
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "bugs": {
+    "url": "https://github.com/melishev/wuki/issues"
+  }
+}

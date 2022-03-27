@@ -1,0 +1,16 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: '🥳 Ohhh, cool. Greetings @${{ github.actor }}, I am very glad that you have joined us, soon 🌵 @melishev will join, please wait for him a little.'
+        pr-message: '🥳 Ohhh, cool. Greetings @${{ github.actor }}, I am very glad that you have joined us, soon 🌵 @melishev will join, please wait for him a little.'

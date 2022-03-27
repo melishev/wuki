@@ -1,0 +1,27 @@
+header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    nav {
+        display: flex;
+        gap: 2rem;
+    }
+    div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        button {
+            display: flex;
+            border: unset;
+            background: unset;
+            padding: 2px 9px;
+            border-radius: 4px;
+            cursor: pointer;
+            &.active {
+                background: #DADADA;
+            }
+        }
+    }
+}

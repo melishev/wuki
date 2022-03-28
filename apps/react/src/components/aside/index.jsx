@@ -11,16 +11,16 @@ export default function header() {
       name: 'Getting start',
       items: [
         {
-          title: 'Start',
-          slug: '/start',
+          title: 'Introduction',
+          slug: 'introduction',
         },
         {
           title: 'Installation',
-          slug: '/installation',
+          slug: 'installation',
         },
         {
           title: 'Icons',
-          slug: '/icons',
+          slug: 'icons',
         },
       ],
     },
@@ -29,7 +29,7 @@ export default function header() {
       items: [
         {
           title: 'Text',
-          slug: '/text',
+          slug: 'component/text',
         },
       ],
     },
@@ -38,7 +38,7 @@ export default function header() {
       items: [
         {
           title: 'Grid',
-          slug: '/grid',
+          slug: 'component/grid',
         },
       ],
     },
@@ -47,15 +47,16 @@ export default function header() {
       items: [
         {
           title: 'Code',
-          slug: '/code',
+          slug: 'component/code',
         },
         {
           title: 'Button',
-          slug: '/button',
+          slug: 'component/button',
         },
       ],
     },
   ];
+
   return (
     <Grid tag="aside" col={3}>
       {nav.map(({ name, items }) => (

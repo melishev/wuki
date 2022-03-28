@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { Text } from '@wuki-ui/react';
 import { colors } from '@wuki-ui/theme';
 
-export default function start() {
-  const t = (key) => useTranslation('start').t(key);
+export default function introduction() {
+  const t = (key) => useTranslation('introduction').t(key);
 
   return (
     <>

@@ -1,0 +1,39 @@
+.iframe {
+    height: 400px;
+    border: 1px solid #BDBDBD; // change
+    border-radius: 10px;
+    position: relative;
+    label {
+        width: calc(50% + 1.5px);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #BDBDBD;
+        text-transform: capitalize;
+        position: absolute;
+        top: -1px;
+        cursor: pointer;
+        &:first-of-type {
+            border-radius: 10px 0 0 0;
+            left: -1px;
+        }
+        &:last-of-type {
+            border-radius: 0 10px 0 0;
+            right: -1px;
+        }
+        &.active {
+            border: 2px solid #0071E3;
+            z-index: 1;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+    }
+    iframe {
+        height: calc(400px - 40px);
+        display: block;
+        border: unset;
+        margin-top: 38px;
+    }
+}
